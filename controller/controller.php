@@ -8,4 +8,20 @@ class Controller{
         $this->model = new Model();
         $this->view = new View();
     }
+    function inicio(){
+        $productos = $this->model->getProductosSlider();
+        $this->view->inicio($productos);
+    }
+    function mostrarProductos(){
+        $productos = $this->model->getProductos();
+        $this->view->mostrarProductos($productos);
+    }
+    function mostrarProductosSlider(){
+        $productos = $this->model->getProductosSlider();
+        $this->view->mostrarProductosSlider($productos);
+    }
+    function mostrarCategorias(){
+        $categorias = $this->model->getCategorias();
+        $this->view->mostrarCategorias($categorias);
+    }
 }

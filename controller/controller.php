@@ -16,10 +16,9 @@ class Controller{
         $productos = $this->model->getProductos();
         $this->view->mostrarProductos($productos);
     }
-    function mostrarProductosSlider(){
-        $productos = $this->model->getProductosSlider();
+   /*  function mostrarProductosSlider(){
         $this->view->mostrarProductosSlider($productos);
-    }
+    } */
     function mostrarCategorias(){
         $categorias = $this->model->getCategorias();
         $this->view->mostrarCategorias($categorias);

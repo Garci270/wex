@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-27 21:15:17
+/* Smarty version 3.1.39, created on 2021-09-28 21:14:54
   from 'C:\xampp\htdocs\tpeespecial\templates\inicio.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61525e9594ef39_64759551',
+  'unifunc' => 'content_6153affe8c25a5_38978419',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a867c0ee55fd85ca5bcb4b778038c77cb969e801' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\inicio.tpl',
-      1 => 1632787272,
+      1 => 1632874472,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_61525e9594ef39_64759551 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6153affe8c25a5_38978419 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +32,7 @@ function content_61525e9594ef39_64759551 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
@@ -40,8 +40,9 @@ function content_61525e9594ef39_64759551 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 <?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<div class="m-3">
-    <img src="assets/img/bannerabarrotes.jpg" class="banner-inicio" alt="">
+<div class="container-fluid">
+<div class="m-3 d-flex">
+    <img src="assets/img/productos_supermercado.jpg" class="banner-inicio" alt="">
 </div>
 <div class="bg-grey m-2">
     <div class="container-fluid">
@@ -74,7 +75,13 @@ function content_61525e9594ef39_64759551 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 </div>
 <?php $_smarty_tpl->_subTemplateRender("file:slider.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-$_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+<div class="m-3 d-flex">
+    <img src="assets/img/productos_supermercado.jpg" class="banner-inicio" alt="">
+</div>
+</div>
+
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <?php }

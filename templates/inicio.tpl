@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>{$titulo}</title>
 </head>
 <body>
 {include file="navbar.tpl"}
-<div class="m-3">
-    <img src="assets/img/bannerabarrotes.jpg" class="banner-inicio" alt="">
+<div class="container-fluid">
+<div class="m-3 d-flex">
+    <img src="assets/img/productos_supermercado.jpg" class="banner-inicio" alt="">
 </div>
 <div class="bg-grey m-2">
     <div class="container-fluid">
@@ -45,5 +46,10 @@
     </div>
 </div>
 {include file="slider.tpl"}
+<div class="m-3 d-flex">
+    <img src="assets/img/productos_supermercado.jpg" class="banner-inicio" alt="">
+</div>
+</div>
+
 {include file="footer.tpl"}
 

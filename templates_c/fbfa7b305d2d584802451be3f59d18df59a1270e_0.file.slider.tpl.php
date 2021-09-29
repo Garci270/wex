@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-27 20:57:49
+/* Smarty version 3.1.39, created on 2021-09-28 23:29:49
   from 'C:\xampp\htdocs\tpeespecial\templates\slider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61525a7d9db679_99074852',
+  'unifunc' => 'content_6153cf9da91fa0_12155164',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fbfa7b305d2d584802451be3f59d18df59a1270e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\slider.tpl',
-      1 => 1632787065,
+      1 => 1632882587,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,167 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61525a7d9db679_99074852 (Smarty_Internal_Template $_smarty_tpl) {
-?><div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-        <div class="row carousel-item active" data-bs-interval="10000">
-            <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productos']->value, 'producto');
-$_smarty_tpl->tpl_vars['producto']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
-$_smarty_tpl->tpl_vars['producto']->do_else = false;
-?>
-            <div class="box-one col-3">
-            <img src="<?php echo $_smarty_tpl->tpl_vars['producto']->value->url_imagen;?>
-" class="d-block image-producto">
+function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="container-fluid">
+  <div class="row text-center"> 
+    <div class="col-12">    
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">      
+          <div class="carousel-item active col-12">
+            <div class="row">
+              <div class="col-2">
+              </div>
+              <div class="card tamanioSlider p-1 col-2">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->url_imagen;?>
+" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Marca;?>
+</p>
+                  <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Descripcion;?>
+</h5>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Precio_1;?>
+</p>
+                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
+                  <a href="#" class="btn btn-danger">Detalle</a>
+                </div>
+              </div>
+              <div class="card tamanioSlider p-1 col-2">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->url_imagen;?>
+" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->Marca;?>
+</p>
+                  <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->Descripcion;?>
+</h5>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->Precio_1;?>
+</p>
+                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
+                  <a href="#" class="btn btn-danger">Detalle</a>
+                </div>
+              </div>
+              <div class="card tamanioSlider p-1 col-2">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->url_imagen;?>
+" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->Marca;?>
+</p>
+                  <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->Descripcion;?>
+</h5>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->Precio_1;?>
+</p>
+                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
+                  <a href="#" class="btn btn-danger">Detalle</a>
+                </div>
+              </div>
+              <div class="card tamanioSlider p-1 col-2">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->url_imagen;?>
+" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->Marca;?>
+</p>
+                  <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->Descripcion;?>
+</h5>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->Precio_1;?>
+</p>
+                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
+                  <a href="#" class="btn btn-danger">Detalle</a>
+                </div>
+              </div>
+              <div class="col-2">
+              </div>
+              <div class="col-2">
+              </div>
             </div>
-            <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+          </div>
+          <div class="carousel-item col-12">
+            <div class="row">
+            <div class="col-2">
+              </div>
+              <div class="card tamanioSlider p-1 col-2">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->url_imagen;?>
+" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->Marca;?>
+</p>
+                  <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->Descripcion;?>
+</h5>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->Precio_1;?>
+</p>
+                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
+                  <a href="#" class="btn btn-danger">Detalle</a>
+                </div>
+              </div>
+              <div class="card tamanioSlider p-1 col-2">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->url_imagen;?>
+" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->Marca;?>
+</p>
+                  <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->Descripcion;?>
+</h5>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->Precio_1;?>
+</p>
+                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
+                  <a href="#" class="btn btn-danger">Detalle</a>
+                </div>
+              </div>
+              <div class="card tamanioSlider p-1 col-2">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->url_imagen;?>
+" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->Marca;?>
+</p>
+                  <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->Descripcion;?>
+</h5>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->Precio_1;?>
+</p>
+                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
+                  <a href="#" class="btn btn-danger">Detalle</a>
+                </div>
+              </div>
+              <div class="card tamanioSlider p-1 col-2">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->url_imagen;?>
+" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->Marca;?>
+</p>
+                  <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->Descripcion;?>
+</h5>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->Precio_1;?>
+</p>
+                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
+                  <a href="#" class="btn btn-danger">Detalle</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <i class="fas fa-chevron-left text-danger"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <i class="fas fa-chevron-right text-danger"></i>
+          <span class="sr-only text-danger">Next</span>
+        </a>
       </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    </div>
+  </div>
 </div><?php }
 }

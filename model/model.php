@@ -18,7 +18,7 @@ class Model{
         return $productos;
     }
     function getProductosSlider(){
-        $query = $this->db->prepare('SELECT * FROM articulo WHERE Precio_1 < 40');
+        $query = $this->db->prepare('SELECT * FROM articulo WHERE idarticulo <= 24');
         $query->execute();
         $productos = $query->fetchAll(PDO::FETCH_OBJ);
         return $productos;

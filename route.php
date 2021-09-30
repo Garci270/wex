@@ -22,17 +22,16 @@ switch($params[0]){
         $controller->mostrarProductos(); 
         break;
     case 'Categorias': 
-        $controller->mostrarCategorias(); 
-        break;
+        if(isset($params[1])){
+            $controller->mostrarItemCategorias($params[1]); 
+            break;
+        }else{
+            $controller->mostrarItemCategorias(0); 
+            break;
+        }
     case 'detalle':
         $controller->mostrarProducto($params[1]); 
         break;
-    /* case 'showactualizarmateria': 
-        change($params[1]); 
-        break; */
-    /* case 'actualizarMateria': 
-        actualizarMateria($params[1]); 
-        break; */
     default: 
         echo('404 Page not found'); 
         break;

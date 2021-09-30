@@ -14,15 +14,17 @@ class Controller{
         $this->view->inicio($productos,$categorias);
     }
     function mostrarProductos(){
-        $productos = $this->model->getProductos();
+        $productos = $this->model->getProductos(0);
         $this->view->mostrarProductos($productos);
     }
     function mostrarProducto($id){
+        $categorias = $this->model->getCategorias();
         $producto = $this->model->getProductoDetalle($id);
-        $this->view->mostrarDetalleProducto($producto);
+        $this->view->mostrarDetalleProducto($producto, $categorias);
     }
-    function mostrarCategorias(){
-        /* $categorias = $this->model->getCategorias();
-        $this->view->mostrarCategoriasNav($categorias); */
+    function mostrarItemCategorias($id){
+        $catP = $this->model->getProductos($id);
+        $categorias = $this->model->getCategorias();
+        $this->view->mostrarCategorias($catP, $categorias);
     }
 }

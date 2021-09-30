@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid mb-5">
   <div class="row text-center"> 
     <div class="col-12">    
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-29 20:21:46
+/* Smarty version 3.1.39, created on 2021-09-30 14:17:58
   from 'C:\xampp\htdocs\tpeespecial\templates\productodetalle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6154f50a442dd6_68127874',
+  'unifunc' => 'content_6155f146e9cbd4_11249208',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7cf94d974d4bcb5911148683db6acff571a177b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productodetalle.tpl',
-      1 => 1632957704,
+      1 => 1633022277,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6154f50a442dd6_68127874 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6155f146e9cbd4_11249208 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,11 +39,13 @@ function content_6154f50a442dd6_68127874 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 <?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-    <div class="mt-4">
+    <div class="m-4">
         <div class="card m-auto" style="width: 18rem;">
             <img src="<?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->url_imagen;?>
 " class="card-img-top" alt="...">
             <div class="card-body">
+                <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->categoria;?>
+</h5>
                 <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Marca;?>
 </h5>
                 <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Descripcion;?>
@@ -53,6 +55,7 @@ function content_6154f50a442dd6_68127874 (Smarty_Internal_Template $_smarty_tpl)
 </p>
                     <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                     <a href="inicio" class="btn btn-danger">Volver</a>
+                </div>
             </div>
         </div>
     </div>

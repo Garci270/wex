@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-29 22:23:13
+/* Smarty version 3.1.39, created on 2021-09-30 14:14:31
   from 'C:\xampp\htdocs\tpeespecial\templates\slider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6155118171aa06_17926579',
+  'unifunc' => 'content_6155f0776e1687_98910879',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fbfa7b305d2d584802451be3f59d18df59a1270e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\slider.tpl',
-      1 => 1632964992,
+      1 => 1633022070,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6155118171aa06_17926579 (Smarty_Internal_Template $_smarty_tpl) {
-?><div class="container-fluid">
+function content_6155f0776e1687_98910879 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="container-fluid mb-5">
   <div class="row text-center"> 
     <div class="col-12">    
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

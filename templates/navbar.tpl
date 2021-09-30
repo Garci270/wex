@@ -35,7 +35,7 @@
     <div class="m-auto row">
       {foreach from=$categorias item=$item}
         <div class="catBox p-2">
-          <a class="text-muted" href="#"><img src="assets/img/{$item->Descripcion}.png" class="cat-img-nav m-auto" alt="...">{$item->Descripcion}</a>
+          <a class="text-muted" href="Categorias/{$item->idcategoria}"><img src="assets/img/{$item->Descripcion}.png" class="cat-img-nav m-auto" alt="...">{$item->Descripcion}</a>
         </div>
       {/foreach}
     </div>

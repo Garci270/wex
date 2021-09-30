@@ -14,13 +14,18 @@ class View{
     $smarty->assign('productos',$productos);
     $smarty->display('templates/productos.tpl');
    }
-   function mostrarDetalleProducto($productos){
+   function mostrarDetalleProducto($productos, $categorias){
     $smarty = new Smarty();
+    $smarty->assign('categorias',$categorias);
     $smarty->assign('titulo',"WEX");
     $smarty->assign('productos',$productos);
     $smarty->display('templates/productodetalle.tpl');
    }
-   function mostrarCategorias($categorias){
+   function mostrarCategorias($productos, $categorias){
     $smarty = new Smarty();
+    $smarty->assign('titulo',"WEX");
+    $smarty->assign('categorias',$categorias);
+    $smarty->assign('productos',$productos);
+    $smarty->display('templates/productos.tpl');
    }
 }

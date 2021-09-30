@@ -11,7 +11,7 @@
 </head>
 <body>
 {include file="navbar.tpl"}
-    <div class="mt-4">
+    <div class="m-4">
         <div class="card m-auto" style="width: 18rem;">
             <img src="{$productos[0]->url_imagen}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -22,6 +22,7 @@
                     <p class="card-text tamañoPrecio">${$productos[0]->Precio_1}</p>
                     <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                     <a href="inicio" class="btn btn-danger">Volver</a>
+                </div>
             </div>
         </div>
     </div>

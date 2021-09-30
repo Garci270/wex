@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-29 22:12:56
+/* Smarty version 3.1.39, created on 2021-09-30 15:08:11
   from 'C:\xampp\htdocs\tpeespecial\templates\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61550f186afb28_63524527',
+  'unifunc' => 'content_6155fd0b7786d5_67122270',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6472c79b734baf540c3f0efef1a0b4a3005c434' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\navbar.tpl',
-      1 => 1632964374,
+      1 => 1633025288,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61550f186afb28_63524527 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6155fd0b7786d5_67122270 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid bg-orange">
   <div class="col-12 text-white">
     <p class="pt-2">Estas comprando en <strong>WEX</strong> Telefono: (2314552547)</p>
@@ -63,7 +63,8 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
         <div class="catBox p-2">
-          <a class="text-muted" href="#"><img src="assets/img/<?php echo $_smarty_tpl->tpl_vars['item']->value->Descripcion;?>
+          <a class="text-muted" href="Categorias/<?php echo $_smarty_tpl->tpl_vars['item']->value->idcategoria;?>
+"><img src="assets/img/<?php echo $_smarty_tpl->tpl_vars['item']->value->Descripcion;?>
 .png" class="cat-img-nav m-auto" alt="..."><?php echo $_smarty_tpl->tpl_vars['item']->value->Descripcion;?>
 </a>
         </div>

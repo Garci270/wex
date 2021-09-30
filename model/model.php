@@ -7,7 +7,7 @@ class Model{
     function getProductos(){
         //1 abrir la conexion
         //2 ejecutar la consulta SQL(2 subpasos = prepare y execute)
-        $query = $this->db->prepare('SELECT * FROM articulo');
+        $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria ORDER BY a.Descripcion');
         $query->execute();
     
         //3 Obtener los datos de la consulta
@@ -18,10 +18,16 @@ class Model{
         return $productos;
     }
     function getProductosSlider(){
-        $query = $this->db->prepare('SELECT * FROM articulo WHERE idarticulo <= 24');
+        $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria ORDER BY a.Descripcion AND idarticulo <= 24');
         $query->execute();
         $productos = $query->fetchAll(PDO::FETCH_OBJ);
         return $productos;
+    }
+    function getProductoDetalle($id){
+        $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria ORDER BY a.Descripcion AND idarticulo =?');
+        $query->execute(array($id));
+        $producto = $query->fetchAll(PDO::FETCH_OBJ);
+        return $producto;
     }
     function setProducto(){
         //enviar producto

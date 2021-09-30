@@ -1,8 +1,9 @@
 <?php
 require_once "libs/smarty-3.1.39/libs/Smarty.class.php";
 class View{
-   function inicio($productos){
+   function inicio($productos, $categorias){
        $smarty = new Smarty();
+       $smarty->assign('categorias',$categorias);
        $smarty->assign('productos',$productos);
        $smarty->assign('titulo',"WEX");
        $smarty->display('templates/inicio.tpl');
@@ -13,14 +14,13 @@ class View{
     $smarty->assign('productos',$productos);
     $smarty->display('templates/productos.tpl');
    }
-   /* function mostrarProductosSlider($productos){
+   function mostrarDetalleProducto($productos){
     $smarty = new Smarty();
-    print_r($productos);
-    die();
+    $smarty->assign('titulo',"WEX");
     $smarty->assign('productos',$productos);
-    $smarty->display('templates/slider.tpl');
-   } */
-   function mostrarCategorias($categoria){
-    var_dump($categoria);
+    $smarty->display('templates/productodetalle.tpl');
+   }
+   function mostrarCategorias($categorias){
+    $smarty = new Smarty();
    }
 }

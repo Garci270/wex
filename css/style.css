@@ -1,3 +1,31 @@
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(173, 173, 173);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
 .image-producto{
     width: 100px;
 }
@@ -6,7 +34,7 @@
 }
 
 .banner-inicio{
-    width: 60%;
+    width: 100%;
     height: 200px;
 }
 
@@ -50,4 +78,24 @@
 .tamañoPrecio{
     font-size: large;
     color:#c70000 ;
+}
+
+.tamanioPrecaudos{
+    width: 100%;
+    height: 200px;
+}
+.cat-img-nav{
+    width: 40px;
+}
+.cats{
+    border: 1px solid rgb(212, 212, 212);
+    font-size: small;
+}
+
+.cats a{
+    text-decoration: none;
+}
+
+.catBox:hover{
+    background-color: rgb(233, 232, 232);
 }

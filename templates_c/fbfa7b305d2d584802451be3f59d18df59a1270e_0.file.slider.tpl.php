@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-28 23:29:49
+/* Smarty version 3.1.39, created on 2021-09-29 22:23:13
   from 'C:\xampp\htdocs\tpeespecial\templates\slider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6153cf9da91fa0_12155164',
+  'unifunc' => 'content_6155118171aa06_17926579',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fbfa7b305d2d584802451be3f59d18df59a1270e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\slider.tpl',
-      1 => 1632882587,
+      1 => 1632964992,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6155118171aa06_17926579 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid">
   <div class="row text-center"> 
     <div class="col-12">    
@@ -36,6 +36,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-body">
                   <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Marca;?>
 </p>
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->categoria;?>
+</p>
                   <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Descripcion;?>
 </h5>
                 </div>
@@ -43,7 +45,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Precio_1;?>
 </p>
                   <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                  <a href="#" class="btn btn-danger">Detalle</a>
+                  <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->idarticulo;?>
+" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
@@ -52,6 +55,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-body">
                   <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->Marca;?>
 </p>
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->categoria;?>
+</p>
                   <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->Descripcion;?>
 </h5>
                 </div>
@@ -59,7 +64,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->Precio_1;?>
 </p>
                   <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                  <a href="#" class="btn btn-danger">Detalle</a>
+                  <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->idarticulo;?>
+" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
@@ -68,6 +74,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-body">
                   <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->Marca;?>
 </p>
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->categoria;?>
+</p>
                   <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->Descripcion;?>
 </h5>
                 </div>
@@ -75,7 +83,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->Precio_1;?>
 </p>
                   <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                  <a href="#" class="btn btn-danger">Detalle</a>
+                  <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->idarticulo;?>
+" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
@@ -84,6 +93,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-body">
                   <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->Marca;?>
 </p>
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->categoria;?>
+</p>
                   <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->Descripcion;?>
 </h5>
                 </div>
@@ -91,7 +102,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->Precio_1;?>
 </p>
                   <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                  <a href="#" class="btn btn-danger">Detalle</a>
+                  <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->idarticulo;?>
+" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="col-2">
@@ -110,6 +122,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-body">
                   <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->Marca;?>
 </p>
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->categoria;?>
+</p>
                   <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->Descripcion;?>
 </h5>
                 </div>
@@ -117,7 +131,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->Precio_1;?>
 </p>
                   <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                  <a href="#" class="btn btn-danger">Detalle</a>
+                  <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->idarticulo;?>
+" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
@@ -126,6 +141,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-body">
                   <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->Marca;?>
 </p>
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->categoria;?>
+</p>
                   <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->Descripcion;?>
 </h5>
                 </div>
@@ -133,7 +150,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->Precio_1;?>
 </p>
                   <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                  <a href="#" class="btn btn-danger">Detalle</a>
+                  <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->idarticulo;?>
+" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
@@ -142,6 +160,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-body">
                   <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->Marca;?>
 </p>
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->categoria;?>
+</p>
                   <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->Descripcion;?>
 </h5>
                 </div>
@@ -149,7 +169,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->Precio_1;?>
 </p>
                   <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                  <a href="#" class="btn btn-danger">Detalle</a>
+                  <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->idarticulo;?>
+" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
@@ -158,6 +179,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-body">
                   <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->Marca;?>
 </p>
+                  <p class="card-text text-muted"><?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->categoria;?>
+</p>
                   <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->Descripcion;?>
 </h5>
                 </div>
@@ -165,7 +188,8 @@ function content_6153cf9da91fa0_12155164 (Smarty_Internal_Template $_smarty_tpl)
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->Precio_1;?>
 </p>
                   <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                  <a href="#" class="btn btn-danger">Detalle</a>
+                  <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->idarticulo;?>
+" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
             </div>

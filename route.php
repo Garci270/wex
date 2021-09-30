@@ -24,7 +24,8 @@ switch($params[0]){
     case 'Categorias': 
         $controller->mostrarCategorias(); 
         break;
-    case '': 
+    case 'detalle':
+        $controller->mostrarProducto($params[1]); 
         break;
     /* case 'showactualizarmateria': 
         change($params[1]); 

@@ -10,17 +10,19 @@ class Controller{
     }
     function inicio(){
         $productos = $this->model->getProductosSlider();
-        $this->view->inicio($productos);
+        $categorias = $this->model->getCategorias();
+        $this->view->inicio($productos,$categorias);
     }
     function mostrarProductos(){
         $productos = $this->model->getProductos();
         $this->view->mostrarProductos($productos);
     }
-   /*  function mostrarProductosSlider(){
-        $this->view->mostrarProductosSlider($productos);
-    } */
+    function mostrarProducto($id){
+        $producto = $this->model->getProductoDetalle($id);
+        $this->view->mostrarDetalleProducto($producto);
+    }
     function mostrarCategorias(){
-        $categorias = $this->model->getCategorias();
-        $this->view->mostrarCategorias($categorias);
+        /* $categorias = $this->model->getCategorias();
+        $this->view->mostrarCategoriasNav($categorias); */
     }
 }

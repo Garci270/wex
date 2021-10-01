@@ -5,6 +5,7 @@ class UsuarioView{
     function ingresar($error = ""){
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
+        $smarty->assign('bandera',true);
         /* $this->smarty->assign('error', $error);  */
         $smarty->display('templates/ingresar.tpl');
     }

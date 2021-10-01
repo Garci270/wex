@@ -5,6 +5,7 @@ class View{
        $smarty = new Smarty();
        $smarty->assign('categorias',$categorias);
        $smarty->assign('productos',$productos);
+       $smarty->assign('bandera',false);
        $smarty->assign('titulo',"WEX");
        $smarty->display('templates/inicio.tpl');
     }
@@ -13,6 +14,7 @@ class View{
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
         $smarty->assign('productos',$productos);
+        $smarty->assign('bandera',false);
         $smarty->display('templates/productos.tpl');
     }
     
@@ -21,6 +23,7 @@ class View{
         $smarty->assign('categorias',$categorias);
         $smarty->assign('titulo',"WEX");
         $smarty->assign('productos',$productos);
+        $smarty->assign('bandera',false);
         $smarty->display('templates/productodetalle.tpl');
     }
    
@@ -29,12 +32,14 @@ class View{
         $smarty->assign('titulo',"WEX");
         $smarty->assign('categorias',$categorias);
         $smarty->assign('productos',$productos);
+        $smarty->assign('bandera',false);
         $smarty->display('templates/productos.tpl');
     }
 
     function mostrarRegistrarse(){
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
+        $smarty->assign('bandera',true);
         $smarty->display('templates/registro.tpl');
     }
 }

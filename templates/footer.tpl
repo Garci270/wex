@@ -1,4 +1,6 @@
-<div class="container-fluid bg-orange foot">
+<div class="container-fluid bg-orange {if $bandera}
+    foot
+{/if}">
     <div class="row">
         <hr class="text-white bg-orange">
     </div>

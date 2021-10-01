@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-30 23:14:32
+/* Smarty version 3.1.39, created on 2021-09-30 23:21:27
   from 'C:\xampp\htdocs\tpeespecial\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61566f08544569_24063576',
+  'unifunc' => 'content_615670a72c8ae2_31581435',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ded21d50eae84a6d5149cae8e3992512cb07bfce' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\footer.tpl',
-      1 => 1633054469,
+      1 => 1633054838,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61566f08544569_24063576 (Smarty_Internal_Template $_smarty_tpl) {
-?><div class="container-fluid bg-orange foot">
+function content_615670a72c8ae2_31581435 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="container-fluid bg-orange <?php if ($_smarty_tpl->tpl_vars['bandera']->value) {?>
+    foot
+<?php }?>">
     <div class="row">
         <hr class="text-white bg-orange">
     </div>

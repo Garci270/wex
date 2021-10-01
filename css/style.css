@@ -99,3 +99,17 @@ body::-webkit-scrollbar-track {
 .catBox:hover{
     background-color: rgb(233, 232, 232);
 }
+
+.tamanioIngresar{
+    width: 70%;
+}
+
+.tamanioImgIngresar{
+    width: 17%;
+}
+
+.foot{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }

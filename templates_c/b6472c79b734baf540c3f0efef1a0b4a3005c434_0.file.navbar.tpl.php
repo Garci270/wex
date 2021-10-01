@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-30 15:08:11
+/* Smarty version 3.1.39, created on 2021-09-30 21:57:53
   from 'C:\xampp\htdocs\tpeespecial\templates\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6155fd0b7786d5_67122270',
+  'unifunc' => 'content_61565d114141e9_49082096',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6472c79b734baf540c3f0efef1a0b4a3005c434' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\navbar.tpl',
-      1 => 1633025288,
+      1 => 1633049282,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6155fd0b7786d5_67122270 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61565d114141e9_49082096 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid bg-orange">
   <div class="col-12 text-white">
     <p class="pt-2">Estas comprando en <strong>WEX</strong> Telefono: (2314552547)</p>
@@ -41,8 +41,8 @@ function content_6155fd0b7786d5_67122270 (Smarty_Internal_Template $_smarty_tpl)
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
                 <ul class="dropdown-menu">
-                <li><a class="dropdown-item " href="#"><i class="fas fa-sign-in-alt m-2"></i>Ingresar</a></li>
-                <li><a class="dropdown-item " href="#"><i class="fas fa-user-plus m-2" aria-hidden="true"></i>Registrarse</a></li>
+                <li><a class="dropdown-item " href="ingresar"><i class="fas fa-sign-in-alt m-2"></i>Ingresar</a></li>
+                <li><a class="dropdown-item " href="registrarse"><i class="fas fa-user-plus m-2" aria-hidden="true"></i>Registrarse</a></li>
                 </ul>
               </li>
               <li class="nav-item">

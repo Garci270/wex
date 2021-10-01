@@ -18,8 +18,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
                 <ul class="dropdown-menu">
-                <li><a class="dropdown-item " href="#"><i class="fas fa-sign-in-alt m-2"></i>Ingresar</a></li>
-                <li><a class="dropdown-item " href="#"><i class="fas fa-user-plus m-2" aria-hidden="true"></i>Registrarse</a></li>
+                <li><a class="dropdown-item " href="ingresar"><i class="fas fa-sign-in-alt m-2"></i>Ingresar</a></li>
+                <li><a class="dropdown-item " href="registrarse"><i class="fas fa-user-plus m-2" aria-hidden="true"></i>Registrarse</a></li>
                 </ul>
               </li>
               <li class="nav-item">

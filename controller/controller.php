@@ -1,14 +1,18 @@
 <?php
 require_once "./model/model.php";
 require_once "./view/view.php";
+require_once "./helper/AuthHelper.php";
 class Controller{
     private $model;
     private $view;
+    private $authHelper;
     function __construct(){
         $this->model = new Model();
         $this->view = new View();
+        $this->authHelper = new AuthHelper();
     }
     function inicio(){
+        /* $this->authHelper->checkearIngreso(); */
         $productos = $this->model->getProductosSlider();
         $categorias = $this->model->getCategorias();
         $this->view->inicio($productos,$categorias);
@@ -26,5 +30,8 @@ class Controller{
         $catP = $this->model->getProductos($id);
         $categorias = $this->model->getCategorias();
         $this->view->mostrarCategorias($catP, $categorias);
+    }
+    function registrarse(){
+        $this->view->mostrarRegistrarse();
     }
 }

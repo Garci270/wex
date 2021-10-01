@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-30 14:13:56
+/* Smarty version 3.1.39, created on 2021-09-30 23:14:32
   from 'C:\xampp\htdocs\tpeespecial\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6155f054ebf5b9_14689375',
+  'unifunc' => 'content_61566f08544569_24063576',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ded21d50eae84a6d5149cae8e3992512cb07bfce' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\footer.tpl',
-      1 => 1633022035,
+      1 => 1633054469,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6155f054ebf5b9_14689375 (Smarty_Internal_Template $_smarty_tpl) {
-?><div class="container-fluid bg-orange">
+function content_61566f08544569_24063576 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="container-fluid bg-orange foot">
     <div class="row">
         <hr class="text-white bg-orange">
     </div>
@@ -33,7 +33,6 @@ function content_6155f054ebf5b9_14689375 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
 </div>
-
 <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"><?php echo '</script'; ?>
 >

@@ -1,5 +1,6 @@
 <?php
 require_once "controller/controller.php";
+require_once "controller/Usercontroller.php";
 
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -12,6 +13,7 @@ if (!empty($_GET['action'])) {
 
 $params = explode('/', $action);
 $controller = new Controller();
+$userController = new UserController();
 
 switch($params[0]){
     case 'inicio': 
@@ -31,6 +33,21 @@ switch($params[0]){
         }
     case 'detalle':
         $controller->mostrarProducto($params[1]); 
+        break;
+    case 'ingresar':
+        $userController->ingresar();
+        break;
+    case 'cerrar': 
+        $userController->salir(); 
+        break;
+    case 'verificarIngreso': 
+        $userController->getUsuario(); 
+        break;
+    case 'registrarse': 
+        $controller->registrarse(); 
+        break;
+    case 'registro': 
+        $userController->setUsuario(); 
         break;
     default: 
         echo('404 Page not found'); 

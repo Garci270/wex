@@ -16,7 +16,7 @@
     </div>
     <div class="card tamanioIngresar m-auto">
         <div class="m-5">
-            <form action="ingreso" method="POST">  
+            <form action="inicioUsuario" method="POST">  
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" placeholder="Escribe tu email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -29,6 +29,9 @@
                 <button type="submit" class="col-2 btn btn-danger">Ingresar</button>
             </form>
         </div>
+        {if $error !== null}
+            <h4 class="text-succes">{$erorr}</h4>
+        {/if}
     </div>
 </div>
 {include file="footer.tpl"}

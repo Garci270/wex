@@ -1,6 +1,5 @@
 <?php
 class AuthHelper{
-
     function __construct(){
     }
     function checkearIngreso(){

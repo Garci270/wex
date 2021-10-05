@@ -20,6 +20,9 @@ switch($params[0]){
         $controller->inicio();
         /* $controller->mostrarProductosSlider(); */
         break;
+    case 'inicioUsuario': 
+        $userController->inicio();
+        break;
     case 'Productos':
         $controller->mostrarProductos(); 
         break;
@@ -49,6 +52,12 @@ switch($params[0]){
     case 'registro': 
         $userController->setUsuario(); 
         break;
+    case 'editarProductos':
+        $userController->editarProducto($params[1]); 
+        break; 
+    case 'editarCategorias':
+        $userController->editarCategoria($params[1]); 
+        break;       
     default: 
         echo('404 Page not found'); 
         break;

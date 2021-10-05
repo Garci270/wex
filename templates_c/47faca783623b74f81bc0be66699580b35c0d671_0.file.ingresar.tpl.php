@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-30 23:07:13
+/* Smarty version 3.1.39, created on 2021-10-04 19:17:31
   from 'C:\xampp\htdocs\tpeespecial\templates\ingresar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61566d511d2ed8_92953419',
+  'unifunc' => 'content_615b7d7b922267_66415260',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '47faca783623b74f81bc0be66699580b35c0d671' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\ingresar.tpl',
-      1 => 1633053626,
+      1 => 1633385848,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_61566d511d2ed8_92953419 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615b7d7b922267_66415260 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +42,7 @@ function content_61566d511d2ed8_92953419 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <div class="card tamanioIngresar m-auto">
         <div class="m-5">
-            <form action="ingreso" method="POST">  
+            <form action="inicioUsuario" method="POST">  
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" placeholder="Escribe tu email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -55,6 +55,10 @@ function content_61566d511d2ed8_92953419 (Smarty_Internal_Template $_smarty_tpl)
                 <button type="submit" class="col-2 btn btn-danger">Ingresar</button>
             </form>
         </div>
+        <?php if ($_smarty_tpl->tpl_vars['error']->value != null) {?>
+            <h4 class="text-succes"><?php echo $_smarty_tpl->tpl_vars['erorr']->value;?>
+</h4>
+        <?php }?>
     </div>
 </div>
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

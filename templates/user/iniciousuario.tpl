@@ -14,17 +14,13 @@
 <div class="container-fluid">
     <div class="col-12 p-4">
         <div class="row">
-            <div class="col-7">
-                <img src="assets/img/productos_supermercado.jpg" class="banner-inicio" alt="">
-            </div>
-            <div class="col-4">
-                <div class="card">
-                    <img src="assets/img/precaudos.png" class="tamanioPrecaudos" alt="">
-                </div>
+            <div class="m-auto">
+                <a class="btn btn-success" href="agregarProd">Agregar Producto</a>
+                <a class="btn btn-success" href="agregarCat">Agregar Categoria</a>
             </div>
         </div>
     </div>
-    <div class="bg-grey m-2 mb-5">
+    {* <div class="bg-grey m-2 mb-5">
         <div class="container-fluid">
             <div class="row px-4 py-3 text-secondary">
                 <div class="col-md-3 text-center">
@@ -53,7 +49,7 @@
                 </div>    
             </div>
         </div>
-    </div>
+    </div> *}
    {*  {include file="slider.tpl"} *}
 </div>
 {include file="templates/footer.tpl"}

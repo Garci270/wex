@@ -13,7 +13,7 @@ class Controller{
     }
     function inicio(){
         $productos = $this->model->getProductosSlider();
-        $categorias = $this->model->getCategorias();
+        $categorias = $this->model->getCategorias(0);
         $this->view->inicio($productos,$categorias);
     }
     function mostrarProductos(){
@@ -21,13 +21,13 @@ class Controller{
         $this->view->mostrarProductos($productos);
     }
     function mostrarProducto($id){
-        $categorias = $this->model->getCategorias();
+        $categorias = $this->model->getCategorias(0);
         $producto = $this->model->getProductoDetalle($id);
         $this->view->mostrarDetalleProducto($producto, $categorias);
     }
     function mostrarItemCategorias($id){
         $catP = $this->model->getProductosCat($id);
-        $categorias = $this->model->getCategorias();
+        $categorias = $this->model->getCategorias(0);
         $this->view->mostrarCategorias($catP, $categorias);
     }
     function registrarse(){

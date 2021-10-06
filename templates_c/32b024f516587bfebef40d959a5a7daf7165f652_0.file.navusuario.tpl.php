@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-04 20:56:37
+/* Smarty version 3.1.39, created on 2021-10-06 13:49:13
   from 'C:\xampp\htdocs\tpeespecial\templates\user\navusuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615b94b5e46e90_14312896',
+  'unifunc' => 'content_615dd389a781f1_86562488',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32b024f516587bfebef40d959a5a7daf7165f652' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\navusuario.tpl',
-      1 => 1633391791,
+      1 => 1633538951,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_615b94b5e46e90_14312896 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615dd389a781f1_86562488 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid bg-orange">
   <div class="col-12 text-white">
     <p class="pt-2">Estas editando en <strong>WEX</strong> Telefono: (2314552547)</p>
@@ -28,17 +28,17 @@ function content_615b94b5e46e90_14312896 (Smarty_Internal_Template $_smarty_tpl)
     <hr class="text-white bg-orange">
   </div>
   <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="inicio"><img src="./assets/img/logo_transparent.png" alt="" class="logoNav"></a>
+      <a class="navbar-brand" href="inicioUsuario"><img src="./assets/img/logo_transparent.png" alt="" class="logoNav"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-white" href="editarCategorias/0">Editar Categorias</a>
+            <a class="nav-link text-white" href="editarCategorias/0">Categorias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="editarProductos/0">Editar Productos</a>
+            <a class="nav-link text-white" href="editarProductos/0">Productos</a>
           </li>
           <div class="disp">
               <li class="nav-item dropdown">

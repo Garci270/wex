@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-05 18:51:51
+/* Smarty version 3.1.39, created on 2021-10-06 12:47:16
   from 'C:\xampp\htdocs\tpeespecial\templates\ingresar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615cc8f7613529_59930156',
+  'unifunc' => 'content_615dc504f2db83_79286011',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '47faca783623b74f81bc0be66699580b35c0d671' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\ingresar.tpl',
-      1 => 1633470700,
+      1 => 1633535196,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_615cc8f7613529_59930156 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615dc504f2db83_79286011 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +42,7 @@ function content_615cc8f7613529_59930156 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <div class="card tamanioIngresar m-auto">
         <div class="m-5">
-            <form action="inicioUsuario" method="POST">  
+            <form action="verificarIngreso" method="POST">  
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" placeholder="Escribe tu email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">

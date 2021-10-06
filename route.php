@@ -52,7 +52,31 @@ switch($params[0]){
         break; 
     case 'editarCategorias':
         $userController->editarCategoria($params[1]); 
-        break;       
+        break; 
+    case 'editarCategoria':
+        $userController->actualizarCategoria($params[1]); 
+        break; 
+    case 'eliminarProd':
+        $userController->eliminarProducto($params[1]);
+        break;
+    case 'actualizarProd':
+        $userController->actualizarProducto($params[1]);
+        break;   
+    case 'eliminarCat':
+        $userController->eliminarCategoria($params[1]);
+        break;
+    case 'agregarProd':
+        $userController->agregarProd();
+        break;
+    case 'agregarProducto':
+        $userController->agregarProducto();
+        break;   
+    case 'agregarCat':
+        $userController->agregarCat();
+        break; 
+    case 'agregarCategoria':
+        $userController->agregarCategoria();
+        break;      
     default: 
         echo('404 Page not found'); 
         break;

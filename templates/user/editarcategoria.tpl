@@ -30,18 +30,20 @@
 </div>
 <div class="m-4">
 {if $categoria}
-    <div class="card m-auto" style="width: 18rem;">
-        <img src="{$categoria->url_imagen}" class="card-img-top" alt="...">
-        <input type="text" placeholder="Escribe la url" class="form-control">
-        <div class="card-body">
-            <h5 class="card-title">{$categoria->Descripcion}</h5>
-            <input type="text" class="form-control" placeholder="Escribe el Titulo">
-            <div class="card-footer">
-                <a href="eliminar" class="btn btn-danger">Eliminar</a>
-                <a href="editar" class="btn btn-danger">Editar</a>
+    <form action="editarCategoria/{$categoria->idcategoria}" method="POST">  
+        <div class="card m-auto" style="width: 18rem;">
+            <img src="{$categoria->url_imagen}" class="card-img-top" alt="..." >
+            <input type="text" name="imagen" value="{$categoria->url_imagen}" class="form-control" readonly>
+            <div class="card-body">
+                <h5 class="card-title">{$categoria->Descripcion}</h5>
+                <input type="text" name="descripcion" class="form-control" value="{$categoria->Descripcion}">
+                <div class="card-footer">
+                    <a href="eliminarCat/{$categoria->idcategoria}" class="btn btn-danger">Eliminar</a>
+                    <button type="submit" class="btn btn-danger">Editar</a>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 {/if}
 
 </div>

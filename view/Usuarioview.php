@@ -9,10 +9,10 @@ class UsuarioView{
         $smarty->assign('error', $error);
         $smarty->display('templates/ingresar.tpl');
     }
-    
-    /* function inicio(){
-        header("Location: ".BASE_URL."inicio");
-    } */
+
+    function inicio(){
+        header("Location: ".BASE_URL."inicioUsuario");
+    } 
     function inicioUsuario(){
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
@@ -35,6 +35,19 @@ class UsuarioView{
         $smarty->assign('categoria',$categoria);
         $smarty->assign('bandera',false);
         $smarty->display('templates/user/editarcategoria.tpl');
+    }
+    function agregarProducto($categorias){
+        $smarty = new Smarty();
+        $smarty->assign('categorias',$categorias);
+        $smarty->assign('titulo',"WEX");
+        $smarty->assign('bandera',false);
+        $smarty->display('templates/user/agregarproducto.tpl');
+    }
+    function agregarCategoria(){
+        $smarty = new Smarty();
+        $smarty->assign('titulo',"WEX");
+        $smarty->assign('bandera',true);
+        $smarty->display('templates/user/agregarcategoria.tpl');
     }
 
 }

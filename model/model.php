@@ -38,9 +38,13 @@ class Model{
         $producto = $query->fetchAll(PDO::FETCH_OBJ);
         return $producto;
     }
-    function getCategorias(){
-        $query = $this->db->prepare('SELECT * FROM categoria');
-        $query->execute();
+    function getCategorias($id){
+        if($id>0){
+            $query = $this->db->prepare('SELECT * FROM categoria WHERE idcategoria=?');
+        }else{
+            $query = $this->db->prepare('SELECT * FROM categoria');
+        }
+        $query->execute(array($id));
         $categoria = $query->fetchAll(PDO::FETCH_OBJ);
         return $categoria;
     }

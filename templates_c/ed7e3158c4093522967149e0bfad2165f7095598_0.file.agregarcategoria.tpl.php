@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-06 14:12:52
-  from 'C:\xampp\htdocs\tpeespecial\templates\user\iniciousuario.tpl' */
+/* Smarty version 3.1.39, created on 2021-10-06 17:09:47
+  from 'C:\xampp\htdocs\tpeespecial\templates\user\agregarcategoria.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615dd91494a6f6_40380750',
+  'unifunc' => 'content_615e028b974e30_46516532',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '45cec60ed8cb0df0ab8103819a67b3ac2ba3ec44' => 
+    'ed7e3158c4093522967149e0bfad2165f7095598' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\iniciousuario.tpl',
-      1 => 1633540369,
+      0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\agregarcategoria.tpl',
+      1 => 1633550984,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_615dd91494a6f6_40380750 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615e028b974e30_46516532 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,16 +39,23 @@ function content_615dd91494a6f6_40380750 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 <?php $_smarty_tpl->_subTemplateRender("file:templates/user/navusuario.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<div class="container-fluid">
-    <div class="col-12 p-4">
-        <div class="row">
-            <div class="m-auto">
-                <a class="btn btn-success" href="agregarProd">Agregar Producto</a>
-                <a class="btn btn-success" href="agregarCat">Agregar Categoria</a>
+<div class="m-4">
+    <form action="agregarCategoria" method="POST">  
+        <div class="card m-auto" style="width: 18rem;">
+            <h5 class="card-title">Imagen</h5>
+            <input type="text" name="imagen" placeholder="Escribe una url"  class="form-control">
+            <div class="card-body">
+                <h5 class="card-title">Categoria</h5>
+                <input type="text" name="descripcion" class="form-control" placeholder="Escribe el Nombre">
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-danger">Agregar</button>
+                    <a href="inicioUsuario" class="btn btn-danger">Cancelar</a>
+                </div>
             </div>
         </div>
-    </div>
-       </div>
+    </form>
+</div>
+
 <?php $_smarty_tpl->_subTemplateRender("file:templates/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }

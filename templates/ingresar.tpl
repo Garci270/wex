@@ -16,7 +16,7 @@
     </div>
     <div class="card tamanioIngresar m-auto">
         <div class="m-5">
-            <form action="inicioUsuario" method="POST">  
+            <form action="verificarIngreso" method="POST">  
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" placeholder="Escribe tu email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">

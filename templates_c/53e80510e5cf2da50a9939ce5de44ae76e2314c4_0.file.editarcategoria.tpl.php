@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-04 21:00:15
+/* Smarty version 3.1.39, created on 2021-10-06 17:26:14
   from 'C:\xampp\htdocs\tpeespecial\templates\user\editarcategoria.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615b958f19fd67_27547452',
+  'unifunc' => 'content_615e06662c7964_20386528',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53e80510e5cf2da50a9939ce5de44ae76e2314c4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\editarcategoria.tpl',
-      1 => 1633392012,
+      1 => 1633551952,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_615b958f19fd67_27547452 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615e06662c7964_20386528 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,20 +67,26 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 <div class="m-4">
 <?php if ($_smarty_tpl->tpl_vars['categoria']->value) {?>
-    <div class="card m-auto" style="width: 18rem;">
-        <img src="<?php echo $_smarty_tpl->tpl_vars['categoria']->value->url_imagen;?>
-" class="card-img-top" alt="...">
-        <input type="text" placeholder="Escribe la url" class="form-control">
-        <div class="card-body">
-            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['categoria']->value->Descripcion;?>
+    <form action="editarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->idcategoria;?>
+" method="POST">  
+        <div class="card m-auto" style="width: 18rem;">
+            <img src="<?php echo $_smarty_tpl->tpl_vars['categoria']->value->url_imagen;?>
+" class="card-img-top" alt="..." >
+            <input type="text" name="imagen" value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value->url_imagen;?>
+" class="form-control" readonly>
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['categoria']->value->Descripcion;?>
 </h5>
-            <input type="text" class="form-control" placeholder="Escribe el Titulo">
-            <div class="card-footer">
-                <a href="eliminar" class="btn btn-danger">Eliminar</a>
-                <a href="editar" class="btn btn-danger">Editar</a>
+                <input type="text" name="descripcion" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value->Descripcion;?>
+">
+                <div class="card-footer">
+                    <a href="eliminarCat/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->idcategoria;?>
+" class="btn btn-danger">Eliminar</a>
+                    <button type="submit" class="btn btn-danger">Editar</a>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 <?php }?>
 
 </div>

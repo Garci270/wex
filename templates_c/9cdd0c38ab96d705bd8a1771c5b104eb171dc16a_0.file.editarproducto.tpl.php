@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-05 19:07:35
+/* Smarty version 3.1.39, created on 2021-10-06 17:42:37
   from 'C:\xampp\htdocs\tpeespecial\templates\user\editarproducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615ccca7e092f4_61888663',
+  'unifunc' => 'content_615e0a3d6ded89_77355456',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9cdd0c38ab96d705bd8a1771c5b104eb171dc16a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\editarproducto.tpl',
-      1 => 1633391946,
+      1 => 1633552877,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_615ccca7e092f4_61888663 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615e0a3d6ded89_77355456 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,41 +67,56 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 <div class="m-4">
 <?php if ($_smarty_tpl->tpl_vars['producto']->value) {?>
-    <div class="card m-auto" style="width: 18rem;">
-        <img src="<?php echo $_smarty_tpl->tpl_vars['producto']->value->url_imagen;?>
+    <form action="actualizarProd/<?php echo $_smarty_tpl->tpl_vars['producto']->value->idarticulo;?>
+" method="POST">  
+        <div class="card m-auto" style="width: 18rem;">
+            <img src="<?php echo $_smarty_tpl->tpl_vars['producto']->value->url_imagen;?>
 " class="card-img-top" alt="...">
-        <input type="text" placeholder="Escribe la url" class="form-control">
-        <div class="card-body">
-            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['producto']->value->categoria;?>
+            <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['producto']->value->url_imagen;?>
+"  class="form-control" readonly>
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['producto']->value->categoria;?>
 </h5>
-            <select class="custom-select mb-2">
-            <?php
+                <select class="custom-select mb-2" name="categoria">
+                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categorias']->value, 'categoria');
 $_smarty_tpl->tpl_vars['categoria']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
 $_smarty_tpl->tpl_vars['categoria']->do_else = false;
 ?>
-                <option selected><?php echo $_smarty_tpl->tpl_vars['categoria']->value->Descripcion;?>
-</option>
-            <?php
+                    <?php if ($_smarty_tpl->tpl_vars['producto']->value->idcategoria == $_smarty_tpl->tpl_vars['categoria']->value->idcategoria) {?>
+                        <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value->idcategoria;?>
+" selected><?php echo $_smarty_tpl->tpl_vars['categoria']->value->Descripcion;?>
+</option>                    
+                    <?php } else { ?>
+                        <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value->idcategoria;?>
+"><?php echo $_smarty_tpl->tpl_vars['categoria']->value->Descripcion;?>
+</option>                                        
+                    <?php }?>
+                <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-            </select>
-            <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['producto']->value->Marca;?>
+                </select>
+                <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['producto']->value->Marca;?>
 </h5>
-            <input type="text" class="form-control" placeholder="Escribe la Marca">
-            <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['producto']->value->Descripcion;?>
+                <input type="text" name="marca" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['producto']->value->Marca;?>
+">
+                <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['producto']->value->Descripcion;?>
 </p>
-            <input type="text" class="form-control" placeholder="Escribe el Detalle">
-            <div class="card-footer">
-            <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['producto']->value->Precio_1;?>
+                <input type="text" name="descripcion" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['producto']->value->Descripcion;?>
+">
+                <div class="card-footer">
+                <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['producto']->value->Precio_1;?>
 </p>
-            <input type="number" class="form-control" placeholder="Escribe el Precio aqui">
-                <a href="eliminar" class="btn btn-danger">Eliminar</a>
-                <a href="editar" class="btn btn-danger">Editar</a>
+                <input type="number" name="precio" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['producto']->value->Precio_1;?>
+">
+                    <a href="eliminarProd/<?php echo $_smarty_tpl->tpl_vars['producto']->value->idarticulo;?>
+" class="btn btn-danger">Eliminar</a>
+                    <button type="submit" class="btn btn-danger">Editar</a>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 <?php }?>
 
 </div>

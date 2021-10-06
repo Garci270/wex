@@ -30,28 +30,34 @@
 </div>
 <div class="m-4">
 {if $producto}
-    <div class="card m-auto" style="width: 18rem;">
-        <img src="{$producto->url_imagen}" class="card-img-top" alt="...">
-        <input type="text" placeholder="Escribe la url" class="form-control">
-        <div class="card-body">
-            <h5 class="card-title">{$producto->categoria}</h5>
-            <select class="custom-select mb-2">
-            {foreach from=$categorias item=$categoria}
-                <option selected>{$categoria->Descripcion}</option>
-            {/foreach}
-            </select>
-            <h5 class="card-title">{$producto->Marca}</h5>
-            <input type="text" class="form-control" placeholder="Escribe la Marca">
-            <p class="card-text">{$producto->Descripcion}</p>
-            <input type="text" class="form-control" placeholder="Escribe el Detalle">
-            <div class="card-footer">
-            <p class="card-text tamañoPrecio">${$producto->Precio_1}</p>
-            <input type="number" class="form-control" placeholder="Escribe el Precio aqui">
-                <a href="eliminar" class="btn btn-danger">Eliminar</a>
-                <a href="editar" class="btn btn-danger">Editar</a>
+    <form action="actualizarProd/{$producto->idarticulo}" method="POST">  
+        <div class="card m-auto" style="width: 18rem;">
+            <img src="{$producto->url_imagen}" class="card-img-top" alt="...">
+            <input type="text" value="{$producto->url_imagen}"  class="form-control" readonly>
+            <div class="card-body">
+                <h5 class="card-title">{$producto->categoria}</h5>
+                <select class="custom-select mb-2" name="categoria">
+                {foreach from=$categorias item=$categoria}
+                    {if $producto->idcategoria == $categoria->idcategoria}
+                        <option value="{$categoria->idcategoria}" selected>{$categoria->Descripcion}</option>                    
+                    {else}
+                        <option value="{$categoria->idcategoria}">{$categoria->Descripcion}</option>                                        
+                    {/if}
+                {/foreach}
+                </select>
+                <h5 class="card-title">{$producto->Marca}</h5>
+                <input type="text" name="marca" class="form-control" value="{$producto->Marca}">
+                <p class="card-text">{$producto->Descripcion}</p>
+                <input type="text" name="descripcion" class="form-control" value="{$producto->Descripcion}">
+                <div class="card-footer">
+                <p class="card-text tamañoPrecio">${$producto->Precio_1}</p>
+                <input type="number" name="precio" class="form-control" value="{$producto->Precio_1}">
+                    <a href="eliminarProd/{$producto->idarticulo}" class="btn btn-danger">Eliminar</a>
+                    <button type="submit" class="btn btn-danger">Editar</a>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 {/if}
 
 </div>

@@ -1,6 +1,7 @@
 <?php
-require_once "controller/controller.php";
+require_once "controller/Productoscontroller.php";
 require_once "controller/Usercontroller.php";
+require_once "controller/Categoriascontroller.php";
 
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -12,25 +13,26 @@ if (!empty($_GET['action'])) {
 }
 
 $params = explode('/', $action);
-$controller = new Controller();
+$productosController = new ProductosController();
 $userController = new UserController();
+$categoriasController = new CategoriasController();
 
 switch($params[0]){
     case 'inicio': 
-        $controller->inicio();
+        $productosController->inicio();
         /* $controller->mostrarProductosSlider(); */
         break;
     case 'inicioUsuario': 
         $userController->inicio();
         break;
     case 'Productos':
-        $controller->mostrarProductos(); 
+        $productosController->mostrarProductos(); 
         break;
     case 'Categorias': 
-            $controller->mostrarItemCategorias($params[1]); 
-            break;
+        $categoriasController->mostrarItemCategorias($params[1]); 
+        break;
     case 'detalle':
-        $controller->mostrarProducto($params[1]); 
+        $productosController->mostrarProducto($params[1]); 
         break;
     case 'ingresar':
         $userController->ingresar();
@@ -42,40 +44,40 @@ switch($params[0]){
         $userController->getUsuario(); 
         break;
     case 'registrarse': 
-        $controller->registrarse(); 
+        $userController->registrarse(); 
         break;
     case 'registro': 
         $userController->setUsuario(); 
         break;
     case 'editarProductos':
-        $userController->editarProducto($params[1]); 
+        $productosController->editarProducto($params[1]); 
         break; 
     case 'editarCategorias':
-        $userController->editarCategoria($params[1]); 
+        $categoriasController->editarCategoria($params[1]); 
         break; 
     case 'editarCategoria':
-        $userController->actualizarCategoria($params[1]); 
+        $categoriasController->actualizarCategoria($params[1]); 
         break; 
     case 'eliminarProd':
-        $userController->eliminarProducto($params[1]);
+        $productosController->eliminarProducto($params[1]);
         break;
     case 'actualizarProd':
-        $userController->actualizarProducto($params[1]);
+        $productosController->actualizarProducto($params[1]);
         break;   
     case 'eliminarCat':
-        $userController->eliminarCategoria($params[1]);
+        $categoriasController->eliminarCategoria($params[1]);
         break;
     case 'agregarProd':
-        $userController->agregarProd();
+        $productosController->agregarProd();
         break;
     case 'agregarProducto':
-        $userController->agregarProducto();
+        $productosController->agregarProducto();
         break;   
     case 'agregarCat':
-        $userController->agregarCat();
+        $categoriasController->agregarCat();
         break; 
     case 'agregarCategoria':
-        $userController->agregarCategoria();
+        $categoriasController->agregarCategoria();
         break;      
     default: 
         echo('404 Page not found'); 

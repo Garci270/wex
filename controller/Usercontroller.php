@@ -1,19 +1,31 @@
 <?php
-require_once "./model/model.php";
 require_once "./model/Usermodel.php";
-require_once "./view/view.php";
 require_once "./view/Usuarioview.php";
+require_once "./model/Productosmodel.php";
+require_once "./view/Productosview.php";
+require_once "./model/Categoriasmodel.php";
+require_once "./view/Categoriasview.php";
+require_once "./helper/AuthHelper.php";
 
 class UserController{
     private $userModel;
-    private $model;
+    private $productoModel;
+    private $categoriaModel;
+    private $productoView;
+    private $categoriaView;
     private $userView;
     private $authHelper;
     function __construct(){
-        $this->authHelper = new AuthHelper();
         $this->userModel = new UserModel();
-        $this->model = new Model();
+        $this->productoModel = new ProductosModel();
+        $this->categoriaModel = new CategoriasModel();
+        $this->productoView = new ProductosView();
+        $this->categoriaView = new CategoriasView();
         $this->userView = new UsuarioView();
+        $this->authHelper = new AuthHelper();
+    }
+    function registrarse(){
+        $this->userView->mostrarRegistrarse();
     }
     function salir(){
         $erorr = "Te deslogueaste!";
@@ -40,7 +52,7 @@ class UserController{
         }
     }
 
-    function editarProducto($id){
+    /* function editarProducto($id){
         $this->authHelper->checkearIngreso();
         $categorias = $this->model->getCategorias(0);
         $productos = $this->model->getProductos(0);
@@ -55,9 +67,9 @@ class UserController{
         $this->authHelper->checkearIngreso();
         $categorias = $this->model->getCategorias(0);
         $this->userView->agregarProducto($categorias);
-    }
+    } */
 
-    function editarCategoria($id){
+    /* function editarCategoria($id){
         $this->authHelper->checkearIngreso();
         $categorias = $this->model->getCategorias(0);
         $categoria = false;
@@ -65,12 +77,12 @@ class UserController{
             $categoria = $this->model->getCategorias($id)[0];
         }
         $this->userView->editarCategoria($categorias, $categoria);
-    }
+    } */
 
-    function agregarCat(){
+    /* function agregarCat(){
         $this->authHelper->checkearIngreso();
         $this->userView->agregarCategoria();
-    }
+    } */
 
 
     function getUsuario(){
@@ -88,13 +100,13 @@ class UserController{
         }
     }
 
-    function eliminarProducto($id){
+    /* function eliminarProducto($id){
         $this->authHelper->checkearIngreso();
         $this->userModel->borrarProducto($id);
         $this->userView->inicio();
-    }
+    } */
 
-    function actualizarProducto($id){
+    /* function actualizarProducto($id){
         $this->authHelper->checkearIngreso();
         if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])){
             $categoria = $_POST['categoria'];
@@ -117,9 +129,9 @@ class UserController{
             $this->userModel->agregarProducto($descripcion, $precio,$marca, $categoria,$imagen);
             $this->userView->inicio();
         }
-    }
+    } */
 
-    function eliminarCategoria($id){
+    /* function eliminarCategoria($id){
         $this->authHelper->checkearIngreso();
         $this->userModel->borrarCategoria($id);
         $this->userView->inicio();
@@ -143,6 +155,6 @@ class UserController{
             $this->userModel->agregarCategoria($descripcion,$urlImagen);
             $this->userView->inicio();
         }
-    }
+    } */
 }
 

@@ -14,7 +14,7 @@ class UserModel{
         $user = $query->fetch(PDO::FETCH_OBJ);
         return $user;
     }
-    function setProducto(){
+    /* function setProducto(){
         //enviar producto
         $query = $this->db->prepare("INSERT INTO articulo");
         $query->execute(array()); 
@@ -36,9 +36,9 @@ class UserModel{
         //actualizar producto con id
         $sentencia = $this->db->prepare("INSERT INTO articulo (Descripcion, Precio_1, url_imagen, Marca, idcategoria) VALUES(?,?,?,?,?)");
         $sentencia->execute(array($descripcion,$precio,$imagen,$marca,$categoria));
-    }
+    } */
 
-    function borrarCategoria($id){
+    /* function borrarCategoria($id){
         //borrar producto con id
         $sentencia = $this->db->prepare("DELETE  FROM categoria WHERE idcategoria=?");
         $sentencia->execute(array($id));
@@ -52,5 +52,5 @@ class UserModel{
     function agregarCategoria($descripcion, $urlImagen){
         $sentencia = $this->db->prepare("INSERT INTO categoria (Descripcion, url_imagen) VALUES (?,?)");
         $sentencia->execute(array($descripcion, $urlImagen));
-    }
+    } */
 }

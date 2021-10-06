@@ -19,7 +19,7 @@ class UsuarioView{
         $smarty->assign('bandera',true);
         $smarty->display('templates/user/iniciousuario.tpl');
     }
-    function editarProducto($productos, $categorias, $producto){
+    /* function editarProducto($productos, $categorias, $producto){
         $smarty = new Smarty();
         $smarty->assign('categorias',$categorias);
         $smarty->assign('titulo',"WEX");
@@ -27,27 +27,33 @@ class UsuarioView{
         $smarty->assign('producto',$producto);
         $smarty->assign('bandera',false);
         $smarty->display('templates/user/editarproducto.tpl');
-    }
-    function editarCategoria($categorias, $categoria){
+    } */
+    /* function editarCategoria($categorias, $categoria){
         $smarty = new Smarty();
         $smarty->assign('categorias',$categorias);
         $smarty->assign('titulo',"WEX");
         $smarty->assign('categoria',$categoria);
         $smarty->assign('bandera',false);
         $smarty->display('templates/user/editarcategoria.tpl');
-    }
-    function agregarProducto($categorias){
+    } */
+    /* function agregarProducto($categorias){
         $smarty = new Smarty();
         $smarty->assign('categorias',$categorias);
         $smarty->assign('titulo',"WEX");
         $smarty->assign('bandera',false);
         $smarty->display('templates/user/agregarproducto.tpl');
-    }
-    function agregarCategoria(){
+    } */
+    /* function agregarCategoria(){
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
         $smarty->assign('bandera',true);
         $smarty->display('templates/user/agregarcategoria.tpl');
+    } */
+    function mostrarRegistrarse(){
+        $smarty = new Smarty();
+        $smarty->assign('titulo',"WEX");
+        $smarty->assign('bandera',true);
+        $smarty->display('templates/registro.tpl');
     }
 
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-30 14:17:58
+/* Smarty version 3.1.39, created on 2021-10-05 18:43:54
   from 'C:\xampp\htdocs\tpeespecial\templates\productodetalle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6155f146e9cbd4_11249208',
+  'unifunc' => 'content_615cc71a7ada78_80098915',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7cf94d974d4bcb5911148683db6acff571a177b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productodetalle.tpl',
-      1 => 1633022277,
+      1 => 1633470224,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6155f146e9cbd4_11249208 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615cc71a7ada78_80098915 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +54,7 @@ function content_6155f146e9cbd4_11249208 (Smarty_Internal_Template $_smarty_tpl)
                     <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Precio_1;?>
 </p>
                     <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="inicio" class="btn btn-danger">Volver</a>
+                    <a href="inicio" class="btn btn-danger">Inicio</a>
                 </div>
             </div>
         </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-04 20:56:10
+/* Smarty version 3.1.39, created on 2021-10-05 19:07:35
   from 'C:\xampp\htdocs\tpeespecial\templates\user\editarproducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615b949a0c7fc9_46118294',
+  'unifunc' => 'content_615ccca7e092f4_61888663',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9cdd0c38ab96d705bd8a1771c5b104eb171dc16a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\editarproducto.tpl',
-      1 => 1633391357,
+      1 => 1633391946,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_615b949a0c7fc9_46118294 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615ccca7e092f4_61888663 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +46,6 @@ function content_615b949a0c7fc9_46118294 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="m-auto">
                     <select class="custom-select" id="selArticulo">
                     <option value="-1" selected>Seleccione un artículo</option>
-
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productos']->value, 'item');
 $_smarty_tpl->tpl_vars['item']->do_else = true;

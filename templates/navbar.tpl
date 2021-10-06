@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-white" href="Categorias">Categorias</a>
+            <a class="nav-link text-white" href="Categorias/0">Categorias</a>
           </li>
           <div class="disp">
               <li class="nav-item dropdown">

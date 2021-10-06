@@ -21,7 +21,7 @@
                 <div class="card-footer">
                     <p class="card-text tamañoPrecio">${$productos[0]->Precio_1}</p>
                     <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="inicio" class="btn btn-danger">Volver</a>
+                    <a href="inicio" class="btn btn-danger">Inicio</a>
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 <div class="container-fluid mb-5">
   <div class="row text-center"> 
-    <div class="col-12">    
+    <div class="col-12">
+    <h4 class="pb-3">Productos mas Vendidos</h4>
+    <hr>    
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">      
           <div class="carousel-item active col-12">

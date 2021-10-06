@@ -71,5 +71,10 @@ class UserController{
             }
         }
     }
+
+    function eliminarProducto($id){
+        $productos = $this->userModel->borrarProducto($id);
+
+    }
 }
 

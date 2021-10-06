@@ -31,6 +31,8 @@
                     <input type="password" class="form-control" placeholder="Escribe tu contraseña" id="exampleInputPassword1" name="contrasena">
                 </div>
                 <button type="submit" class="col-2 btn btn-danger">Registrarse</button>
+                <a href="ingresar" class="col-2 btn btn-danger">Iniciar Sesion</a>
+                <a href="inicio" class="col-2 btn btn-danger">Inicio</a>
             </form>
         </div>
     </div>

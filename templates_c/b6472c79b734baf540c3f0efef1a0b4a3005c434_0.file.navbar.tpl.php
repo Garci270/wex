@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-30 21:57:53
+/* Smarty version 3.1.39, created on 2021-10-05 18:06:37
   from 'C:\xampp\htdocs\tpeespecial\templates\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61565d114141e9_49082096',
+  'unifunc' => 'content_615cbe5dba3881_33206542',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6472c79b734baf540c3f0efef1a0b4a3005c434' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\navbar.tpl',
-      1 => 1633049282,
+      1 => 1633467989,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61565d114141e9_49082096 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615cbe5dba3881_33206542 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid bg-orange">
   <div class="col-12 text-white">
     <p class="pt-2">Estas comprando en <strong>WEX</strong> Telefono: (2314552547)</p>
@@ -35,7 +35,7 @@ function content_61565d114141e9_49082096 (Smarty_Internal_Template $_smarty_tpl)
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-white" href="Categorias">Categorias</a>
+            <a class="nav-link text-white" href="Categorias/0">Categorias</a>
           </li>
           <div class="disp">
               <li class="nav-item dropdown">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-30 23:18:26
+/* Smarty version 3.1.39, created on 2021-10-05 18:54:35
   from 'C:\xampp\htdocs\tpeespecial\templates\registro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61566ff2e85025_24517098',
+  'unifunc' => 'content_615cc99b14b797_74320089',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '869b437fe72f7c0515a0711a6befb9875709df81' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\registro.tpl',
-      1 => 1633054705,
+      1 => 1633470862,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_61566ff2e85025_24517098 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615cc99b14b797_74320089 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,6 +57,8 @@ function content_61566ff2e85025_24517098 (Smarty_Internal_Template $_smarty_tpl)
                     <input type="password" class="form-control" placeholder="Escribe tu contraseña" id="exampleInputPassword1" name="contrasena">
                 </div>
                 <button type="submit" class="col-2 btn btn-danger">Registrarse</button>
+                <a href="ingresar" class="col-2 btn btn-danger">Iniciar Sesion</a>
+                <a href="inicio" class="col-2 btn btn-danger">Inicio</a>
             </form>
         </div>
     </div>

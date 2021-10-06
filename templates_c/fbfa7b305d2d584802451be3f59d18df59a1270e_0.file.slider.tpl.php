@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-30 14:14:31
+/* Smarty version 3.1.39, created on 2021-10-05 18:59:57
   from 'C:\xampp\htdocs\tpeespecial\templates\slider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6155f0776e1687_98910879',
+  'unifunc' => 'content_615ccadd740971_69235254',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fbfa7b305d2d584802451be3f59d18df59a1270e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\slider.tpl',
-      1 => 1633022070,
+      1 => 1633471195,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6155f0776e1687_98910879 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid mb-5">
   <div class="row text-center"> 
-    <div class="col-12">    
+    <div class="col-12">
+    <h4 class="pb-3">Productos mas Vendidos</h4>
+    <hr>    
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">      
           <div class="carousel-item active col-12">

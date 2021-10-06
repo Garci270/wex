@@ -26,7 +26,11 @@
                     <label for="exampleInputPassword1">Contraseña</label>
                     <input type="password" class="form-control" placeholder="Escribe tu contraseña" id="exampleInputPassword1" name="contrasena">
                 </div>
+                <div class="">
                 <button type="submit" class="col-2 btn btn-danger">Ingresar</button>
+                <a href="registrarse" class="col-2 btn btn-danger">Registrarse</a>
+                <a href="inicio" class="col-2 btn btn-danger">Inicio</a>
+                </div>
             </form>
         </div>
         {if $error !== null}

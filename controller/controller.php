@@ -12,7 +12,6 @@ class Controller{
         $this->authHelper = new AuthHelper();
     }
     function inicio(){
-        /* $this->authHelper->checkearIngreso(); */
         $productos = $this->model->getProductosSlider();
         $categorias = $this->model->getCategorias();
         $this->view->inicio($productos,$categorias);
@@ -27,7 +26,7 @@ class Controller{
         $this->view->mostrarDetalleProducto($producto, $categorias);
     }
     function mostrarItemCategorias($id){
-        $catP = $this->model->getProductos($id);
+        $catP = $this->model->getProductosCat($id);
         $categorias = $this->model->getCategorias();
         $this->view->mostrarCategorias($catP, $categorias);
     }

@@ -27,7 +27,6 @@ class CategoriasModel{
     }
 
     function borrarCategoria($id){
-        //borrar producto con id
         $sentencia = $this->db->prepare("DELETE  FROM categoria WHERE idcategoria=?");
         $sentencia->execute(array($id));
     }

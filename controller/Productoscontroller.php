@@ -83,12 +83,4 @@ class ProductosController{
         $this->productoModel->borrarProducto($id);
         $this->userView->inicio();
     }
-    /* function mostrarItemCategorias($id){
-        $catP = $this->model->getProductosCat($id);
-        $categorias = $this->model->getCategorias(0);
-        $this->view->mostrarCategorias($catP, $categorias);
-    } */
-    /* function registrarse(){
-        $this->view->mostrarRegistrarse();
-    } */
 }

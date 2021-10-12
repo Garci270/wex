@@ -42,20 +42,4 @@ class ProductosView{
         $smarty->assign('bandera',false);
         $smarty->display('templates/user/editarproducto.tpl');
     }
-   
-    /* function mostrarCategorias($productos, $categorias){
-        $smarty = new Smarty();
-        $smarty->assign('titulo',"WEX");
-        $smarty->assign('categorias',$categorias);
-        $smarty->assign('productos',$productos);
-        $smarty->assign('bandera',false);
-        $smarty->display('templates/productos.tpl');
-    } */
-
-    /* function mostrarRegistrarse(){
-        $smarty = new Smarty();
-        $smarty->assign('titulo',"WEX");
-        $smarty->assign('bandera',true);
-        $smarty->display('templates/registro.tpl');
-    } */
 }

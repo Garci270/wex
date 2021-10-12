@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-10-2021 a las 14:37:48
+-- Tiempo de generación: 12-10-2021 a las 15:26:31
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
 
@@ -158,16 +158,16 @@ CREATE TABLE `categoria` (
 --
 
 INSERT INTO `categoria` (`idcategoria`, `Descripcion`, `url_imagen`) VALUES
-(1, 'ALMACÉN', ''),
-(2, 'CARNES', 'http://sintinta.com.ar/wp-content/uploads/2014/03/carne-mostrador.jpg'),
-(3, 'FRUTAS Y VERDURAS', 'http://3.bp.blogspot.com/-Dh5EPDLjkfA/TaOVdepstxI/AAAAAAAAAF0/ZTJMOasVWNM/s1600/IMG_2114.JPG'),
-(9, 'QUESOS Y FIAMBRES', 'https://jumboargentina.vteximg.com.br/arquivos/ids/472962-230-230/queso-cremoso-la-paulina-doble-crema-se-fracciona-por-1-4-de-horma-peso-aprox-1-kg-1-46588.jpg?v=636695568598970000'),
-(10, 'BEBIDAS', 'https://www.donismael.es/wp-content/uploads/2018/03/lonchas-de-queso-mezcla-tierno-200-g-830x401.jpg'),
-(16, 'LÁCTEOS', 'http://dieta.exur.netdna-cdn.com/images/articulos/articulos-v2/dietas-seguras-que-tan-saludables-son-los-aceites-de-cocina.jpg'),
-(18, 'ESPECIALES & KITS', 'https://a.wattpad.com/cover/77874180-352-k101905.jpg'),
-(21, 'OFERTAS', 'http://2.bp.blogspot.com/-nm25urwamrc/upw3usbfdui/aaaaaaaaarm/w4qgfxnqbio/s1600/insecticidas-ecologicos-jardin.jpg'),
-(22, 'LIMPIEZA', 'https://media.istockphoto.com/photos/basket-with-variety-cleaning-product-with-copy-space-picture-id639365138?k=6&m=639365138&s=612x612&w=0&h=ikvh-89h8rq67jau2aahanlnkuzjzy86b6_v3qhzxqs='),
-(23, 'PERFUMERÍA', 'https://i.ytimg.com/vi/cvkzfz4jpog/maxresdefault.jpg');
+(1, 'ALMACÉN', 'assets/img/ALMACÉN.png'),
+(2, 'CARNES', 'assets/img/CARNES.png'),
+(3, 'FRUTAS Y VERDURAS', 'assets/img/FRUTAS Y VERDURAS.png'),
+(9, 'QUESOS Y FIAMBRES', 'assets/img/QUESOS Y FIAMBRES.png'),
+(10, 'BEBIDAS', 'assets/img/BEBIDAS.png'),
+(16, 'LÁCTEOS', 'assets/img/LÁCTEOS.png'),
+(18, 'ESPECIALES & KITS', 'assets/img/ESPECIALES & KITS.png'),
+(21, 'OFERTAS', 'assets/img/OFERTAS.png'),
+(22, 'LIMPIEZA', 'assets/img/LIMPIEZA.png'),
+(23, 'PERFUMERÍA', 'assets/img/PERFUMERÍA.png');
 
 -- --------------------------------------------------------
 

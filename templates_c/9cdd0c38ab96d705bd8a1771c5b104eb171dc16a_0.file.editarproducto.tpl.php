@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-06 17:42:37
+/* Smarty version 3.1.39, created on 2021-10-12 15:11:36
   from 'C:\xampp\htdocs\tpeespecial\templates\user\editarproducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615e0a3d6ded89_77355456',
+  'unifunc' => 'content_6165cfd8b22758_17822186',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9cdd0c38ab96d705bd8a1771c5b104eb171dc16a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\editarproducto.tpl',
-      1 => 1633552877,
+      1 => 1634062283,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_615e0a3d6ded89_77355456 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6165cfd8b22758_17822186 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,22 +44,24 @@ function content_615e0a3d6ded89_77355456 (Smarty_Internal_Template $_smarty_tpl)
         <div class="row">
             <div class="m-2">
                 <div class="m-auto">
-                    <select class="custom-select" id="selArticulo">
-                    <option value="-1" selected>Seleccione un artículo</option>
-                    <?php
+                    <div class="row">
+                        <select class="custom-select col-10" id="selArticulo">
+                        <option value="-1" selected>Seleccione un artículo</option>
+                        <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productos']->value, 'item');
 $_smarty_tpl->tpl_vars['item']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
-                        <option value="<?php echo $_smarty_tpl->tpl_vars['item']->value->idarticulo;?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['item']->value->idarticulo;?>
 "><?php echo $_smarty_tpl->tpl_vars['item']->value->Descripcion;?>
 </option>
-                    <?php
+                        <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                    </select>
-                    <button type="button" class="btn btn-secondary" id="editar"><i class="fas fa-search"></i></button>
+                        </select>
+                        <button type="button" class="btn btn-secondary col-1" id="editar"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,12 +120,18 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
     </form>
 <?php }?>
-
 </div>
 <?php echo '<script'; ?>
  src="js/producto.js"><?php echo '</script'; ?>
 >
+<?php if ($_smarty_tpl->tpl_vars['producto']->value) {?>
+    <?php $_smarty_tpl->_subTemplateRender("file:templates/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+} else {
+echo '<script'; ?>
+ src="https://kit.fontawesome.com/538a82c3ca.js" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    
+<?php }?>
 
-<?php $_smarty_tpl->_subTemplateRender("file:templates/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-}
+<?php }
 }

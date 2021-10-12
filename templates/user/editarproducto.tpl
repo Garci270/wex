@@ -16,13 +16,15 @@
         <div class="row">
             <div class="m-2">
                 <div class="m-auto">
-                    <select class="custom-select" id="selArticulo">
-                    <option value="-1" selected>Seleccione un artículo</option>
-                    {foreach from=$productos item=$item}
-                        <option value="{$item->idarticulo}">{$item->Descripcion}</option>
-                    {/foreach}
-                    </select>
-                    <button type="button" class="btn btn-secondary" id="editar"><i class="fas fa-search"></i></button>
+                    <div class="row">
+                        <select class="custom-select col-10" id="selArticulo">
+                        <option value="-1" selected>Seleccione un artículo</option>
+                        {foreach from=$productos item=$item}
+                            <option value="{$item->idarticulo}">{$item->Descripcion}</option>
+                        {/foreach}
+                        </select>
+                        <button type="button" class="btn btn-secondary col-1" id="editar"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,8 +61,11 @@
         </div>
     </form>
 {/if}
-
 </div>
 <script src="js/producto.js"></script>
+{if $producto}
+    {include file="templates/footer.tpl"}
+{else}
+    <script src="https://kit.fontawesome.com/538a82c3ca.js" crossorigin="anonymous"></script>
+{/if}
 
-{include file="templates/footer.tpl"}

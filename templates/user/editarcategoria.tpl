@@ -16,13 +16,15 @@
         <div class="row">
             <div class="m-2">
                 <div class="m-auto">
-                    <select class="custom-select" id="selCategoria">
-                    <option value="-1" selected>Seleccione una categoria</option>
-                    {foreach from=$categorias item=$item}
-                        <option value="{$item->idcategoria}">{$item->Descripcion}</option>
-                    {/foreach}
-                    </select>
-                    <button type="button" class="btn btn-secondary" id="editar"><i class="fas fa-search"></i></button>
+                    <div class="row">
+                        <select class="custom-select col-10" id="selCategoria">
+                        <option value="-1" selected>Seleccione una categoria</option>
+                        {foreach from=$categorias item=$item}
+                            <option value="{$item->idcategoria}">{$item->Descripcion}</option>
+                        {/foreach}
+                        </select>
+                        <button type="button" class="btn btn-secondary col-2" id="editar"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,5 +50,8 @@
 
 </div>
 <script src="js/categoria.js"></script>
-
-{include file="templates/footer.tpl"}
+{if $categoria}
+    {include file="templates/footer.tpl"}
+{else}
+    <script src="https://kit.fontawesome.com/538a82c3ca.js" crossorigin="anonymous"></script>
+{/if}

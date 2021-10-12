@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-05 18:06:37
+/* Smarty version 3.1.39, created on 2021-10-12 15:25:36
   from 'C:\xampp\htdocs\tpeespecial\templates\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615cbe5dba3881_33206542',
+  'unifunc' => 'content_6165d320f334a6_59841953',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6472c79b734baf540c3f0efef1a0b4a3005c434' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\navbar.tpl',
-      1 => 1633467989,
+      1 => 1634063131,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_615cbe5dba3881_33206542 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6165d320f334a6_59841953 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid bg-orange">
   <div class="col-12 text-white">
     <p class="pt-2">Estas comprando en <strong>WEX</strong> Telefono: (2314552547)</p>
@@ -64,8 +64,8 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
         <div class="catBox p-2">
           <a class="text-muted" href="Categorias/<?php echo $_smarty_tpl->tpl_vars['item']->value->idcategoria;?>
-"><img src="assets/img/<?php echo $_smarty_tpl->tpl_vars['item']->value->Descripcion;?>
-.png" class="cat-img-nav m-auto" alt="..."><?php echo $_smarty_tpl->tpl_vars['item']->value->Descripcion;?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['item']->value->url_imagen;?>
+" class="cat-img-nav m-auto" alt="..."><?php echo $_smarty_tpl->tpl_vars['item']->value->Descripcion;?>
 </a>
         </div>
       <?php

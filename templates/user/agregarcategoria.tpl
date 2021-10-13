@@ -20,8 +20,8 @@
                 <h5 class="card-title">Categoria</h5>
                 <input type="text" name="descripcion" class="form-control" placeholder="Escribe el Nombre">
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-danger">Agregar</button>
-                    <a href="inicioUsuario" class="btn btn-danger">Cancelar</a>
+                    <button type="submit" class="btn btn-danger mt-2">Agregar</button>
+                    <a href="inicioUsuario" class="btn btn-danger mt-2">Cancelar</a>
                 </div>
             </div>
         </div>

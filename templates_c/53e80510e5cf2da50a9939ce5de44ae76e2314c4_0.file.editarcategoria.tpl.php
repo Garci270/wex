@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-12 15:19:52
+/* Smarty version 3.1.39, created on 2021-10-13 18:42:16
   from 'C:\xampp\htdocs\tpeespecial\templates\user\editarcategoria.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6165d1c8794600_80246650',
+  'unifunc' => 'content_616752b8647947_95803690',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53e80510e5cf2da50a9939ce5de44ae76e2314c4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\editarcategoria.tpl',
-      1 => 1634062769,
+      1 => 1634161262,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6165d1c8794600_80246650 (Smarty_Internal_Template $_smarty_tpl) {
+function content_616752b8647947_95803690 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,8 +83,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 ">
                 <div class="card-footer">
                     <a href="eliminarCat/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->idcategoria;?>
-" class="btn btn-danger">Eliminar</a>
-                    <button type="submit" class="btn btn-danger">Editar</a>
+" class="btn btn-danger mt-2">Eliminar</a>
+                    <button type="submit" class="btn btn-danger mt-2">Editar</a>
                 </div>
             </div>
         </div>

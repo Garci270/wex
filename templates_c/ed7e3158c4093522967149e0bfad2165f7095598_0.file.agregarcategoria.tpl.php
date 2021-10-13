@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-06 17:09:47
+/* Smarty version 3.1.39, created on 2021-10-13 18:42:27
   from 'C:\xampp\htdocs\tpeespecial\templates\user\agregarcategoria.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615e028b974e30_46516532',
+  'unifunc' => 'content_616752c3bbf137_06990923',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed7e3158c4093522967149e0bfad2165f7095598' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\agregarcategoria.tpl',
-      1 => 1633550984,
+      1 => 1634161303,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_615e028b974e30_46516532 (Smarty_Internal_Template $_smarty_tpl) {
+function content_616752c3bbf137_06990923 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,8 +48,8 @@ function content_615e028b974e30_46516532 (Smarty_Internal_Template $_smarty_tpl)
                 <h5 class="card-title">Categoria</h5>
                 <input type="text" name="descripcion" class="form-control" placeholder="Escribe el Nombre">
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-danger">Agregar</button>
-                    <a href="inicioUsuario" class="btn btn-danger">Cancelar</a>
+                    <button type="submit" class="btn btn-danger mt-2">Agregar</button>
+                    <a href="inicioUsuario" class="btn btn-danger mt-2">Cancelar</a>
                 </div>
             </div>
         </div>

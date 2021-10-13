@@ -28,10 +28,10 @@ class ProductosModel{
         return $producto;
     }
 
-    function setProducto(){
+    /* function setProducto(){
         $query = $this->db->prepare("INSERT INTO articulo");
         $query->execute(array()); 
-    }
+    } */
     
     function borrarProducto($id){
         $sentencia = $this->db->prepare("DELETE  FROM articulo WHERE idarticulo=?");

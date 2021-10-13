@@ -21,9 +21,6 @@
                 <li><a class="dropdown-item " href="registrarse"><i class="fas fa-user-plus m-2" aria-hidden="true"></i>Registrarse</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link float-right text-white" href="Carrito"><i class="fas fa-shopping-cart"></i></a>
-              </li>
           </div>
         </ul>
       </div>

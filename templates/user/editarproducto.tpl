@@ -53,9 +53,9 @@
                 <input type="text" name="descripcion" class="form-control" value="{$producto->Descripcion}">
                 <div class="card-footer">
                 <p class="card-text tamañoPrecio">${$producto->Precio_1}</p>
-                <input type="number" name="precio" class="form-control" value="{$producto->Precio_1}">
-                    <a href="eliminarProd/{$producto->idarticulo}" class="btn btn-danger">Eliminar</a>
-                    <button type="submit" class="btn btn-danger">Editar</a>
+                <input type="text" name="precio" class="form-control" value="{$producto->Precio_1}">
+                    <a href="eliminarProd/{$producto->idarticulo}" class="btn btn-danger mt-2">Eliminar</a>
+                    <button type="submit" class="btn btn-danger mt-2">Editar</a>
                 </div>
             </div>
         </div>

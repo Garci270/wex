@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-05 18:59:57
+/* Smarty version 3.1.39, created on 2021-10-13 18:43:41
   from 'C:\xampp\htdocs\tpeespecial\templates\slider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615ccadd740971_69235254',
+  'unifunc' => 'content_6167530d789f26_39360320',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fbfa7b305d2d584802451be3f59d18df59a1270e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\slider.tpl',
-      1 => 1633471195,
+      1 => 1634161414,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6167530d789f26_39360320 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid mb-5">
   <div class="row text-center"> 
     <div class="col-12">
@@ -46,7 +46,6 @@ function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Precio_1;?>
 </p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                 </div>
@@ -65,7 +64,6 @@ function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->Precio_1;?>
 </p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[1]->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                 </div>
@@ -84,7 +82,6 @@ function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->Precio_1;?>
 </p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[2]->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                 </div>
@@ -103,7 +100,6 @@ function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->Precio_1;?>
 </p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[3]->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                 </div>
@@ -132,7 +128,6 @@ function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->Precio_1;?>
 </p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[4]->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                 </div>
@@ -151,7 +146,6 @@ function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->Precio_1;?>
 </p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[5]->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                 </div>
@@ -170,7 +164,6 @@ function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->Precio_1;?>
 </p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[6]->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                 </div>
@@ -189,7 +182,6 @@ function content_615ccadd740971_69235254 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->Precio_1;?>
 </p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['productos']->value[7]->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                 </div>

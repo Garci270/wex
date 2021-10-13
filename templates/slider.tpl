@@ -18,7 +18,6 @@
                 </div>
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">${$productos[0]->Precio_1}</p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/{$productos[0]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
@@ -31,7 +30,6 @@
                 </div>
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">${$productos[1]->Precio_1}</p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/{$productos[1]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
@@ -44,7 +42,6 @@
                 </div>
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">${$productos[2]->Precio_1}</p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/{$productos[2]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
@@ -57,7 +54,6 @@
                 </div>
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">${$productos[3]->Precio_1}</p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/{$productos[3]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
@@ -80,7 +76,6 @@
                 </div>
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">${$productos[4]->Precio_1}</p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/{$productos[4]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
@@ -93,7 +88,6 @@
                 </div>
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">${$productos[5]->Precio_1}</p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/{$productos[5]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
@@ -106,7 +100,6 @@
                 </div>
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">${$productos[6]->Precio_1}</p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/{$productos[6]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
@@ -119,7 +112,6 @@
                 </div>
                 <div class="card-footer">
                   <p class="card-text tamañoPrecio">${$productos[7]->Precio_1}</p>
-                  <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                   <a href="detalle/{$productos[7]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>

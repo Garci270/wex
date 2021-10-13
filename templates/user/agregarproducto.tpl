@@ -30,8 +30,8 @@
                 <div class="card-footer">
                 <p class="card-text tamañoPrecio">Precio</p>
                 <input type="number" name="precio" class="form-control" placeholder="Ingrese el Precio">
-                    <button type="submit" class="btn btn-danger">Agregar</button>
-                    <a href="inicioUsuario" class="btn btn-danger">Cancelar</a>
+                    <button type="submit" class="btn btn-danger mt-2">Agregar</button>
+                    <a href="inicioUsuario" class="btn btn-danger mt-2">Cancelar</a>
                 </div>
             </div>
         </div>

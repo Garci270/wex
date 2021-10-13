@@ -23,7 +23,6 @@
                         <p class="card-text">{$producto->Descripcion}</p>
                         <div class="card-footer">
                             <p class="card-text tamañoPrecio">${$producto->Precio_1}</p>
-                            <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                             <a href="detalle/{$producto->idarticulo}" class="btn btn-danger">Detalle</a>
                         </div>
                     </div>

@@ -40,8 +40,8 @@
                 <h5 class="card-title">{$categoria->Descripcion}</h5>
                 <input type="text" name="descripcion" class="form-control" value="{$categoria->Descripcion}">
                 <div class="card-footer">
-                    <a href="eliminarCat/{$categoria->idcategoria}" class="btn btn-danger">Eliminar</a>
-                    <button type="submit" class="btn btn-danger">Editar</a>
+                    <a href="eliminarCat/{$categoria->idcategoria}" class="btn btn-danger mt-2">Eliminar</a>
+                    <button type="submit" class="btn btn-danger mt-2">Editar</a>
                 </div>
             </div>
         </div>

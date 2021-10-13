@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-10-2021 a las 15:26:31
+-- Tiempo de generación: 13-10-2021 a las 18:47:25
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
 
@@ -63,7 +63,7 @@ INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `
 (64, 'Bolsas De Leña X 6 Kgs.', 249.9, 'https://actualonline.com.ar/images/articulos/p_64.jpg', 'GENERICA', 1),
 (68, 'Detergente  Cremoso Glicerina Botella X 4 Lts.', 349.9, 'https://actualonline.com.ar/https://actualonline.com.ar/images/SIN.jpg', 'ALA', 22),
 (81, 'Yerba  Paquete X 500 Grs.', 199.9, 'https://actualonline.com.ar/images/tmp/p_81.jpg', 'ANDRESITO', 1),
-(86, 'Yogur  Entero Sabor Frutilla Pote X 120 Cc', 35.9, 'https://actualonline.com.ar/images/tmp/p_86.jpg', 'ILOLAY', 16),
+(86, 'Yogur  Entero Sabor Frutilla Pote X 120 Cc', 34.365, 'https://actualonline.com.ar/images/tmp/p_86.jpg', 'ILOLAY', 16),
 (87, 'Yogur  Entero Sabor Vainilla Pote X 120 Cc.', 35.9, 'https://actualonline.com.ar/images/tmp/p_87.jpg', 'ILOLAY', 16),
 (88, 'Yogur Descremado Vainilla', 40.9, 'https://actualonline.com.ar/images/tmp/p_88.jpg', 'ILOLAY', 10),
 (91, 'Galletitas  Sandwicheras Paquete X 360 Grs.', 85.05, 'https://actualonline.com.ar/images/articulos/p_91.jpg', 'MEDIA TARDE', 1),
@@ -112,7 +112,7 @@ INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `
 (245, 'Pan Dulce  X 400 Grs.', 169.9, 'https://actualonline.com.ar/images/tmp/p_245.jpg', 'VALENTE', 1),
 (247, 'Toallitas Femenitas  Basica Sin Alas Paquete X 8 Uds.', 129.9, 'https://actualonline.com.ar/https://actualonline.com.ar/images/SIN.jpg', 'ALWAYS', 18),
 (252, 'Vino s Cabernet Sauvignon Botella  X 750 Cc.', 479.9, 'https://actualonline.com.ar/images/tmp/p_252.png', 'NAVARRO CORREA', 21),
-(253, ' De Arcor X 23 Grs.', 59.9, 'https://actualonline.com.ar/images/articulos/p_253.jpg', 'CEREAL MIX', 1),
+(253, ' De Arcor X 23 Grs.', 60.9, 'https://actualonline.com.ar/images/articulos/p_253.jpg', 'CEREAL MIX', 1),
 (262, 'Pilas  Aaa Control Remodto Display X 4 Uds.', 369.9, 'https://actualonline.com.ar/images/articulos/p_262.jpg', 'ENERGIZER', 18),
 (267, 'Pañales  Ultra Chico Bolson X 12 Uds.', 169.9, 'https://actualonline.com.ar/images/articulos/p_267.jpg', 'BABYSEC', 21),
 (268, 'Margarina  Dorada Soft Light Pote X 200 Grs.', 129.9, 'https://actualonline.com.ar/images/tmp/p_268.jpg', 'DANICA', 1),
@@ -128,7 +128,7 @@ INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `
 (294, 'Semola  Luchetti Clasica Fortificada Estuche X 500 Grs.', 175.9, 'https://actualonline.com.ar/images/articulos/p_294.jpg', 'VITINA', 1),
 (308, 'Sal  Fina Paquete X 500 G', 42.9, 'https://actualonline.com.ar//https://actualonline.com.ar/images/articulos/p_308.jpg', 'CELUSAL', 1),
 (309, 'Fideos  Tallarin Con Huevo Paquete X 500 Grs.', 139.9, 'https://actualonline.com.ar/images/tmp/p_309.117', 'DON VICENTE', 1),
-(310, 'Mortadela Familiar  X 500 G', 389.9, 'https://actualonline.com.ar/images/tmp/p_310.jpg', 'PALADINI', 9),
+(310, 'Mortadela Familiar  X 500 G', 389.9, 'https://actualonline.com.ar/images/tmp/p_310.jpg', 'PALADINI', 4),
 (312, 'Oblea  Sabor Vainilla Paquete X 100 Grs.', 49.99, 'https://actualonline.com.ar/images/articulos/p_312.jpg', 'RECITAL', 1),
 (316, 'Limpiador Liquido  X 900 Cc. Suavidad De Algodon', 65.9, 'https://actualonline.com.ar//https://actualonline.com.ar/images/articulos/p_316.jpg', 'POETT', 22),
 (320, 'Aceite  De Girasol Botella X 1,5 Lts.', 219.55, 'https://actualonline.com.ar//https://actualonline.com.ar/images/articulos/p_320.jpg', 'CAÑUELAS', 1),
@@ -139,7 +139,8 @@ INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `
 (352, 'Mermelada  Sabor Ciruela Frasco X 390 Grs.', 99.9, 'https://actualonline.com.ar/images/tmp/p_352.119', 'DR CORMILLOT', 1),
 (355, 'Shampoo  Liso Extremo Envase X 200 Cc.', 225.9, 'https://actualonline.com.ar/images/tmp/p_355.jpg', 'PANTENE', 23),
 (357, 'Queso Cremoso 100gr', 147, 'url', 'AGUSTIN', 16),
-(359, 'Anana en Lata x400gr', 200, 'https://actualonline.com.ar/images/articulos/p_6.jpg', 'AGUSTIN', 1);
+(359, 'Anana en Lata x400gr', 200, 'https://actualonline.com.ar/images/articulos/p_6.jpg', 'AGUSTIN', 1),
+(360, 'AGUSTIN', 25421, 'https://actualonline.com.ar/images/articulos/p_6.jpg', 'AGUSTIN', 21);
 
 -- --------------------------------------------------------
 
@@ -161,7 +162,7 @@ INSERT INTO `categoria` (`idcategoria`, `Descripcion`, `url_imagen`) VALUES
 (1, 'ALMACÉN', 'assets/img/ALMACÉN.png'),
 (2, 'CARNES', 'assets/img/CARNES.png'),
 (3, 'FRUTAS Y VERDURAS', 'assets/img/FRUTAS Y VERDURAS.png'),
-(9, 'QUESOS Y FIAMBRES', 'assets/img/QUESOS Y FIAMBRES.png'),
+(4, 'QUESOS Y FIAMBRES2', 'assets/img/QUESOS Y FIAMBRES.png'),
 (10, 'BEBIDAS', 'assets/img/BEBIDAS.png'),
 (16, 'LÁCTEOS', 'assets/img/LÁCTEOS.png'),
 (18, 'ESPECIALES & KITS', 'assets/img/ESPECIALES & KITS.png'),
@@ -189,7 +190,9 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`idusuario`, `nombre`, `email`, `clave`) VALUES
 (1, 'Agustin', 'agustingarciaamaro@gmail.com', '$2y$10$QpMh7708FS1kFAhN9CZNBOqqEHvtWk41PGVqLIQKYv97A22D/ch.a'),
 (2, 'Roberto', 'rogworksi@gmail.com', '$2y$10$Z.5qyPDt2oadYR/3PfV7Ru5rxVb3HbjVuFmXBTFZ/zFLv8.acZ32i'),
-(3, 'Roberto', 'manuelgarcia0952@gmail.com', '$2y$10$73r/A8G5C0X477wrHoRscuIpvqiCLzp7UWUzNbapTnvkMcv2Z4/RC');
+(3, 'Roberto', 'manuelgarcia0952@gmail.com', '$2y$10$73r/A8G5C0X477wrHoRscuIpvqiCLzp7UWUzNbapTnvkMcv2Z4/RC'),
+(4, 'Roberto', 'testinguser@gmail.com', '$2y$10$6TytzhetysrlxMjkE1UYSezOIvj6D8MAjD4FS88MW.jEjbSPziAEK'),
+(5, 'Manuel', 'pepito@gmail.com', '$2y$10$52RrIbRQkpOufQyIsKCZoe.6bbMu34i1nw3.CwuzGHBySHPULRMNy');
 
 --
 -- Índices para tablas volcadas
@@ -222,19 +225,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `articulo`
 --
 ALTER TABLE `articulo`
-  MODIFY `idarticulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=360;
+  MODIFY `idarticulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=361;
 
 --
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas

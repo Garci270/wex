@@ -1,7 +1,6 @@
 <div class="container-fluid bg-orange">
   <div class="col-12 text-white">
-    <p class="pt-2">Estas comprando en <strong>WEX</strong> Telefono: (2314552547)</p>
-    <p class="">Localidad: <strong>Bolivar</strong></p>
+    <p class="pt-2">Estas comprando en <strong>WEX</strong> Telefono: (2314552547) | Localidad: <strong>Bolivar</strong></p>
     <hr class="text-white bg-orange">
   </div>
   <nav class="navbar navbar-expand-lg navbar-light">

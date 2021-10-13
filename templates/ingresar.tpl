@@ -33,9 +33,6 @@
                 </div>
             </form>
         </div>
-        {if $error !== null}
-            <h4 class="text-succes">{$erorr}</h4>
-        {/if}
     </div>
 </div>
 {include file="footer.tpl"}

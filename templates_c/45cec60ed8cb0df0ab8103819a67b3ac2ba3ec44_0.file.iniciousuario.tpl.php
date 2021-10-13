@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-06 14:12:52
+/* Smarty version 3.1.39, created on 2021-10-13 12:42:27
   from 'C:\xampp\htdocs\tpeespecial\templates\user\iniciousuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615dd91494a6f6_40380750',
+  'unifunc' => 'content_6166fe63713684_52174037',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '45cec60ed8cb0df0ab8103819a67b3ac2ba3ec44' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\iniciousuario.tpl',
-      1 => 1633540369,
+      1 => 1634139746,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_615dd91494a6f6_40380750 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6166fe63713684_52174037 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,12 +43,36 @@ function content_615dd91494a6f6_40380750 (Smarty_Internal_Template $_smarty_tpl)
     <div class="col-12 p-4">
         <div class="row">
             <div class="m-auto">
-                <a class="btn btn-success" href="agregarProd">Agregar Producto</a>
-                <a class="btn btn-success" href="agregarCat">Agregar Categoria</a>
+                <a class="btn agregarP" href="agregarProd">Agregar Producto</a>
+                <a class="btn agregarC" href="agregarCat">Agregar Categoria</a>
             </div>
         </div>
     </div>
-       </div>
+    <div class="row">
+        <div class="m-auto">
+            <div class="row">
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Cantidad de Productos</h5>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="card-title"><?php echo count($_smarty_tpl->tpl_vars['productos']->value);?>
+</h6>
+                    </div>
+                </div>
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Cantidad de Categorias</h5>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="card-title"><?php echo count($_smarty_tpl->tpl_vars['categorias']->value);?>
+</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <?php $_smarty_tpl->_subTemplateRender("file:templates/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }

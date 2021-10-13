@@ -28,17 +28,18 @@ class UserController{
         $this->userView->mostrarRegistrarse();
     }
     function salir(){
-        $erorr = "Te deslogueaste!";
         session_start();
         session_destroy();
-        $this->userView->ingresar($erorr);
+        $this->userView->ingresar();
     }
     function ingresar(){
         $this->userView->ingresar(null);
     }
     function inicio(){
+        $productos = $this->productoModel->getProductos(0);
+        $categorias = $this->categoriaModel->getCategorias(0);
         $this->authHelper->checkearIngreso();
-        $this->userView->inicioUsuario();
+        $this->userView->inicioUsuario($productos, $categorias);
     }
 
     function setUsuario(){

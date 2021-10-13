@@ -15,41 +15,32 @@
     <div class="col-12 p-4">
         <div class="row">
             <div class="m-auto">
-                <a class="btn btn-success" href="agregarProd">Agregar Producto</a>
-                <a class="btn btn-success" href="agregarCat">Agregar Categoria</a>
+                <a class="btn agregarP" href="agregarProd">Agregar Producto</a>
+                <a class="btn agregarC" href="agregarCat">Agregar Categoria</a>
             </div>
         </div>
     </div>
-    {* <div class="bg-grey m-2 mb-5">
-        <div class="container-fluid">
-            <div class="row px-4 py-3 text-secondary">
-                <div class="col-md-3 text-center">
-                    <div class="row col-md-12 pointer">
-                        <img src="assets/img/service4.png" class="iconServ m-auto" alt="">
-                        <p class="textServ">Cantidad Productos</p>
+    <div class="row">
+        <div class="m-auto">
+            <div class="row">
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Cantidad de Productos</h5>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="card-title">{$productos|@count}</h6>
                     </div>
                 </div>
-                <div class="col-md-3 text-center">
-                    <div class="row col-md-12 pointer">
-                        <img src="assets/img/service3.png" class="iconServ m-auto" alt="">
-                        <p class="textServ">Usuarios</p>
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Cantidad de Categorias</h5>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="card-title">{$categorias|@count}</h6>
                     </div>
                 </div>
-                <div class="col-md-3 text-center">
-                    <div class="row col-md-12 mt-auto pointer">
-                        <img src="assets/img/service1.png" class="iconServ m-auto" alt="">
-                        <p class="textServ">Envio a destino</p>
-                    </div>  
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="row col-md-12 pointer">
-                        <img src="assets/img/service2.png" class="iconServ m-auto" alt="">
-                        <p class="textServ">Retiro en sucursal 24hs</p>
-                    </div>
-                </div>    
             </div>
         </div>
-    </div> *}
-   {*  {include file="slider.tpl"} *}
+    </div>
 </div>
 {include file="templates/footer.tpl"}

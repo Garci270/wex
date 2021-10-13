@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-06 13:49:13
+/* Smarty version 3.1.39, created on 2021-10-13 12:34:25
   from 'C:\xampp\htdocs\tpeespecial\templates\user\navusuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615dd389a781f1_86562488',
+  'unifunc' => 'content_6166fc81af04a6_58268391',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32b024f516587bfebef40d959a5a7daf7165f652' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\navusuario.tpl',
-      1 => 1633538951,
+      1 => 1634139264,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_615dd389a781f1_86562488 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6166fc81af04a6_58268391 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid bg-orange">
   <div class="col-12 text-white">
-    <p class="pt-2">Estas editando en <strong>WEX</strong> Telefono: (2314552547)</p>
-    <p class="">Localidad: <strong>Bolivar</strong></p>
+    <p class="pt-2">Estas editando en <strong>WEX</strong> Telefono: (2314552547) | Localidad: <strong>Bolivar</strong></p>
     <hr class="text-white bg-orange">
   </div>
   <nav class="navbar navbar-expand-lg navbar-light">

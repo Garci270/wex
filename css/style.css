@@ -113,3 +113,19 @@ body::-webkit-scrollbar-track {
     bottom: 0;
     width: 100%;
 } 
+
+.agregarP{
+    background-color: #E39695;
+}
+
+.agregarC{
+    background-color: #E39695;
+}
+
+.agregarP:hover{
+    color: #fafafa;
+}
+
+.agregarC:hover{
+    color: #fafafa;
+}

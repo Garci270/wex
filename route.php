@@ -20,7 +20,6 @@ $categoriasController = new CategoriasController();
 switch($params[0]){
     case 'inicio': 
         $productosController->inicio();
-        /* $controller->mostrarProductosSlider(); */
         break;
     case 'inicioUsuario': 
         $userController->inicio();

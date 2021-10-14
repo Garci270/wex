@@ -27,11 +27,6 @@ class ProductosModel{
         $producto = $query->fetchAll(PDO::FETCH_OBJ);
         return $producto;
     }
-
-    /* function setProducto(){
-        $query = $this->db->prepare("INSERT INTO articulo");
-        $query->execute(array()); 
-    } */
     
     function borrarProducto($id){
         $sentencia = $this->db->prepare("DELETE  FROM articulo WHERE idarticulo=?");

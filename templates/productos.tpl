@@ -15,7 +15,7 @@
     <div class="row">
         {foreach from=$productos item=$producto}
             <div class="m-auto col-3">
-                <div class="card p-6" style="width: 18rem;">
+                <div class="card p-10" style="width: 16rem;">
                     <img src="{$producto->url_imagen}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{$producto->categoria}</h5>

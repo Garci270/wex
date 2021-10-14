@@ -38,9 +38,9 @@ class ProductosModel{
         $sentencia->execute(array($id));
     }
 
-    function actualizarProducto($descripcion,$precio,$marca,$categoria,$id){
-        $sentencia = $this->db->prepare("UPDATE articulo SET Descripcion=?, Precio_1=?, Marca=?, idcategoria=? WHERE idarticulo =?");
-        $sentencia->execute(array($descripcion,$precio,$marca,$categoria,$id));
+    function actualizarProducto($descripcion,$precio,$marca,$categoria,$id, $imagen){
+        $sentencia = $this->db->prepare("UPDATE articulo SET Descripcion=?, Precio_1=?, url_imagen=?, Marca=?, idcategoria=? WHERE idarticulo =?");
+        $sentencia->execute(array($descripcion,$precio,$imagen,$marca,$categoria,$id));
     }
 
     function agregarProducto($descripcion,$precio,$marca,$categoria,$imagen){

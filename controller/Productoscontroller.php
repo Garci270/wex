@@ -1,25 +1,19 @@
 <?php
-require_once "./model/Usermodel.php";
 require_once "./view/Usuarioview.php";
 require_once "./model/Productosmodel.php";
 require_once "./view/Productosview.php";
 require_once "./model/Categoriasmodel.php";
-require_once "./view/Categoriasview.php";
 require_once "./helper/AuthHelper.php";
 class ProductosController{
-    private $userModel;
     private $productoModel;
     private $categoriaModel;
     private $productoView;
-    private $categoriaView;
     private $userView;
     private $authHelper;
     function __construct(){
-        $this->userModel = new UserModel();
         $this->productoModel = new ProductosModel();
         $this->categoriaModel = new CategoriasModel();
         $this->productoView = new ProductosView();
-        $this->categoriaView = new CategoriasView();
         $this->userView = new UsuarioView();
         $this->authHelper = new AuthHelper();
     }
@@ -49,19 +43,20 @@ class ProductosController{
         $this->productoView->editarProducto($productos, $categorias, $producto);
     }
 
-    function agregarProd(){
+    function iragregarProducto(){
         $this->authHelper->checkearIngreso();
         $categorias = $this->categoriaModel->getCategorias(0);
         $this->productoView->agregarProducto($categorias);
     }
     function actualizarProducto($id){
         $this->authHelper->checkearIngreso();
-        if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])){
+        if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])&& !empty($_POST['imagen'])){
             $categoria = $_POST['categoria'];
             $descripcion = $_POST['descripcion'];
             $marca = $_POST['marca'];
             $precio = $_POST['precio'];
-            $this->productoModel->actualizarProducto($descripcion, $precio,$marca, $categoria, $id);
+            $imagen = $_POST['imagen'];
+            $this->productoModel->actualizarProducto($descripcion, $precio,$marca, $categoria, $id,$imagen);
             $this->userView->inicio();
         }
     }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-13 18:41:46
+/* Smarty version 3.1.39, created on 2021-10-14 18:07:40
   from 'C:\xampp\htdocs\tpeespecial\templates\user\agregarproducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6167529a0f8aa5_07327692',
+  'unifunc' => 'content_61689c1cda14a2_25529398',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1eb46469b7cd4f1b4d4d66f7b57cc4acc91bf256' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\agregarproducto.tpl',
-      1 => 1634161294,
+      1 => 1634245657,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6167529a0f8aa5_07327692 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61689c1cda14a2_25529398 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +66,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <input type="text" name="descripcion" class="form-control" placeholder="Escribe el Detalle">
                 <div class="card-footer">
                 <p class="card-text tamañoPrecio">Precio</p>
-                <input type="number" name="precio" class="form-control" placeholder="Ingrese el Precio">
+                <input type="text" name="precio" class="form-control" placeholder="Ingrese el Precio">
                     <button type="submit" class="btn btn-danger mt-2">Agregar</button>
                     <a href="inicioUsuario" class="btn btn-danger mt-2">Cancelar</a>
                 </div>

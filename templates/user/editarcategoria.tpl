@@ -30,7 +30,7 @@
         </div>
     </div>
 </div>
-<div class="m-4">
+<div class="m-5">
 {if $categoria}
     <form action="editarCategoria/{$categoria->idcategoria}" method="POST">  
         <div class="card m-auto" style="width: 18rem;">

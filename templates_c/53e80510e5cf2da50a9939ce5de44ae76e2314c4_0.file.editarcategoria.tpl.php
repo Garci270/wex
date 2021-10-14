@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-13 18:42:16
+/* Smarty version 3.1.39, created on 2021-10-14 18:04:15
   from 'C:\xampp\htdocs\tpeespecial\templates\user\editarcategoria.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_616752b8647947_95803690',
+  'unifunc' => 'content_61689b4f537806_35877198',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53e80510e5cf2da50a9939ce5de44ae76e2314c4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\editarcategoria.tpl',
-      1 => 1634161262,
+      1 => 1634245453,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_616752b8647947_95803690 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61689b4f537806_35877198 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,7 +67,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
     </div>
 </div>
-<div class="m-4">
+<div class="m-5">
 <?php if ($_smarty_tpl->tpl_vars['categoria']->value) {?>
     <form action="editarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->idcategoria;?>
 " method="POST">  

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-13 18:43:45
+/* Smarty version 3.1.39, created on 2021-10-14 18:42:55
   from 'C:\xampp\htdocs\tpeespecial\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_616753117eaec2_99038519',
+  'unifunc' => 'content_6168a45f36a626_50083091',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4f4130892e06fade9a74148c473afb44f5c2b5a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productos.tpl',
-      1 => 1634161371,
+      1 => 1634247768,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_616753117eaec2_99038519 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6168a45f36a626_50083091 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +48,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['producto']->valu
 $_smarty_tpl->tpl_vars['producto']->do_else = false;
 ?>
             <div class="m-auto col-3">
-                <div class="card p-6" style="width: 18rem;">
+                <div class="card p-10" style="width: 16rem;">
                     <img src="<?php echo $_smarty_tpl->tpl_vars['producto']->value->url_imagen;?>
 " class="card-img-top" alt="...">
                     <div class="card-body">

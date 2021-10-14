@@ -1,24 +1,15 @@
 <?php
-require_once "./model/Usermodel.php";
 require_once "./view/Usuarioview.php";
-require_once "./model/Productosmodel.php";
-require_once "./view/Productosview.php";
 require_once "./model/Categoriasmodel.php";
 require_once "./view/Categoriasview.php";
 require_once "./helper/AuthHelper.php";
 class CategoriasController{
-    private $userModel;
-    private $productoModel;
     private $categoriaModel;
-    private $productoView;
     private $categoriaView;
     private $userView;
     private $authHelper;
     function __construct(){
-        $this->userModel = new UserModel();
-        $this->productoModel = new ProductosModel();
         $this->categoriaModel = new CategoriasModel();
-        $this->productoView = new ProductosView();
         $this->categoriaView = new CategoriasView();
         $this->userView = new UsuarioView();
         $this->authHelper = new AuthHelper();
@@ -64,7 +55,7 @@ class CategoriasController{
         $this->categoriaView->editarCategoria($categorias, $categoria);
     }
 
-    function agregarCat(){
+    function iragregarCategoria(){
         $this->authHelper->checkearIngreso();
         $this->categoriaView->agregarCategoria();
     }

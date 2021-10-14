@@ -68,13 +68,13 @@ switch($params[0]){
         $categoriasController->eliminarCategoria($params[1]);
         break;
     case 'agregarProd':
-        $productosController->agregarProd();
+        $productosController->iragregarProducto();
         break;
     case 'agregarProducto':
         $productosController->agregarProducto();
         break;   
     case 'agregarCat':
-        $categoriasController->agregarCat();
+        $categoriasController->iragregarCategoria();
         break; 
     case 'agregarCategoria':
         $categoriasController->agregarCategoria();

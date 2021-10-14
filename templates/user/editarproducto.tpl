@@ -35,7 +35,7 @@
     <form action="actualizarProd/{$producto->idarticulo}" method="POST">  
         <div class="card m-auto" style="width: 18rem;">
             <img src="{$producto->url_imagen}" class="card-img-top" alt="...">
-            <input type="text" value="{$producto->url_imagen}"  class="form-control" readonly>
+            <input type="text" value="{$producto->url_imagen}" name="imagen"  class="form-control">
             <div class="card-body">
                 <h5 class="card-title">{$producto->categoria}</h5>
                 <select class="custom-select mb-2" name="categoria">

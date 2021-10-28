@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-14 18:42:55
+/* Smarty version 3.1.39, created on 2021-10-27 21:15:02
   from 'C:\xampp\htdocs\tpeespecial\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6168a45f36a626_50083091',
+  'unifunc' => 'content_6179eb86da81a1_87998976',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4f4130892e06fade9a74148c473afb44f5c2b5a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productos.tpl',
-      1 => 1634247768,
+      1 => 1635380098,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6168a45f36a626_50083091 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6179eb86da81a1_87998976 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +63,14 @@ $_smarty_tpl->tpl_vars['producto']->do_else = false;
 </p>
                             <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['producto']->value->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
+                            <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
+                                <h5 class="card-title">Danos tu opinion</h5>
+                                <input type="text" name="coment" placeholder="Deje un comentario del producto aqui">
+                                <h5>Puntua el producto</h5>
+                                <select name="rate" id="">
+                                    <option value=""></option>
+                                </select>
+                            <?php }?>
                         </div>
                     </div>
                 </div>

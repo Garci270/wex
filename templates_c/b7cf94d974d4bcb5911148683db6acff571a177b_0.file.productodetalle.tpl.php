@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-05 18:43:54
+/* Smarty version 3.1.39, created on 2021-10-27 22:47:48
   from 'C:\xampp\htdocs\tpeespecial\templates\productodetalle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615cc71a7ada78_80098915',
+  'unifunc' => 'content_617a0144661803_25153624',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7cf94d974d4bcb5911148683db6acff571a177b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productodetalle.tpl',
-      1 => 1633470224,
+      1 => 1635377528,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_615cc71a7ada78_80098915 (Smarty_Internal_Template $_smarty_tpl) {
+function content_617a0144661803_25153624 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,8 +53,15 @@ function content_615cc71a7ada78_80098915 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="card-footer">
                     <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['productos']->value[0]->Precio_1;?>
 </p>
-                    <a href="#" class="btn btn-danger"><i class="fas fa-shopping-cart"></i></a>
                     <a href="inicio" class="btn btn-danger">Inicio</a>
+                    <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
+                        <h5 class="card-title">Danos tu opinion</h5>
+                        <input type="text" name="coment" placeholder="Deje un comentario del producto aqui">
+                        <h5>Puntua el producto</h5>
+                        <select name="rate" id="">
+                            <option value=""></option>
+                        </select>
+                    <?php }?>
                 </div>
             </div>
         </div>

@@ -24,6 +24,14 @@
                         <div class="card-footer">
                             <p class="card-text tamañoPrecio">${$producto->Precio_1}</p>
                             <a href="detalle/{$producto->idarticulo}" class="btn btn-danger">Detalle</a>
+                            {if $user}
+                                <h5 class="card-title">Danos tu opinion</h5>
+                                <input type="text" name="coment" placeholder="Deje un comentario del producto aqui">
+                                <h5>Puntua el producto</h5>
+                                <select name="rate" id="">
+                                    <option value=""></option>
+                                </select>
+                            {/if}
                         </div>
                     </div>
                 </div>

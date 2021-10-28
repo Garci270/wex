@@ -1,10 +1,10 @@
 <?php
-class CategoriasModel{
+class categorysModel{
     private $db;
     function __construct(){
         $this->db = new PDO('mysql:host=localhost;'.'dbname=tpespecial','root','');
     }
-    function getProductosCat($id){
+    function getProductsCat($id){
         if($id>0){
             $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria AND a.idcategoria =?');
         }
@@ -15,7 +15,7 @@ class CategoriasModel{
         $productos = $query->fetchAll(PDO::FETCH_OBJ);
         return $productos;
     }
-    function getCategorias($id){
+    function getCategorys($id){
         if($id>0){
             $query = $this->db->prepare('SELECT * FROM categoria WHERE idcategoria=?');
         }else{
@@ -26,18 +26,18 @@ class CategoriasModel{
         return $categoria;
     }
 
-    function borrarCategoria($id){
+    function deleteCategory($id){
         $sentencia = $this->db->prepare("DELETE  FROM categoria WHERE idcategoria=?");
         $sentencia->execute(array($id));
     }
 
-    function actualizarCategoria($descripcion, $urlImagen, $id){
+    function updateCategory($description, $urlImage, $id){
         $sentencia = $this->db->prepare("UPDATE categoria SET Descripcion=?, url_imagen=? WHERE idcategoria=?");
-        $sentencia->execute(array($descripcion, $urlImagen, $id));
+        $sentencia->execute(array($description, $urlImage, $id));
     }
 
-    function agregarCategoria($descripcion, $urlImagen){
+    function addCategory($description, $urlImage){
         $sentencia = $this->db->prepare("INSERT INTO categoria (Descripcion, url_imagen) VALUES (?,?)");
-        $sentencia->execute(array($descripcion, $urlImagen));
+        $sentencia->execute(array($description, $urlImage));
     }
 }

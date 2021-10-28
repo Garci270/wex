@@ -1,0 +1,63 @@
+<?php
+class productsModel{
+    private $db;
+    function __construct(){
+        $this->db = new PDO('mysql:host=localhost;'.'dbname=tpespecial','root','');
+    }
+    function getProducts($id){
+        if($id>0){
+            $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria AND a.idarticulo =?');
+        }
+        else{
+            $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria ORDER BY a.Descripcion');
+        }
+        $query->execute(array($id));
+        $products = $query->fetchAll(PDO::FETCH_OBJ);
+        return $products;
+    }
+    function getProductsSlider(){
+        $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria ORDER BY a.Descripcion AND idarticulo <= 24');
+        $query->execute();
+        $products = $query->fetchAll(PDO::FETCH_OBJ);
+        return $products;
+    }
+    function getProductDetail($id){
+        $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria  AND idarticulo =?');
+        $query->execute(array($id));
+        $product = $query->fetchAll(PDO::FETCH_OBJ);
+        return $product;
+    }
+    
+    function deleteProduct($id){
+        $query = $this->db->prepare("DELETE  FROM articulo WHERE idarticulo=?");
+        $query->execute(array($id));
+    }
+
+    function updateProduct($description,$price,$brand,$categoria,$id, $image){
+        $query = $this->db->prepare("UPDATE articulo SET Descripcion=?, Precio_1=?, url_imagen=?, Marca=?, idcategoria=? WHERE idarticulo =?");
+        $query->execute(array($description,$price,$image,$brand,$categoria,$id));
+    }
+
+    function addProduct($description,$price,$brand,$category,$image){
+        $query = $this->db->prepare("INSERT INTO articulo (Descripcion, Precio_1, url_imagen, Marca, idcategoria) VALUES(?,?,?,?,?)");
+        $query->execute(array($description,$price,$image,$brand,$category));
+    }
+
+    function getComentByProduct(){
+        $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria  AND idarticulo =?');
+        $coments = $query->fetchAll(PDO::FETCH_OBJ);
+        return $coments;
+    }
+
+    function setComentByProduct($idproduct,$iduser,$coment,$rate,$date){
+        $query = $this->db->prepare("INSERT INTO comentario(idarticulo, idusuario, comentario,puntuacion, fecha) VALUES (?,?,?,?,?)");
+        $query->execute(array($idproduct,$iduser,$coment,$rate,$date));
+
+    }
+
+    function deleteComent($id){
+        $query = $this->db->prepare("DELETE FROM comentario WHERE idcomentario =?");
+        $query->execute(array($id));
+
+    }
+}

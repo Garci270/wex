@@ -1,64 +1,85 @@
 <?php
 require_once "./model/Usermodel.php";
-require_once "./view/Usuarioview.php";
-require_once "./model/Productosmodel.php";
-require_once "./model/Categoriasmodel.php";
+require_once "./view/Userview.php";
+require_once "./model/Productmodel.php";
+require_once "./model/Categorymodel.php";
 require_once "./helper/AuthHelper.php";
 
 class UserController{
     private $userModel;
-    private $productoModel;
-    private $categoriaModel;
+    private $productModel;
+    private $categoryModel;
     private $userView;
     private $authHelper;
     function __construct(){
         $this->userModel = new UserModel();
-        $this->productoModel = new ProductosModel();
-        $this->categoriaModel = new CategoriasModel();
+        $this->productModel = new ProductsModel();
+        $this->categoryModel = new CategorysModel();
         $this->userView = new UsuarioView();
         $this->authHelper = new AuthHelper();
     }
-    function registrarse(){
-        $this->userView->mostrarRegistrarse();
+    function regist(){
+        $this->userView->showRegister();
     }
-    function salir(){
+    function logOut(){
         session_start();
         session_destroy();
-        $this->userView->ingresar();
+        $this->userView->logIn();
     }
-    function ingresar(){
-        $this->userView->ingresar(null);
+    function logIn(){
+        $this->userView->logIn(null);
     }
-    function inicio(){
-        $productos = $this->productoModel->getProductos(0);
-        $categorias = $this->categoriaModel->getCategorias(0);
-        $this->authHelper->checkearIngreso();
-        $this->userView->inicioUsuario($productos, $categorias);
-    }
-
-    function setUsuario(){
-        if(!empty($_POST['email']) && !empty($_POST['nombre'])&& !empty($_POST['contrasena'])){
-            $email=$_POST['email'];
-            $contrasena= password_hash($_POST['contrasena'], PASSWORD_BCRYPT);
-            $nombre=$_POST['nombre'];
-            $this->userModel->setUsuario($nombre,$email, $contrasena);
-            $this->userView->ingresar();
+    function home(){
+        $products = $this->productModel->getProducts(0);
+        $categorys = $this->categoryModel->getCategorys(0);
+        $this->authHelper->checkLogIn();
+        if($categorys && $products){
+            return $this->userView->userStart($products, $categorys);
+        }else{
+            return $this->userView->response("fail to load product by category", 400);
         }
     }
 
-    function getUsuario(){
-        if(!empty($_POST['email'])&& !empty($_POST['contrasena'])){
-            $userEmail=$_POST['email'];
-            $contrasena=$_POST['contrasena'];
-            $user = $this->userModel->getUsuario($userEmail);
-            if($user && password_verify($contrasena,($user->clave))){
-                session_start();
-                $_SESSION['email'] = $userEmail;
-                $this->userView->inicio();
+    function setUser(){
+        if(!empty($_POST['email']) && !empty($_POST['nombre'])&& !empty($_POST['contrasena'])){
+            $email=$_POST['email'];
+            $password= password_hash($_POST['contrasena'], PASSWORD_BCRYPT);
+            $name=$_POST['nombre'];
+            $userName=$_POST['nombre_usuario'];
+            $level = "";
+            $user = $this->userModel->setUsuer($name,$userName,$email, $password, $level);
+            if ($user) {
+                return $this->userView->logIn();
             }else{
-                $this->userView->ingresar("Acceso denegado!");
+                return $this->userView->response("fail to load product by category", 400);
             }
         }
     }
-}
 
+    function getUser(){
+        if(!empty($_POST['email'])&& !empty($_POST['contrasena'])){
+            $userEmail=$_POST['email'];
+            $password=$_POST['contrasena'];
+            $user = $this->userModel->getUsuer($userEmail);
+            if($user && password_verify($password,($user->clave))){
+                session_start();
+                $_SESSION['email'] = $userEmail;
+                return $this->userView->home();
+            }else{
+                return $this->userView->logIn("Acceso denegado!");
+            }
+        }
+    }
+
+    function getUsers(){
+        $this->authHelper->checkLevel();
+        $users = $this->userModel->getUsers();
+        $this->userView->showUsers($users);
+    }
+
+    function deleteUser($id){
+        $this->authHelper->checkLevel();
+        $this->userModel->deleteUser($id);
+        $this->userView->home();
+    }
+}

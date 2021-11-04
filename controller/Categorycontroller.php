@@ -15,10 +15,15 @@ class categorysController{
         $this->authHelper = new AuthHelper();
     }
     function showItemsCategorys($id){
+        if ($this->authHelper->checkLogIn()) {
+            $user = true;
+        }else{
+            $user = false;
+        }
         $catP = $this->categoryModel->getProductsCat($id);
         $categorys = $this->categoryModel->getCategorys(0);
         if($catP && $categorys){
-            return $this->categoryView->showCategorys($catP, $categorys);
+            return $this->categoryView->showCategorys($catP, $categorys, $user);
         }else{
             return $this->categoryView->response("fail to load product by category", 400);
         }

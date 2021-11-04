@@ -18,10 +18,15 @@ class ProductosController{
         $this->authHelper = new AuthHelper();
     }
     function home(){
+        if ($this->authHelper->checkLogIn()) {
+            $user = true;
+        }else{
+            $user = false;
+        }
         $products = $this->productModel->getProductsSlider();
         $categorys = $this->categoryModel->getCategorys(0);
         if($products && $categorys){
-            return $this->productView->inicio($products,$categorys);
+            return $this->productView->inicio($products,$categorys, $user);
         }else{
             return $this->productView->response("fail to load products and categorys", 400);
         }
@@ -29,9 +34,10 @@ class ProductosController{
     function showProducts(){
         if ($this->authHelper->checkLogIn()) {
             $user = true;
+        }else{
+            $user = false;
         }
         $products = $this->productModel->getProducts(0);
-        $user = false;
         if($products){
             return $this->productView->mostrarProductos($products, $user);
         }else{
@@ -42,10 +48,11 @@ class ProductosController{
     function showProduct($id){
         if ($this->authHelper->checkLogIn()) {
             $user = true;
+        }else{
+            $user = false;
         }
         $categorys = $this->categoryModel->getCategorys(0);
         $product = $this->productModel->getProductDetail($id);
-        $user = false;
         if($product){
             return $this->productView->mostrarDetalleProducto($product, $categorys, $user);
         }else{

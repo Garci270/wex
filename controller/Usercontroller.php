@@ -30,14 +30,16 @@ class UserController{
         $this->userView->logIn(null);
     }
     function home(){
-        $products = $this->productModel->getProducts(0);
-        $categorys = $this->categoryModel->getCategorys(0);
-        $this->authHelper->checkLogIn();
-        if($categorys && $products){
-            return $this->userView->userStart($products, $categorys);
-        }else{
-            return $this->userView->response("fail to load product by category", 400);
+        if ($this->authHelper->checkLevel()) {
+            $products = $this->productModel->getProducts(0);
+            $categorys = $this->categoryModel->getCategorys(0);
+            if($categorys && $products){
+                return $this->userView->userStart($products, $categorys);
+            }else{
+                return $this->userView->response("fail to load product by category", 400);
+            }
         }
+        
     }
 
     function setUser(){
@@ -64,6 +66,7 @@ class UserController{
             if($user && password_verify($password,($user->clave))){
                 session_start();
                 $_SESSION['email'] = $userEmail;
+                $_SESSION['level'] = $user->nivel;
                 return $this->userView->home();
             }else{
                 return $this->userView->logIn("Acceso denegado!");

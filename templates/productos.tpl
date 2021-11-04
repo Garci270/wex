@@ -26,10 +26,10 @@
                             <a href="detalle/{$producto->idarticulo}" class="btn btn-danger">Detalle</a>
                             {if $user}
                                 <h5 class="card-title">Danos tu opinion</h5>
-                                <input type="text" name="coment" placeholder="Deje un comentario del producto aqui">
+                                <input type="text" name="coment" class="form-control" placeholder="Deje un comentario del producto aqui">
                                 <h5>Puntua el producto</h5>
-                                <select name="rate" id="">
-                                    <option value=""></option>
+                                <select class="form-control" name="rate" id="">
+                                    <option value="1">Selecciona una puntuacion</option>
                                 </select>
                             {/if}
                         </div>

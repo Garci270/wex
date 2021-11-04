@@ -16,12 +16,13 @@ class CategorysView{
           );
           return (isset($status[$code]))? $status[$code] : $status[500];
     }
-    function showCategorys($productos, $categorias){
+    function showCategorys($productos, $categorias, $user){
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
         $smarty->assign('categorias',$categorias);
         $smarty->assign('productos',$productos);
         $smarty->assign('bandera',false);
+        $smarty->assign('user',$user);
         $smarty->display('templates/productos.tpl');
     }
     function editCategory($categorias, $categoria){

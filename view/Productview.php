@@ -18,11 +18,12 @@ class ProductsView{
           return (isset($status[$code]))? $status[$code] : $status[500];
     }
 
-    function inicio($productos, $categorias){
+    function inicio($productos, $categorias, $user){
        $smarty = new Smarty();
        $smarty->assign('categorias',$categorias);
        $smarty->assign('productos',$productos);
        $smarty->assign('bandera',false);
+       $smarty->assign('user',$user);
        $smarty->assign('titulo',"WEX");
        $smarty->display('templates/inicio.tpl');
     }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-03 16:47:24
+/* Smarty version 3.1.39, created on 2021-11-11 19:57:50
   from 'C:\xampp\htdocs\tpeespecial\templates\user\navusuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6182e74c6562a1_28363962',
+  'unifunc' => 'content_618d9fee0a18e8_22380459',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32b024f516587bfebef40d959a5a7daf7165f652' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\navusuario.tpl',
-      1 => 1635968181,
+      1 => 1636671461,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6182e74c6562a1_28363962 (Smarty_Internal_Template $_smarty_tpl) {
+function content_618d9fee0a18e8_22380459 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid bg-orange">
   <div class="col-12 text-white">
     <p class="pt-2">Estas editando en <strong>WEX</strong> Telefono: (2314552547) | Localidad: <strong>Bolivar</strong></p>

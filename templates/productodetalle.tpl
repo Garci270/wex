@@ -23,11 +23,17 @@
                     <a href="inicio" class="btn btn-danger">Inicio</a>
                     {if $user}
                         <h5 class="card-title">Danos tu opinion</h5>
-                        <input type="text" name="coment" placeholder="Deje un comentario del producto aqui">
+                        <input type="text" name="coment" class="form-control" placeholder="Deje un comentario del producto aqui">
                         <h5>Puntua el producto</h5>
-                        <select name="rate" id="">
-                            <option value=""></option>
+                        <select name="rate" id="" class="form-control text-center">
+                            <option value="-1">Selecciona una puntuacion</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
+                        <a href="enviarcomentario" class="btn btn-danger">Enviar</a>
                     {/if}
                 </div>
             </div>

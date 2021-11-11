@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-13 12:42:27
+/* Smarty version 3.1.39, created on 2021-11-11 18:42:55
   from 'C:\xampp\htdocs\tpeespecial\templates\user\iniciousuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6166fe63713684_52174037',
+  'unifunc' => 'content_618d8e5feb74b2_31358721',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '45cec60ed8cb0df0ab8103819a67b3ac2ba3ec44' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\iniciousuario.tpl',
-      1 => 1634139746,
+      1 => 1636666249,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6166fe63713684_52174037 (Smarty_Internal_Template $_smarty_tpl) {
+function content_618d8e5feb74b2_31358721 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +45,7 @@ function content_6166fe63713684_52174037 (Smarty_Internal_Template $_smarty_tpl)
             <div class="m-auto">
                 <a class="btn agregarP" href="agregarProd">Agregar Producto</a>
                 <a class="btn agregarC" href="agregarCat">Agregar Categoria</a>
+                <a class="btn agregarC" href="agregarUsuario">Agregar Usuario</a>
             </div>
         </div>
     </div>

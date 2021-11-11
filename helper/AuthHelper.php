@@ -2,7 +2,7 @@
 class AuthHelper{
     function checkLogIn(){
         session_start();
-        if(!isset($_SESSION["email"])){
+        if(!isset($_SESSION["email"]) && !isset($_SESSION["nombre_usuario"])){
            /*  header("Location: ".BASE_URL."ingresar"); */
            return false;
         }else{
@@ -11,8 +11,7 @@ class AuthHelper{
     }
 
     function checkLevel(){
-        session_start();
-        if((!isset($_SESSION["email"]))&&($_SESSION["level"] == 1)){
+        if($_SESSION["level"] == '1'){
             return true;
         }else{
             return false;

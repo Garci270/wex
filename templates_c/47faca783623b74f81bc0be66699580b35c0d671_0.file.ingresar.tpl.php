@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-13 12:12:38
+/* Smarty version 3.1.39, created on 2021-11-11 20:01:35
   from 'C:\xampp\htdocs\tpeespecial\templates\ingresar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6166f766f28ef6_27341175',
+  'unifunc' => 'content_618da0cf64d163_14772424',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '47faca783623b74f81bc0be66699580b35c0d671' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\ingresar.tpl',
-      1 => 1634137937,
+      1 => 1636669481,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6166f766f28ef6_27341175 (Smarty_Internal_Template $_smarty_tpl) {
+function content_618da0cf64d163_14772424 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +46,12 @@ function content_6166f766f28ef6_27341175 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" placeholder="Escribe tu email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email con nadie.</small>
+                    <small id="emailHelp" class="form-text text-muted">Puedes ingresar con email o con nombre de usuario.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre Usuario</label>
+                    <input type="text" class="form-control" placeholder="Escribe tu email" name="nombre_usuario" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Puedes ingresar con email o con nombre de usuario.</small>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Contraseña</label>

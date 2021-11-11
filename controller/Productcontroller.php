@@ -61,6 +61,7 @@ class ProductosController{
     }
 
     function editProduct($id){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         $categorys = $this->categoryModel->getCategorys(0);
         $products = $this->productModel->getProducts(0);
@@ -68,14 +69,11 @@ class ProductosController{
         if($id>0){
             $product = $this->productModel->getProducts($id)[0];
         }
-        if($product){
-            return $this->productView->editarProducto($products, $categorys, $product);
-        }else{
-            return $this->productView->response("fail to load product by category", 400);
-        }
+        return $this->productView->editarProducto($products, $categorys, $product);
     }
 
     function goToAddProduct(){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         $categorys = $this->categoryModel->getCategorys(0);
         if($categorys){
@@ -86,6 +84,7 @@ class ProductosController{
         
     }
     function updateProduct($id){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])&& !empty($_POST['imagen'])){
             $category = $_POST['categoria'];
@@ -103,6 +102,7 @@ class ProductosController{
     }
 
     function addProduct(){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])&& !empty($_POST['imagen'])){
             $category = $_POST['categoria'];
@@ -119,6 +119,7 @@ class ProductosController{
         }
     }
     function deleteProduct($id){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         $deleteProduct = $this->productModel->deleteProduct($id);
         if($deleteProduct){

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-13 18:44:10
+/* Smarty version 3.1.39, created on 2021-11-11 18:20:42
   from 'C:\xampp\htdocs\tpeespecial\templates\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6167532a3ae583_01931246',
+  'unifunc' => 'content_618d892ac69c71_76946072',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b6472c79b734baf540c3f0efef1a0b4a3005c434' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\navbar.tpl',
-      1 => 1634161448,
+      1 => 1636665640,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6167532a3ae583_01931246 (Smarty_Internal_Template $_smarty_tpl) {
+function content_618d892ac69c71_76946072 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container-fluid bg-orange">
   <div class="col-12 text-white">
     <p class="pt-2">Estas comprando en <strong>WEX</strong> Telefono: (2314552547) | Localidad: <strong>Bolivar</strong></p>
@@ -40,8 +40,12 @@ function content_6167532a3ae583_01931246 (Smarty_Internal_Template $_smarty_tpl)
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
                 <ul class="dropdown-menu">
-                <li><a class="dropdown-item " href="ingresar"><i class="fas fa-sign-in-alt m-2"></i>Ingresar</a></li>
-                <li><a class="dropdown-item " href="registrarse"><i class="fas fa-user-plus m-2" aria-hidden="true"></i>Registrarse</a></li>
+                <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
+                  <li><a class="dropdown-item " href="cerrar"><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+                <?php } else { ?>
+                  <li><a class="dropdown-item " href="ingresar"><i class="fas fa-sign-in-alt m-2"></i>Ingresar</a></li>
+                  <li><a class="dropdown-item " href="registrarse"><i class="fas fa-user-plus m-2" aria-hidden="true"></i>Registrarse</a></li>
+                <?php }?>
                 </ul>
               </li>
           </div>

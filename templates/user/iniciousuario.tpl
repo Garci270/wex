@@ -17,6 +17,7 @@
             <div class="m-auto">
                 <a class="btn agregarP" href="agregarProd">Agregar Producto</a>
                 <a class="btn agregarC" href="agregarCat">Agregar Categoria</a>
+                <a class="btn agregarC" href="agregarUsuario">Agregar Usuario</a>
             </div>
         </div>
     </div>

@@ -31,6 +31,7 @@ class categorysController{
     }
 
     function deleteCategory($id){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         $delete = $this->categoryModel->deleteCategory($id);
         if($delete){
@@ -41,6 +42,7 @@ class categorysController{
     }
 
     function updateCategory($id){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         if(!empty($_POST['descripcion'])&& !empty($_POST['imagen'])){
             $description = $_POST['descripcion'];
@@ -55,6 +57,7 @@ class categorysController{
     }
 
     function addCategory(){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         if(!empty($_POST['descripcion'])&& !empty($_POST['imagen'])){
             $description = $_POST['descripcion'];
@@ -68,20 +71,18 @@ class categorysController{
         }
     }
     function editCategory($id){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         $categorys = $this->categoryModel->getcategorys(0);
         $category = false;
         if($id>0){
             $category = $this->categoryModel->getcategorys($id)[0];
         }
-        if($category && $categorys){
-            return $this->categoryView->editCategory($categorys, $category);
-        }else{
-            return $this->categoryView->response("fail to load product by category", 400);
-        }
+        return $this->categoryView->editCategory($categorys, $category);
     }
 
     function goToAddCategory(){
+        $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         $this->categoryView->addCategory();
     }

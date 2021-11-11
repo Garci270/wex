@@ -50,7 +50,10 @@ switch($params[0]){
         break;
     case 'editarProductos':
         $productsController->editProduct($params[1]); 
-        break; 
+        break;
+    case 'editarUsuarios':
+        $userController->goToEditUser($params[1]); 
+        break;     
     case 'editarCategorias':
         $categorysController->editCategory($params[1]); 
         break; 
@@ -77,7 +80,19 @@ switch($params[0]){
         break; 
     case 'agregarCategoria':
         $categorysController->addCategory();
-        break;      
+        break;
+    case 'agregarUsuario':
+        $userController->goToAddUser();
+        break;
+    case 'crearUsuario':
+        $userController->AddUser();
+        break;
+    case 'eliminarUsu':
+        $userController->deleteUser($params[1]);
+        break;
+    case 'actualizarUsu':
+        $userController->editUser($params[1]);
+        break;          
     default: 
         echo('404 Page not found'); 
         break;

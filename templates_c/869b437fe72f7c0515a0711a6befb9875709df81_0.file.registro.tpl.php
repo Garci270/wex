@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-05 18:54:35
+/* Smarty version 3.1.39, created on 2021-11-11 20:50:17
   from 'C:\xampp\htdocs\tpeespecial\templates\registro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615cc99b14b797_74320089',
+  'unifunc' => 'content_618dac39ab8dd1_96674698',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '869b437fe72f7c0515a0711a6befb9875709df81' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\registro.tpl',
-      1 => 1633470862,
+      1 => 1636668394,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_615cc99b14b797_74320089 (Smarty_Internal_Template $_smarty_tpl) {
+function content_618dac39ab8dd1_96674698 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +46,10 @@ function content_615cc99b14b797_74320089 (Smarty_Internal_Template $_smarty_tpl)
             <div class="form-group">
                     <label for="exampleInputEmail1">Nombre</label>
                     <input type="text" class="form-control" placeholder="Escribe tu nombre" name="nombre" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre de Usuario</label>
+                    <input type="text" class="form-control" placeholder="Escribe tu nombre de usuario" name="nombre_usuario" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>  
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>

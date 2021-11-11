@@ -20,7 +20,12 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" placeholder="Escribe tu email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email con nadie.</small>
+                    <small id="emailHelp" class="form-text text-muted">Puedes ingresar con email o con nombre de usuario.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre Usuario</label>
+                    <input type="text" class="form-control" placeholder="Escribe tu email" name="nombre_usuario" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Puedes ingresar con email o con nombre de usuario.</small>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Contraseña</label>

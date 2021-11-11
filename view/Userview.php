@@ -2,25 +2,10 @@
 require_once "libs/smarty-3.1.39/libs/Smarty.class.php";
 
 class UsuarioView{
-    public function response($data, $status) {
-        header("Content-Type: application/json");
-        header("HTTP/1.1 " . $status . " " . $this->_requestStatus($status));
-        echo json_encode($data);
-    }
-    
-    private function _requestStatus($code){
-        $status = array(
-            200 => "OK",
-            404 => "Not found",
-            500 => "Internal Server Error",
-            501 => "Internal Error in Tasks web"
-          );
-          return (isset($status[$code]))? $status[$code] : $status[500];
-    }
     function logIn(){
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
-        $smarty->assign('bandera',true);
+        $smarty->assign('bandera',false);
         $smarty->display('templates/ingresar.tpl');
     }
 
@@ -38,16 +23,24 @@ class UsuarioView{
     function showRegister(){
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
-        $smarty->assign('bandera',true);
+        $smarty->assign('bandera',false);
         $smarty->display('templates/registro.tpl');
     }
 
-    function showUsers($users){
+    function showAddUsers(){
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
+        $smarty->assign('bandera',false);
+        $smarty->display('templates/user/agregarusuario.tpl');
+    }
+
+    function showEditUsers($users, $user){
+        $smarty = new Smarty();
+        $smarty->assign('titulo',"WEX");
+        $smarty->assign('users',$users);
+        $smarty->assign('user',$user);
         $smarty->assign('bandera',true);
-        $smarty->assign('productos',$users);
-        $smarty->display('templates/users.tpl');
+        $smarty->display('templates/user/editarusuario.tpl');
     }
 
 }

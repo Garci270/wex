@@ -43,8 +43,16 @@ class productsModel{
         $query->execute(array($description,$price,$image,$brand,$category));
     }
 
-    function getComentByProduct(){
-        $query = $this->db->prepare('SELECT a.*, c.Descripcion as categoria FROM articulo a, categoria c WHERE a.idcategoria = c.idcategoria  AND idarticulo =?');
+    function getComentByProduct($id){
+        $query = $this->db->prepare('SELECT c.*, u.nombre_usuario as nombreU FROM articulo a, comentario c, usuario u WHERE a.idarticulo = c.idarticulo AND c.idusuario = u.idusuario  AND idcomentario =?');
+        $query->execute(array($id));
+        $coments = $query->fetchAll(PDO::FETCH_OBJ);
+        return $coments;
+    }
+
+    function getComents(){
+        $query = $this->db->prepare('SELECT * FROM comentario');
+        $query->execute();
         $coments = $query->fetchAll(PDO::FETCH_OBJ);
         return $coments;
     }
@@ -57,7 +65,7 @@ class productsModel{
 
     function deleteComent($id){
         $query = $this->db->prepare("DELETE FROM comentario WHERE idcomentario =?");
-        $query->execute(array($id));
-
+        $delete = $query->execute(array($id));
+        return $delete;
     }
 }

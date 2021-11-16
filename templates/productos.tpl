@@ -15,7 +15,7 @@
     <div class="row">
         {foreach from=$productos item=$producto}
             <div class="m-auto col-3">
-                <div class="card p-10" style="width: 16rem;">
+                <div class="card m-4" style="width: 16rem;">
                     <img src="{$producto->url_imagen}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{$producto->categoria}</h5>
@@ -25,17 +25,7 @@
                             <p class="card-text tamañoPrecio">${$producto->Precio_1}</p>
                             <a href="detalle/{$producto->idarticulo}" class="btn btn-danger">Detalle</a>
                             {if $user}
-                                <h5 class="card-title">Danos tu opinion</h5>
-                                <input type="text" name="coment" class="form-control" placeholder="Deje un comentario del producto aqui">
-                                <h5>Puntua</h5>
-                                <select class="form-control text-center" name="rate" id="">
-                                <option value="-1">Selecciona una puntuacion</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                </select>
+                                {include file="comentarios.tpl"}
                             {/if}
                         </div>
                     </div>

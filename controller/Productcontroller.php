@@ -69,7 +69,7 @@ class ProductosController{
         if($id>0){
             $product = $this->productModel->getProducts($id)[0];
         }
-        return $this->productView->editarProducto($products, $categorys, $product);
+        return $this->productView->editarProducto($products, $categorys, $product, true);
     }
 
     function goToAddProduct(){

@@ -56,6 +56,7 @@
                     <input type="text" name="precio" class="form-control" value="{$producto->Precio_1}">
                     <a href="eliminarProd/{$producto->idarticulo}" class="btn btn-danger mt-2">Eliminar</a>
                     <button type="submit" class="btn btn-danger mt-2">Editar</a>
+                    {include file="./articuloComentarios.tpl"}
                 </div>
             </div>
         </div>

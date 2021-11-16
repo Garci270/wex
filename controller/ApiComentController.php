@@ -1,45 +1,55 @@
 <?php
-require_once "./view/Userview.php";
-require_once "./helper/AuthHelper.php";
-require_once "./model/Productmodel.php";
-
-class comentController{
-    private $authHelper;
-    private $productModel;
+require_once "./controller/ApiController.php";
+class ApiComentController extends ApiController{
+    private $data;
     function __construct(){
-        $this->productModel = new ProductsModel();
-        $this->authHelper = new AuthHelper();
+        parent::__construct();
+        $this->data = $this->getData();
     }
+
     function getComents(){
-        $coments = $this->productModel->getComentByProduct();
+        $coments = $this->productModel->getComents();
         if($coments){
-            /* return $this->productView->mostrarProductos($products); */
+            return $this->apiView->response($coments, 200);
         }else{
-            return $this->productView->response("fail to load products", 400);
+            return $this->apiView->response("fail to get coments", 400);
         }
     }
-    function getComent($id){
-        $coments = $this->productModel->getComentByProduct();
+
+    function getComent($params = []){
+        $id = $params[":ID"];
+        $coments = $this->productModel->getComentByProduct($id);
         if($coments){
-            /* return $this->productView->mostrarProductos($products); */
+            return $this->apiView->response($coments, 200);
         }else{
-            return $this->productView->response("fail to load products", 400);
+            return $this->apiView->response("fail to get coment", 400);
         }
     }
-    function setComent($idproduct,$iduser,$coment,$rate,$date){
-        $coments = $this->productModel->setComentByProduct($idproduct,$iduser,$coment,$rate,$date);
-        if($coments){
-            /* return $this->productView->mostrarProductos($products); */
-        }else{
-            return $this->productView->response("fail to load products", 400);
+
+    function setComent($params = []){
+        $idproduct = $params['ID'];
+        $iduser = $params['ID'];
+        if(!empty($this->data->coment) && !empty($this->data->rate)){
+            $coment = $this->data->coment;
+            $rate = $this->data->rate;
+            $date = date('Y-m-d');
+            $coments = $this->productModel->setComentByProduct($idproduct,$iduser,$coment,$rate,$date);
+            if($coments){
+                return $this->apiView->response("OK", 200);
+            }else{
+                return $this->apiView->response("fail to set coment", 400);
+            }
         }
     }
-    function deleteComent($id){
-        $coment = $this->productModel->deleteComent($id);
+
+    function deleteComent($params = []){
+        $id = $params[":ID"];
+        $coment = $this->productModel->getComentByProduct($id);
         if($coment){
-            /* return $this->productView->mostrarProductos($products); */
+            $this->productModel->deleteComent($id);
+            return $this->userView->home();
         }else{
-            return $this->productView->response("fail to load products", 400);
+            return $this->apiView->response("fail to delete coment", 400);
         }
     }
 }

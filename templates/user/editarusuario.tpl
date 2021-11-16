@@ -38,6 +38,7 @@
                 <h5 class="card-title">{$user->nombre}</h5>
                 <h5 class="card-title">{$user->nombre_usuario}</h5>
                 <h5 class="card-title">{$user->email}</h5>
+                <h5 class="card-title">Cambiar Nivel</h5>
                 <input type="text" name="nivel" class="form-control" value="{$user->nivel}">
                 <div class="card-footer">
                     <a href="eliminarUsu/{$user->idusuario}" class="btn btn-danger mt-2">Eliminar</a>

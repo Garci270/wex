@@ -53,12 +53,13 @@ class ProductsView{
         $smarty->assign('bandera',false);
         $smarty->display('templates/user/agregarproducto.tpl');
     }
-    function editarProducto($productos, $categorias, $producto){
+    function editarProducto($productos, $categorias, $producto, $admin){
         $smarty = new Smarty();
         $smarty->assign('categorias',$categorias);
         $smarty->assign('titulo',"WEX");
         $smarty->assign('productos',$productos);
         $smarty->assign('producto',$producto);
+        $smarty->assign('admin',$admin);
         $smarty->assign('bandera',false);
         $smarty->display('templates/user/editarproducto.tpl');
     }

@@ -1,28 +1,29 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-11 18:26:26
+/* Smarty version 3.1.39, created on 2021-11-15 19:54:59
   from 'C:\xampp\htdocs\tpeespecial\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_618d8a82d23500_18663593',
+  'unifunc' => 'content_6192e54360e642_30633636',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4f4130892e06fade9a74148c473afb44f5c2b5a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productos.tpl',
-      1 => 1636665984,
+      1 => 1637008731,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:navbar.tpl' => 1,
+    'file:comentarios.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_618d8a82d23500_18663593 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6192e54360e642_30633636 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +49,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['producto']->valu
 $_smarty_tpl->tpl_vars['producto']->do_else = false;
 ?>
             <div class="m-auto col-3">
-                <div class="card p-10" style="width: 16rem;">
+                <div class="card m-4" style="width: 16rem;">
                     <img src="<?php echo $_smarty_tpl->tpl_vars['producto']->value->url_imagen;?>
 " class="card-img-top" alt="...">
                     <div class="card-body">
@@ -64,17 +65,8 @@ $_smarty_tpl->tpl_vars['producto']->do_else = false;
                             <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['producto']->value->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                             <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
-                                <h5 class="card-title">Danos tu opinion</h5>
-                                <input type="text" name="coment" class="form-control" placeholder="Deje un comentario del producto aqui">
-                                <h5>Puntua</h5>
-                                <select class="form-control text-center" name="rate" id="">
-                                <option value="-1">Selecciona una puntuacion</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                </select>
+                                <?php $_smarty_tpl->_subTemplateRender("file:comentarios.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>
                             <?php }?>
                         </div>
                     </div>

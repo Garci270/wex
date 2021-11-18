@@ -1,28 +1,29 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-14 18:50:21
+/* Smarty version 3.1.39, created on 2021-11-17 20:04:23
   from 'C:\xampp\htdocs\tpeespecial\templates\user\editarproducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6168a61d1c65c7_77451009',
+  'unifunc' => 'content_61958a779acd74_76720591',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9cdd0c38ab96d705bd8a1771c5b104eb171dc16a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\editarproducto.tpl',
-      1 => 1634248218,
+      1 => 1637190261,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:templates/user/navusuario.tpl' => 1,
+    'file:templates/user/editarComentario.tpl' => 1,
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6168a61d1c65c7_77451009 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61958a779acd74_76720591 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +36,10 @@ function content_6168a61d1c65c7_77451009 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="css/style.css">
     <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
+    <?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"><?php echo '</script'; ?>
+>
+
 </head>
 <body>
 <?php $_smarty_tpl->_subTemplateRender("file:templates/user/navusuario.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -114,15 +119,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 ">
                     <a href="eliminarProd/<?php echo $_smarty_tpl->tpl_vars['producto']->value->idarticulo;?>
 " class="btn btn-danger mt-2">Eliminar</a>
-                    <button type="submit" class="btn btn-danger mt-2">Editar</a>
+                    <button type="submit" class="btn btn-danger mt-2">Editar</button>
                 </div>
             </div>
         </div>
-    </form>
-<?php }?>
+        </form>
+        <?php $_smarty_tpl->_subTemplateRender("file:templates/user/editarComentario.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}?>
 </div>
 <?php echo '<script'; ?>
  src="js/producto.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/comentario.js"><?php echo '</script'; ?>
 >
 <?php if ($_smarty_tpl->tpl_vars['producto']->value) {?>
     <?php $_smarty_tpl->_subTemplateRender("file:templates/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

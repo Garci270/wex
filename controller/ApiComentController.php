@@ -7,16 +7,18 @@ class ApiComentController extends ApiController{
         $this->data = $this->getData();
     }
 
-    function getComents(){
-        $coments = $this->productModel->getComents();
+    function getComents($params = []){
+        $id = $params[":ID"];
+        $coments = $this->productModel->getComentByProduct($id);
+        /* $coments = $this->productModel->getComents(); */
         if($coments){
             return $this->apiView->response($coments, 200);
         }else{
-            return $this->apiView->response("fail to get coments", 400);
+            return $this->apiView->response("no coments", 200);
         }
     }
 
-    function getComent($params = []){
+    /* function getComent($params = []){
         $id = $params[":ID"];
         $coments = $this->productModel->getComentByProduct($id);
         if($coments){
@@ -24,7 +26,7 @@ class ApiComentController extends ApiController{
         }else{
             return $this->apiView->response("fail to get coment", 400);
         }
-    }
+    } */
 
     function setComent($params = []){
         $idproduct = $params['ID'];
@@ -44,12 +46,7 @@ class ApiComentController extends ApiController{
 
     function deleteComent($params = []){
         $id = $params[":ID"];
-        $coment = $this->productModel->getComentByProduct($id);
-        if($coment){
-            $this->productModel->deleteComent($id);
-            return $this->userView->home();
-        }else{
-            return $this->apiView->response("fail to delete coment", 400);
-        }
+        $this->productModel->deleteComent($id);
+        return $this->apiView->response('ok',200);       
     }
 }

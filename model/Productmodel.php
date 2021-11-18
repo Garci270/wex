@@ -44,14 +44,14 @@ class productsModel{
     }
 
     function getComentByProduct($id){
-        $query = $this->db->prepare('SELECT c.*, u.nombre_usuario as nombreU FROM articulo a, comentario c, usuario u WHERE a.idarticulo = c.idarticulo AND c.idusuario = u.idusuario  AND idcomentario =?');
+        $query = $this->db->prepare('SELECT c.*, u.nombre_usuario as nombreU FROM articulo a, comentario c, usuario u WHERE a.idarticulo = c.idarticulo AND c.idusuario = u.idusuario  AND c.idarticulo =?');
         $query->execute(array($id));
         $coments = $query->fetchAll(PDO::FETCH_OBJ);
         return $coments;
     }
 
     function getComents(){
-        $query = $this->db->prepare('SELECT * FROM comentario');
+        $query = $this->db->prepare('SELECT c.*, u.nombre_usuario as nombreU FROM comentario c, usuario u WHERE u.idusuario = c.idusuario');
         $query->execute();
         $coments = $query->fetchAll(PDO::FETCH_OBJ);
         return $coments;

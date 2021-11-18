@@ -1,29 +1,28 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-15 19:54:59
+/* Smarty version 3.1.39, created on 2021-11-17 18:30:26
   from 'C:\xampp\htdocs\tpeespecial\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6192e54360e642_30633636',
+  'unifunc' => 'content_619574729e8553_19286181',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4f4130892e06fade9a74148c473afb44f5c2b5a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productos.tpl',
-      1 => 1637008731,
+      1 => 1637184625,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:navbar.tpl' => 1,
-    'file:comentarios.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6192e54360e642_30633636 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619574729e8553_19286181 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,8 +64,9 @@ $_smarty_tpl->tpl_vars['producto']->do_else = false;
                             <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['producto']->value->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                             <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
-                                <?php $_smarty_tpl->_subTemplateRender("file:comentarios.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
-?>
+                                <p class="text-muted">En detalle ahora puedes comentar!</p>
+                            <?php } else { ?>
+                                <p class="text-muted">En detalle puedes ver los comentarios!</p>
                             <?php }?>
                         </div>
                     </div>

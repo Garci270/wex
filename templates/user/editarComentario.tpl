@@ -11,6 +11,9 @@
                             <h5 class="card-title">Puntuacion</h5>
                             <h6 class="card-title text-muted">{{ coment.puntuacion }}</h6>
                         </div>
+                        <div class="card-footer">
+                            <button v-on:click="deleteComent(coment.idcomentario)" class="btn btn-danger mt-2 btn-delete-coment">Eliminar</button>
+                        </div>
                     </div>
                 </div>
             </div>

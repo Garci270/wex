@@ -8,8 +8,8 @@ require_once "controller/ApiComentController.php";
 $router = new Router();
 
 // ejemplo aplicar similar para el ecommerce
-$router->addRoute("comentarios", "GET", "ApiComentController", "getComents");
-$router->addRoute("comentarios/:ID", "GET", "ApiComentController", "getComent");
+$router->addRoute("comentarios/:ID", "GET", "ApiComentController", "getComents");
+/* $router->addRoute("comentarios/:ID", "GET", "ApiComentController", "getComent"); */
 $router->addRoute("comentarios/:ID", "POST", "ApiComentController", "setComent");
 $router->addRoute("comentarios/:ID", "DELETE", "ApiComentController", "deleteComent");
 

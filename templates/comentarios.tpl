@@ -12,4 +12,3 @@
     </select>
     <a class="btn btn-danger mt-2" id="send-coment">Comentar</a>
 {/literal}
-<script src="js/comentario.js"></script>

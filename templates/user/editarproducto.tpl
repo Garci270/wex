@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>{$titulo}</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
 </head>
 <body>
 {include file="templates/user/navusuario.tpl"}
@@ -55,15 +57,16 @@
                     <p class="card-text tamañoPrecio">${$producto->Precio_1}</p>
                     <input type="text" name="precio" class="form-control" value="{$producto->Precio_1}">
                     <a href="eliminarProd/{$producto->idarticulo}" class="btn btn-danger mt-2">Eliminar</a>
-                    <button type="submit" class="btn btn-danger mt-2">Editar</a>
-                    {include file="./articuloComentarios.tpl"}
+                    <button type="submit" class="btn btn-danger mt-2">Editar</button>
                 </div>
             </div>
         </div>
-    </form>
+        </form>
+        {include file="templates/user/editarComentario.tpl"}
 {/if}
 </div>
 <script src="js/producto.js"></script>
+<script src="js/comentario.js"></script>
 {if $producto}
     {include file="templates/footer.tpl"}
 {else}

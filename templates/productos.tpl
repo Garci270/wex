@@ -25,7 +25,9 @@
                             <p class="card-text tamañoPrecio">${$producto->Precio_1}</p>
                             <a href="detalle/{$producto->idarticulo}" class="btn btn-danger">Detalle</a>
                             {if $user}
-                                {include file="comentarios.tpl"}
+                                <p class="text-muted">En detalle ahora puedes comentar!</p>
+                            {else}
+                                <p class="text-muted">En detalle puedes ver los comentarios!</p>
                             {/if}
                         </div>
                     </div>

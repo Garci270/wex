@@ -1,28 +1,30 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-11 18:22:01
+/* Smarty version 3.1.39, created on 2021-11-17 18:40:46
   from 'C:\xampp\htdocs\tpeespecial\templates\productodetalle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_618d897988df86_92567242',
+  'unifunc' => 'content_619576de62bd77_38573915',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7cf94d974d4bcb5911148683db6acff571a177b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productodetalle.tpl',
-      1 => 1636665719,
+      1 => 1637185244,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:navbar.tpl' => 1,
+    'file:comentarios.tpl' => 1,
+    'file:articuloComentarios.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_618d897988df86_92567242 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619576de62bd77_38573915 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +37,9 @@ function content_618d897988df86_92567242 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="css/style.css">
     <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
+    <?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"><?php echo '</script'; ?>
+>
 </head>
 <body>
 <?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -55,17 +60,20 @@ function content_618d897988df86_92567242 (Smarty_Internal_Template $_smarty_tpl)
 </p>
                     <a href="inicio" class="btn btn-danger">Inicio</a>
                     <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
-                        <h5 class="card-title">Danos tu opinion</h5>
-                        <input type="text" name="coment" class="form-control" placeholder="Deje un comentario del producto aqui">
-                        <h5>Puntua el producto</h5>
-                        <select name="rate" id="" class="form-control">
-                            <option value="">Selecciona una puntuacion</option>
-                        </select>
+                        <?php $_smarty_tpl->_subTemplateRender("file:comentarios.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
                     <?php }?>
                 </div>
             </div>
         </div>
+        <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
+            <?php $_smarty_tpl->_subTemplateRender("file:articuloComentarios.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+        <?php }?>
     </div>
+<?php echo '<script'; ?>
+ src="js/comentario.js"><?php echo '</script'; ?>
+>
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }

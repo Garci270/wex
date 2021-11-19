@@ -28,9 +28,7 @@
                 </div>
             </div>
         </div>
-        {if $user}
-            {include file="articuloComentarios.tpl"}
-        {/if}
+        {include file="articuloComentarios.tpl"}
     </div>
 <script src="js/comentario.js"></script>
 {include file="footer.tpl"}

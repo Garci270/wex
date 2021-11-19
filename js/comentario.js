@@ -3,7 +3,6 @@ window.addEventListener('DOMContentLoaded', (event)=>{
     
     const API_URL = "api/comentarios";
     
-    /* document.querySelector("#send-coment").addEventListener("click", addComent); */
     let app = new Vue({
         el: '#app-coments',
         data: {
@@ -20,6 +19,30 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                 if(response.ok){
                     getComent()
                 } 
+            },
+            addComent: async function () {
+                let coment = document.querySelector("#coment").value;
+                let rate = document.querySelector("#rate").value;
+                let data = {
+                    coment: coment,
+                    rate: rate
+                }
+                console.log("hola");
+                console.log(data);
+                try {
+                    let response = await fetch(API_URL +'/'+getUrl(), {
+                        method:'POST',
+                        body: JSON.stringify(data),
+                            headers: {
+                                'Content-type': 'application/json'
+                            }
+                    });
+                    if(response.ok){
+                        getComent();
+                    }
+                } catch (e) {
+                    console.log(e);
+                } 
             }
         }
     })
@@ -28,25 +51,18 @@ window.addEventListener('DOMContentLoaded', (event)=>{
         try {
             let response = await fetch(API_URL+'/'+getUrl());
             let coments = await response.json();
-            console.log(coments);
             if(coments == "no coments"){
                 app.coments = false;
             }else{
                 app.coments = coments;                
+                console.log(app.coments);
             }
         } catch (e) {
             console.log(e);
         }
     }
     
-    async function addComent() {
-        try {
-            let response = await fetch(API_URL);
-            let coments = await response.json();
-        } catch (e) {
-            console.log(e);
-        }
-    }
+    
    
     function getUrl(){
         //Se obtiene el valor de la URL desde el navegador

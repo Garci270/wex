@@ -29,18 +29,13 @@ class ApiComentController extends ApiController{
     } */
 
     function setComent($params = []){
-        $idproduct = $params['ID'];
-        $iduser = $params['ID'];
+        $idproduct = $params[':ID'];
         if(!empty($this->data->coment) && !empty($this->data->rate)){
             $coment = $this->data->coment;
             $rate = $this->data->rate;
             $date = date('Y-m-d');
-            $coments = $this->productModel->setComentByProduct($idproduct,$iduser,$coment,$rate,$date);
-            if($coments){
-                return $this->apiView->response("OK", 200);
-            }else{
-                return $this->apiView->response("fail to set coment", 400);
-            }
+            $this->productModel->setComentByProduct($idproduct,7,$coment,$rate,$date);
+            return $this->apiView->response("OK", 200);
         }
     }
 

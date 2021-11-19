@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-17 18:40:46
+/* Smarty version 3.1.39, created on 2021-11-18 19:06:16
   from 'C:\xampp\htdocs\tpeespecial\templates\productodetalle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_619576de62bd77_38573915',
+  'unifunc' => 'content_6196ce58e31c06_05162644',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7cf94d974d4bcb5911148683db6acff571a177b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productodetalle.tpl',
-      1 => 1637185244,
+      1 => 1637272822,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_619576de62bd77_38573915 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6196ce58e31c06_05162644 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,10 +66,8 @@ function content_619576de62bd77_38573915 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
         </div>
-        <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
-            <?php $_smarty_tpl->_subTemplateRender("file:articuloComentarios.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+        <?php $_smarty_tpl->_subTemplateRender("file:articuloComentarios.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-        <?php }?>
     </div>
 <?php echo '<script'; ?>
  src="js/comentario.js"><?php echo '</script'; ?>

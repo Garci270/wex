@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        {include file="articuloComentarios.tpl"}
+        {include file="templates/articuloComentarios.tpl"}
     </div>
 <script src="js/comentario.js"></script>
 {include file="footer.tpl"}

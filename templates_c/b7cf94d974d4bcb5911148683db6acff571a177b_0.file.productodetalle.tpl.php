@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-18 19:06:16
+/* Smarty version 3.1.39, created on 2021-11-19 23:41:38
   from 'C:\xampp\htdocs\tpeespecial\templates\productodetalle.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6196ce58e31c06_05162644',
+  'unifunc' => 'content_61986062024ba3_73512515',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7cf94d974d4bcb5911148683db6acff571a177b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productodetalle.tpl',
-      1 => 1637272822,
+      1 => 1637376095,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:navbar.tpl' => 1,
     'file:comentarios.tpl' => 1,
-    'file:articuloComentarios.tpl' => 1,
+    'file:templates/articuloComentarios.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6196ce58e31c06_05162644 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61986062024ba3_73512515 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +66,7 @@ function content_6196ce58e31c06_05162644 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
         </div>
-        <?php $_smarty_tpl->_subTemplateRender("file:articuloComentarios.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+        <?php $_smarty_tpl->_subTemplateRender("file:templates/articuloComentarios.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     </div>
 <?php echo '<script'; ?>

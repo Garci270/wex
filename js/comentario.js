@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', (event)=>{
     const API_URL = "api/comentarios";
     
     let app = new Vue({
+        
         el: '#app-coments',
         data: {
             coments : []
@@ -43,7 +44,7 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                 } catch (e) {
                     console.log(e);
                 } 
-            }
+            },
         }
     })
     

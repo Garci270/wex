@@ -45,6 +45,36 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                     console.log(e);
                 } 
             },
+            getComentByDate: async function() {
+                try {
+                    let response = await fetch(API_URL+'/'+getUrl());
+                    let coments = await response.json();
+                    if(coments == "no coments"){
+                        app.coments = false;
+                    }else{
+                        app.coments = [];
+                        app.coments = coments;                
+                        console.log(app.coments);
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+            },
+            getComentByRate: async function() {
+                try {
+                    let response = await fetch(API_URL+'/'+getUrl());
+                    let coments = await response.json();
+                    if(coments == "no coments"){
+                        app.coments = false;
+                    }else{
+                        app.coments = [];
+                        app.coments = coments;                
+                        console.log(app.coments);
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+            }
         }
     })
     
@@ -62,6 +92,8 @@ window.addEventListener('DOMContentLoaded', (event)=>{
             console.log(e);
         }
     }
+
+    
     
     
    

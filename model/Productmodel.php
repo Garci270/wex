@@ -50,6 +50,34 @@ class productsModel{
         return $coments;
     }
 
+    function getComentByDate($id){
+        $query = $this->db->prepare('SELECT * FROM comentario WHERE idarticulo = ? ORDER BY fecha DESC');
+        $query->execute(array($id));
+        $coments = $query->fetchAll(PDO::FETCH_OBJ);
+        return $coments;
+    }
+
+    function getComentByDateAsc($id){
+        $query = $this->db->prepare('SELECT * FROM comentario WHERE idarticulo = ? ORDER BY fecha ASC');
+        $query->execute(array($id));
+        $coments = $query->fetchAll(PDO::FETCH_OBJ);
+        return $coments;
+    }
+
+    function getComentByRate($id){
+        $query = $this->db->prepare('SELECT * FROM comentario WHERE idarticulo = ? ORDER BY puntuacion DESC');
+        $query->execute(array($id));
+        $coments = $query->fetchAll(PDO::FETCH_OBJ);
+        return $coments;
+    }
+
+    function getComentByRateAsc($id){
+        $query = $this->db->prepare('SELECT * FROM comentario WHERE idarticulo = ? ORDER BY puntuacion ASC');
+        $query->execute(array($id));
+        $coments = $query->fetchAll(PDO::FETCH_OBJ);
+        return $coments;
+    }
+
     function getComents(){
         $query = $this->db->prepare('SELECT c.*, u.nombre_usuario as nombreU FROM comentario c, usuario u WHERE u.idusuario = c.idusuario');
         $query->execute();

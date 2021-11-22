@@ -22,23 +22,15 @@ class categorysController{
         }
         $catP = $this->categoryModel->getProductsCat($id);
         $categorys = $this->categoryModel->getCategorys(0);
-        if($catP && $categorys){
-            return $this->categoryView->showCategorys($catP, $categorys, $user);
-        }else{
-            return $this->categoryView->response("fail to load product by category", 400);
-        }
+        return $this->categoryView->showCategorys($catP, $categorys, $user);
         
     }
 
     function deleteCategory($id){
         $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
-        $delete = $this->categoryModel->deleteCategory($id);
-        if($delete){
-            return $this->userView->home();
-        }else{
-            return $this->categoryView->response("fail to load product by category", 400);
-        }
+        $this->categoryModel->deleteCategory($id);
+        return $this->userView->home();
     }
 
     function updateCategory($id){
@@ -47,12 +39,9 @@ class categorysController{
         if(!empty($_POST['descripcion'])&& !empty($_POST['imagen'])){
             $description = $_POST['descripcion'];
             $urlImage = $_POST['imagen'];
-            $update = $this->categoryModel->updateCategory($description,$urlImage,$id);
-            if($update){
-                return $this->userView->home();
-            }else{
-                return $this->categoryView->response("fail to load product by category", 400);
-            }
+            $this->categoryModel->updateCategory($description,$urlImage,$id);
+            return $this->userView->home();
+           
         }
     }
 
@@ -62,12 +51,8 @@ class categorysController{
         if(!empty($_POST['descripcion'])&& !empty($_POST['imagen'])){
             $description = $_POST['descripcion'];
             $urlImage = $_POST['imagen'];
-            $addCategory = $this->categoryModel->addCategory($description,$urlImage);
-            if ($addCategory) {
-                return $this->userView->home();
-            }else{
-                return $this->categoryView->response("fail to load product by category", 400);
-            }
+            $this->categoryModel->addCategory($description,$urlImage);
+            return $this->userView->home();
         }
     }
     function editCategory($id){

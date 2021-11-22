@@ -28,7 +28,6 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                     coment: coment,
                     rate: rate
                 }
-                console.log("hola");
                 console.log(data);
                 try {
                     let response = await fetch(API_URL +'/'+getUrl(), {

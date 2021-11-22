@@ -40,6 +40,14 @@
                         <h6 class="card-title">{$categorias|@count}</h6>
                     </div>
                 </div>
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Cantidad de Usuarios</h5>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="card-title">{$users|@count}</h6>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -35,10 +35,11 @@ class UserController{
     function home(){
         $products = $this->productModel->getProducts(0);
         $categorys = $this->categoryModel->getCategorys(0);
+        $users = $this->userModel->getUsers();
         if($this->authHelper->checkLogIn()){
             if ($this->authHelper->checkLevel()) {
-                if($categorys && $products){
-                    return $this->userView->userStart($products, $categorys);
+                if($categorys && $products && $users){
+                    return $this->userView->userStart($products, $categorys, $users);
                 }else{
                 }
             }else{
@@ -56,11 +57,8 @@ class UserController{
             $name=$_POST['nombre'];
             $userName=$_POST['nombre_usuario'];
             $level = 0;
-            $user = $this->userModel->setUser($name,$userName,$email, $password, $level);
-            if ($user) {
-                return $this->userView->logIn();
-            }else{
-            }
+            $this->userModel->setUser($name,$userName,$email, $password, $level);
+            return $this->getUser();
         }
     }
 
@@ -83,7 +81,7 @@ class UserController{
                 $_SESSION['nombre_usuario'] = $userName;
                 return $this->userView->home();
             }else{
-                return $this->userView->logIn("Acceso denegado!");
+                return $this->userView->logIn();
             }
         }
     }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-11 18:42:55
+/* Smarty version 3.1.39, created on 2021-11-22 16:04:35
   from 'C:\xampp\htdocs\tpeespecial\templates\user\iniciousuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_618d8e5feb74b2_31358721',
+  'unifunc' => 'content_619be9c304e742_57638775',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '45cec60ed8cb0df0ab8103819a67b3ac2ba3ec44' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\iniciousuario.tpl',
-      1 => 1636666249,
+      1 => 1637607873,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_618d8e5feb74b2_31358721 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619be9c304e742_57638775 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,6 +67,15 @@ function content_618d8e5feb74b2_31358721 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                     <div class="card-footer">
                         <h6 class="card-title"><?php echo count($_smarty_tpl->tpl_vars['categorias']->value);?>
+</h6>
+                    </div>
+                </div>
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Cantidad de Usuarios</h5>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="card-title"><?php echo count($_smarty_tpl->tpl_vars['users']->value);?>
 </h6>
                     </div>
                 </div>

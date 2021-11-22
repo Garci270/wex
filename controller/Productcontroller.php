@@ -25,11 +25,7 @@ class ProductosController{
         }
         $products = $this->productModel->getProductsSlider();
         $categorys = $this->categoryModel->getCategorys(0);
-        if($products && $categorys){
-            return $this->productView->inicio($products,$categorys, $user);
-        }else{
-            return $this->productView->response("fail to load products and categorys", 400);
-        }
+        return $this->productView->inicio($products,$categorys, $user);
     }
     function showProducts(){
         if ($this->authHelper->checkLogIn()) {
@@ -38,12 +34,7 @@ class ProductosController{
             $user = false;
         }
         $products = $this->productModel->getProducts(0);
-        if($products){
-            return $this->productView->mostrarProductos($products, $user);
-        }else{
-            return $this->productView->response("fail to load products", 400);
-        }
-        
+        return $this->productView->mostrarProductos($products, $user);
     }
     function showProduct($id){
         if ($this->authHelper->checkLogIn()) {
@@ -53,11 +44,7 @@ class ProductosController{
         }
         $categorys = $this->categoryModel->getCategorys(0);
         $product = $this->productModel->getProductDetail($id);
-        if($product){
-            return $this->productView->mostrarDetalleProducto($product, $categorys, $user);
-        }else{
-            return $this->productView->response("fail to load product by category", 400);
-        }
+        return $this->productView->mostrarDetalleProducto($product, $categorys, $user);
     }
 
     function editProduct($id){
@@ -76,11 +63,7 @@ class ProductosController{
         $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
         $categorys = $this->categoryModel->getCategorys(0);
-        if($categorys){
-            return $this->productView->agregarProducto($categorys);;
-        }else{
-            return $this->productView->response("fail to load product by category", 400);
-        }
+        return $this->productView->agregarProducto($categorys);
         
     }
     function updateProduct($id){
@@ -92,12 +75,8 @@ class ProductosController{
             $brand = $_POST['marca'];
             $price = $_POST['precio'];
             $image = $_POST['imagen'];
-            $update = $this->productModel->updateProduct($description, $price,$brand, $category, $id,$image);
-            if($update){
-                $this->userView->home();
-            }else{
-                return $this->productView->response("fail to load product by category", 400);
-            }
+            $this->productModel->updateProduct($description, $price,$brand, $category, $id,$image);
+            $this->userView->home();
         }
     }
 
@@ -110,23 +89,15 @@ class ProductosController{
             $brand = $_POST['marca'];
             $price = $_POST['precio'];
             $image = $_POST['imagen'];
-            $addProduct = $this->productModel->addProduct($description, $price,$brand, $category,$image);
-            if($addProduct){
-                return $this->userView->home();
-            }else{
-                return $this->productView->response("fail to load product by category", 400);
-            }
+            $this->productModel->addProduct($description, $price,$brand, $category,$image);
+            return $this->userView->home();
         }
     }
     function deleteProduct($id){
         $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
-        $deleteProduct = $this->productModel->deleteProduct($id);
-        if($deleteProduct){
-            return $this->userView->home();
-        }else{
-            return $this->productView->response("fail to load product by category", 400);
-        }
+        $this->productModel->deleteProduct($id);
+        return $this->userView->home();
         
     }
 }

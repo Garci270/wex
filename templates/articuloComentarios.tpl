@@ -1,10 +1,13 @@
 <div id="app-coments">
     {if $user}
         <div class="m-2">
-                <button class="btn btn-danger" v-on:click="getComentByDate">Ver por fecha Descendiente</button>
-                <button class="btn btn-danger" v-on:click="getComentByDate">Ver por fecha Ascendiente</button>
-                <button class="btn btn-danger" v-on:click="getComentByRate">Ver por puntaje Descendiente</button>
-                <button class="btn btn-danger" v-on:click="getComentByRate">Ver por puntaje Ascendiente</button>
+            <select name="" id="" class="form-control">
+                <option value="">Seleccionar filtro</option>
+                <option value="">Ver por fecha Descendiente</option>
+                <option value="">Ver por fecha Ascendiente</option>
+                <option value="">Ver por puntaje Descendiente</option>
+                <option value="">Ver por puntaje Ascendiente</option>
+            </select>
         </div> 
     {/if}
     <div class="row" v-if="coments">

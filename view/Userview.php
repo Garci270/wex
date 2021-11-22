@@ -12,12 +12,13 @@ class UsuarioView{
     function home(){
         header("Location: ".BASE_URL."inicioUsuario");
     } 
-    function userStart($productos, $categorias){
+    function userStart($productos, $categorias, $users){
         $smarty = new Smarty();
         $smarty->assign('titulo',"WEX");
         $smarty->assign('bandera',true);
         $smarty->assign('productos',$productos);
         $smarty->assign('categorias',$categorias);
+        $smarty->assign('users',$users);
         $smarty->display('templates/user/iniciousuario.tpl');
     }
     function showRegister(){

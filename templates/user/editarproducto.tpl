@@ -61,13 +61,13 @@
                 </div>
             </div>
         </div>
-        </form>
-        {include file="templates/user/editarComentario.tpl"}
+    </form>
+    {include file="templates/user/editarComentario.tpl"}
 {/if}
 </div>
 <script src="js/producto.js"></script>
-<script src="js/comentario.js"></script>
 {if $producto}
+    <script src="js/comentario.js"></script>
     {include file="templates/footer.tpl"}
 {else}
     <script src="https://kit.fontawesome.com/538a82c3ca.js" crossorigin="anonymous"></script>

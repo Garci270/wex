@@ -40,12 +40,14 @@ class UserController{
             if ($this->authHelper->checkLevel()) {
                 if($categorys && $products && $users){
                     return $this->userView->userStart($products, $categorys, $users);
-                }else{
                 }
             }else{
                 $user = true;
                 return $this->productView->inicio($products, $categorys, $user);
             }
+        }else{
+            $error = "asegurate de que eres usuario";
+            $this->userView->showError($error, false);
         }
         
     }
@@ -59,6 +61,9 @@ class UserController{
             $level = 0;
             $this->userModel->setUser($name,$userName,$email, $password, $level);
             return $this->getUser();
+        }else{
+            $error = "asegurate de completar bien todos los campos";
+            $this->userView->showError($error, false);
         }
     }
 
@@ -83,63 +88,87 @@ class UserController{
             }else{
                 return $this->userView->logIn();
             }
+        }else{
+            $error = "asegurate de completar bien todos los campos";
+            $this->userView->showError($error, false);
         }
     }
 
     function goToAddUser(){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        $this->userView->showAddUsers();
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $this->userView->showAddUsers();
+        }else{
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
+        }
     }
 
     function goToEditUser($id){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        $users = $this->userModel->getUsers();
-        $user = false;
-        if($id>0){
-            $user = $this->userModel->getUserById($id)[0];
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $users = $this->userModel->getUsers();
+            $user = false;
+            if($id>0){
+                $user = $this->userModel->getUserById($id)[0];
+            }
+            $this->userView->showEditUsers($users, $user);
+        }else{
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
         }
-        $this->userView->showEditUsers($users, $user);
     }
 
     function editUser($id){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        if(!empty($_POST['nivel']) && $_POST['nivel'] >= 0 && $_POST['nivel'] <= 1){
-            $level = $_POST['nivel'];
-            if($id>0){
-                $this->userModel->setUserLevel($id, $level);
-                $this->userView->home();
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $user = true;
+            if($_POST['nivel'] >= 0 && $_POST['nivel'] <= 1){
+                $level = $_POST['nivel'];
+                if($id>0){
+                    $this->userModel->setUserLevel($id, $level);
+                    $this->userView->home();
+                }
+            }else{
+                $error = "asegurate de completar bien todos los campos";
+                $this->userView->showError($error, $user);
             }
         }else{
-            $this->goToEditUser($id);
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
         }
     }
 
     function AddUser(){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        if(!empty($_POST['email']) && !empty($_POST['nombre'])&& !empty($_POST['contrasena'])&& !empty($_POST['nivel'])&& !empty($_POST['nombre_usuario'])){
-            $email=$_POST['email'];
-            $password= password_hash($_POST['contrasena'], PASSWORD_BCRYPT);
-            $name=$_POST['nombre'];
-            $userName=$_POST['nombre_usuario'];
-            $level=intval($_POST['nivel']);
-            if($level >= 0 && $level <= 1){
-                $this->userModel->setUser($name,$userName,$email, $password, $level);
-                return $this->userView->home();
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $user = true;
+            if(!empty($_POST['email']) && !empty($_POST['nombre'])&& !empty($_POST['contrasena'])&& !empty($_POST['nivel'])&& !empty($_POST['nombre_usuario'])){
+                $email=$_POST['email'];
+                $password= password_hash($_POST['contrasena'], PASSWORD_BCRYPT);
+                $name=$_POST['nombre'];
+                $userName=$_POST['nombre_usuario'];
+                $level=intval($_POST['nivel']);
+                if($level >= 0 && $level <= 1){
+                    $this->userModel->setUser($name,$userName,$email, $password, $level);
+                    return $this->userView->home();
+                }else{
+                    $error = "asegurate de poner un nivel valido";
+                    $this->userView->showError($error, $user);
+                }
             }else{
+                $error = "asegurate de completar bien todos los campos";
+                $this->userView->showError($error, $user);
             }
         }else{
-            $this->userView->home();
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
         }
     }
 
     function deleteUser($id){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        $this->userModel->deleteUser($id);
-        $this->userView->home();
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $this->userModel->deleteUser($id);
+            $this->userView->home();
+        }else{
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
+        }
     }
 }

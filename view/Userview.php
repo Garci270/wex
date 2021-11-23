@@ -44,4 +44,13 @@ class UsuarioView{
         $smarty->display('templates/user/editarusuario.tpl');
     }
 
+    function showError($error,$user){
+        $smarty = new Smarty();
+        $smarty->assign('titulo',"WEX");
+        $smarty->assign('error',$error);
+        $smarty->assign('user',$user);
+        $smarty->assign('bandera',true);
+        $smarty->display('templates/error.tpl');
+    }
+
 }

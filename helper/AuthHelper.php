@@ -3,7 +3,6 @@ class AuthHelper{
     function checkLogIn(){
         session_start();
         if(!isset($_SESSION["email"]) && !isset($_SESSION["nombre_usuario"])){
-           /*  header("Location: ".BASE_URL."ingresar"); */
            return false;
         }else{
             return true;

@@ -51,64 +51,92 @@ class ProductosController{
     }
 
     function editProduct($id){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        $categorys = $this->categoryModel->getCategorys(0);
-        $products = $this->productModel->getProducts(0);
-        $product = false;
-        if($id>0){
-            $product = $this->productModel->getProducts($id)[0];
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $categorys = $this->categoryModel->getCategorys(0);
+            $products = $this->productModel->getProducts(0);
+            $product = false;
+            if($id>0){
+                $product = $this->productModel->getProducts($id)[0];
+            }
+            return $this->productView->editarProducto($products, $categorys, $product, true);
+        }else{
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
         }
-        return $this->productView->editarProducto($products, $categorys, $product, true);
     }
 
     function goToAddProduct(){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        $categorys = $this->categoryModel->getCategorys(0);
-        return $this->productView->agregarProducto($categorys);
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $user = true;
+            $categorys = $this->categoryModel->getCategorys(0);
+            return $this->productView->agregarProducto($categorys);
+        }else{
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
+        }
         
     }
 
     function updateProduct($id){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])&& !empty($_FILES['productFile']["name"])){
-            if($_FILES['productFile']['type'] == "image/jpg" || $_FILES['productFile']['type'] == "image/jpeg" || $_FILES['productFile']['type'] == "image/png" ){
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $user = true;
+            if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])&& !empty($_FILES['productFile']["name"])){
+                if($_FILES['productFile']['type'] == "image/jpg" || $_FILES['productFile']['type'] == "image/jpeg" || $_FILES['productFile']['type'] == "image/png" ){
+                    $image = $_FILES['productFile'];
+                    $category = $_POST['categoria'];
+                    $description = $_POST['descripcion'];
+                    $brand = $_POST['marca'];
+                    $price = $_POST['precio'];
+                    $this->productModel->updateProduct($description, $price,$brand, $category, $id,$image);
+                    $this->userView->home();
+                }else{
+                    $error = "asegurate de que subes una imagen!";
+                    $this->userView->showError($error, $user);
+                }
+            }else{
+                $error = "asegurate de completar bien los campos!";
+                $this->userView->showError($error, $user);
+            }
+        }else{
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
+        }
+    }
+
+    function addProduct(){
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $user = true;
+            if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])&& !empty($_FILES['productFile']["name"])){
+                if($_FILES['productFile']['type'] == "image/jpg" || $_FILES['productFile']['type'] == "image/jpeg" || $_FILES['productFile']['type'] == "image/png" ){
                 $image = $_FILES['productFile'];
                 $category = $_POST['categoria'];
                 $description = $_POST['descripcion'];
                 $brand = $_POST['marca'];
                 $price = $_POST['precio'];
-                $this->productModel->updateProduct($description, $price,$brand, $category, $id,$image);
-                $this->userView->home();
+                $this->productModel->addProduct($description, $price,$brand, $category,$image);
+                return $this->userView->home();
+                }else{
+                    $error = "asegurate de que subes una imagen!";
+                    $this->userView->showError($error, $user);
+                }
             }else{
+                $error = "asegurate de completar bien los campos!";
+                $this->userView->showError($error, $user);
             }
-        }
-    }
-
-    function addProduct(){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])&& !empty($_FILES['productFile']["name"])){
-            if($_FILES['productFile']['type'] == "image/jpg" || $_FILES['productFile']['type'] == "image/jpeg" || $_FILES['productFile']['type'] == "image/png" ){
-            $image = $_FILES['productFile'];
-            $category = $_POST['categoria'];
-            $description = $_POST['descripcion'];
-            $brand = $_POST['marca'];
-            $price = $_POST['precio'];
-            $this->productModel->addProduct($description, $price,$brand, $category,$image);
-            return $this->userView->home();
-            }else{
-            }
+        }else{
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
         }
     }
 
     function deleteProduct($id){
-        $this->authHelper->checkLogIn();
-        $this->authHelper->checkLevel();
-        $this->productModel->deleteProduct($id);
-        return $this->userView->home();
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $this->productModel->deleteProduct($id);
+            return $this->userView->home();
+        }else{
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
+        }
         
     }
 }

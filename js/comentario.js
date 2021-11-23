@@ -21,29 +21,6 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                     getComent()
                 } 
             },
-            addComent: async function () {
-                let coment = document.querySelector("#coment").value;
-                let rate = document.querySelector("#rate").value;
-                let data = {
-                    coment: coment,
-                    rate: rate
-                }
-                console.log(data);
-                try {
-                    let response = await fetch(API_URL +'/'+getUrl(), {
-                        method:'POST',
-                        body: JSON.stringify(data),
-                            headers: {
-                                'Content-type': 'application/json'
-                            }
-                    });
-                    if(response.ok){
-                        getComent();
-                    }
-                } catch (e) {
-                    console.log(e);
-                } 
-            },
             getComentByDate: async function() {
                 try {
                     let response = await fetch(API_URL+'/'+getUrl());
@@ -76,6 +53,40 @@ window.addEventListener('DOMContentLoaded', (event)=>{
             }
         }
     })
+
+
+    if(document.querySelector("#app-send")){
+        let send = new Vue({
+            el: '#app-send',
+            data: {
+            },
+            methods: {
+                addComent: async function () {
+                    let coment = document.querySelector("#coment").value;
+                    let rate = document.querySelector("#rate").value;
+                    let data = {
+                        coment: coment,
+                        rate: rate
+                    }
+                    console.log(data);
+                    try {
+                        let response = await fetch(API_URL +'/'+getUrl(), {
+                            method:'POST',
+                            body: JSON.stringify(data),
+                                headers: {
+                                    'Content-type': 'application/json'
+                                }
+                        });
+                        if(response.ok){
+                            getComent();
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    } 
+                }
+            }
+        })
+    }
     
     async function getComent() {
         try {

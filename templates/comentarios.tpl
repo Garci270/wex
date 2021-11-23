@@ -1,5 +1,5 @@
 {literal}
-    <div id="app-coments">
+    <div id="app-send">
         <h5 class="card-title">Danos tu opinion</h5>
         <input type="text" name="coment" id="coment" class="form-control" placeholder="Deje un comentario del producto aqui">
         <h5>Puntua</h5>

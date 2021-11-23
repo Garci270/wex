@@ -12,7 +12,7 @@
     {/if}
     <div class="row" v-if="coments">
         <div v-for="coment in coments">
-            <div class="m-4 col-3">
+            <div class="m-1 col-3">
                 <div class="card m-auto" style="width: 18rem;">
                     {literal}
                         <div class="card-body">

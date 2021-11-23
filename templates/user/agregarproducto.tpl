@@ -12,10 +12,10 @@
 <body>
 {include file="templates/user/navusuario.tpl"}
 <div class="m-4">
-    <form action="agregarProducto" method="POST">  
+    <form action="agregarProducto" method="POST" enctype="multipart/form-data">  
         <div class="card m-auto" style="width: 18rem;">
             <h5 class="card-title">Imagen</h5>
-            <input type="text" placeholder="Escribe una url" name="imagen" class="form-control">
+            <input type="file" name="productFile" id="imageToUpload">
             <div class="card-body">
                 <h5 class="card-title">Categoria</h5>
                 <select class="custom-select mb-2" name="categoria">

@@ -21,24 +21,10 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                     getComent()
                 } 
             },
-            getComentByDate: async function() {
+            getComentByRate: async function($event, id) {
+                let rate = $event.target.value;
                 try {
-                    let response = await fetch(API_URL+'/'+getUrl());
-                    let coments = await response.json();
-                    if(coments == "no coments"){
-                        app.coments = false;
-                    }else{
-                        app.coments = [];
-                        app.coments = coments;                
-                        console.log(app.coments);
-                    }
-                } catch (e) {
-                    console.log(e);
-                }
-            },
-            getComentByRate: async function() {
-                try {
-                    let response = await fetch(API_URL+'/'+getUrl());
+                    let response = await fetch(API_URL+'/'+id+'/'+rate);
                     let coments = await response.json();
                     if(coments == "no coments"){
                         app.coments = false;

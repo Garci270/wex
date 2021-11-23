@@ -34,10 +34,10 @@
 </div>
 <div class="m-4">
 {if $producto}
-    <form action="actualizarProd/{$producto->idarticulo}" method="POST">  
+    <form action="actualizarProd/{$producto->idarticulo}" method="POST" enctype="multipart/form-data">  
         <div class="card m-auto" style="width: 18rem;">
             <img src="{$producto->url_imagen}" class="card-img-top" alt="...">
-            <input type="text" value="{$producto->url_imagen}" name="imagen"  class="form-control">
+            <input type="file" name="productFile" id="imageToUpload">
             <div class="card-body">
                 <h5 class="card-title">{$producto->categoria}</h5>
                 <select class="custom-select mb-2" name="categoria">

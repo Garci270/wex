@@ -36,23 +36,26 @@ class categorysController{
     function updateCategory($id){
         $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
-        if(!empty($_POST['descripcion'])&& !empty($_POST['imagen'])){
+        if(!empty($_POST['descripcion'])&& !empty($_FILES['categoryFile']['name'])){
+            if($_FILES['categoryFile']['type'] == "image/jpg" || $_FILES['categoryFile']['type'] == "image/jpeg" || $_FILES['categoryFile']['type'] == "image/png" ){
             $description = $_POST['descripcion'];
-            $urlImage = $_POST['imagen'];
-            $this->categoryModel->updateCategory($description,$urlImage,$id);
+            $image = $_FILES['categoryFile'];
+            $this->categoryModel->updateCategory($description,$image,$id);
             return $this->userView->home();
-           
+            }
         }
     }
 
     function addCategory(){
         $this->authHelper->checkLogIn();
         $this->authHelper->checkLevel();
-        if(!empty($_POST['descripcion'])&& !empty($_POST['imagen'])){
+        if(!empty($_POST['descripcion'])&& !empty($_FILES['categoryFile']['name'])){
+            if($_FILES['categoryFile']['type'] == "image/jpg" || $_FILES['categoryFile']['type'] == "image/jpeg" || $_FILES['categoryFile']['type'] == "image/png" ){
             $description = $_POST['descripcion'];
-            $urlImage = $_POST['imagen'];
-            $this->categoryModel->addCategory($description,$urlImage);
+            $image = $_FILES['categoryFile'];
+            $this->categoryModel->addCategory($description,$image);
             return $this->userView->home();
+            }
         }
     }
     function editCategory($id){

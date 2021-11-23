@@ -1,13 +1,14 @@
 <div id="app-coments">
-        <div class="m-2" v-if="coments">
-            <select name="" id="" class="form-control">
-                <option value="">Seleccionar filtro</option>
-                <option value="">Ver por fecha Descendiente</option>
-                <option value="">Ver por fecha Ascendiente</option>
-                <option value="">Ver por puntaje Descendiente</option>
-                <option value="">Ver por puntaje Ascendiente</option>
-            </select>
-        </div> 
+    <div class="m-2">
+        <select name="" id=""  @change="getComentByRate($event, {$producto->idarticulo})"  class="form-control">
+            <option value="-1">Seleccionar Puntaje</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div> 
     <div class="row" v-if="coments">
         <div v-for="coment in coments">
             <div class="m-4 col-3">

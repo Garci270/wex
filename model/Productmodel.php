@@ -34,13 +34,23 @@ class productsModel{
     }
 
     function updateProduct($description,$price,$brand,$categoria,$id, $image){
+        $filepath = $this->addImage($image);
         $query = $this->db->prepare("UPDATE articulo SET Descripcion=?, Precio_1=?, url_imagen=?, Marca=?, idcategoria=? WHERE idarticulo =?");
-        $query->execute(array($description,$price,$image,$brand,$categoria,$id));
+        $query->execute(array($description,$price,$filepath,$brand,$categoria,$id));
     }
 
     function addProduct($description,$price,$brand,$category,$image){
+        $filepath = $this->addImage($image);
         $query = $this->db->prepare("INSERT INTO articulo (Descripcion, Precio_1, url_imagen, Marca, idcategoria) VALUES(?,?,?,?,?)");
-        $query->execute(array($description,$price,$image,$brand,$category));
+        $query->execute(array($description,$price,$filepath,$brand,$category));
+    }
+
+    function addImage($image){
+        $filepath = "assets/img/product/{$image['name']}";
+        if (move_uploaded_file($image['tmp_name'], $filepath)) {
+            return $filepath;            
+        }
+        return null;
     }
 
     function getComentByProduct($id){
@@ -50,30 +60,9 @@ class productsModel{
         return $coments;
     }
 
-    function getComentByDate($id){
-        $query = $this->db->prepare('SELECT * FROM comentario WHERE idarticulo = ? ORDER BY fecha DESC');
-        $query->execute(array($id));
-        $coments = $query->fetchAll(PDO::FETCH_OBJ);
-        return $coments;
-    }
-
-    function getComentByDateAsc($id){
-        $query = $this->db->prepare('SELECT * FROM comentario WHERE idarticulo = ? ORDER BY fecha ASC');
-        $query->execute(array($id));
-        $coments = $query->fetchAll(PDO::FETCH_OBJ);
-        return $coments;
-    }
-
-    function getComentByRate($id){
-        $query = $this->db->prepare('SELECT * FROM comentario WHERE idarticulo = ? ORDER BY puntuacion DESC');
-        $query->execute(array($id));
-        $coments = $query->fetchAll(PDO::FETCH_OBJ);
-        return $coments;
-    }
-
-    function getComentByRateAsc($id){
-        $query = $this->db->prepare('SELECT * FROM comentario WHERE idarticulo = ? ORDER BY puntuacion ASC');
-        $query->execute(array($id));
+    function getComentByRate($id, $rate){
+        $query = $this->db->prepare('SELECT * FROM comentario WHERE puntuacion=? AND idarticulo=?');
+        $query->execute(array($rate,$id));
         $coments = $query->fetchAll(PDO::FETCH_OBJ);
         return $coments;
     }

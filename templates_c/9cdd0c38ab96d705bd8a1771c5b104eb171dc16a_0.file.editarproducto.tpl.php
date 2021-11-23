@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-22 15:56:59
+/* Smarty version 3.1.39, created on 2021-11-23 15:32:39
   from 'C:\xampp\htdocs\tpeespecial\templates\user\editarproducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_619be7fb8ecf87_35765814',
+  'unifunc' => 'content_619d33c7843c51_80983948',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9cdd0c38ab96d705bd8a1771c5b104eb171dc16a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\editarproducto.tpl',
-      1 => 1637607417,
+      1 => 1637691562,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_619be7fb8ecf87_35765814 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619d33c7843c51_80983948 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,12 +75,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <div class="m-4">
 <?php if ($_smarty_tpl->tpl_vars['producto']->value) {?>
     <form action="actualizarProd/<?php echo $_smarty_tpl->tpl_vars['producto']->value->idarticulo;?>
-" method="POST">  
+" method="POST" enctype="multipart/form-data">  
         <div class="card m-auto" style="width: 18rem;">
             <img src="<?php echo $_smarty_tpl->tpl_vars['producto']->value->url_imagen;?>
 " class="card-img-top" alt="...">
-            <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['producto']->value->url_imagen;?>
-" name="imagen"  class="form-control">
+            <input type="file" name="productFile" id="imageToUpload">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['producto']->value->categoria;?>
 </h5>

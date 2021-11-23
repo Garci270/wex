@@ -18,42 +18,15 @@ class ApiComentController extends ApiController{
         }
     }
 
-    function getComentsByDate($params = []){
-        $id = $params[":ID"];
-        $coments = $this->productModel->getComentByDate($id);
-        /* $coments = $this->productModel->getComents(); */
-        if($coments){
-            return $this->apiView->response($coments, 200);
-        }else{
-            return $this->apiView->response("no coments", 200);
-        }
-    }
-
-    function getComentsByDateAsc($params = []){
-        $id = $params[":ID"];
-        $coments = $this->productModel->getComentByDateAsc($id);
-        /* $coments = $this->productModel->getComents(); */
-        if($coments){
-            return $this->apiView->response($coments, 200);
-        }else{
-            return $this->apiView->response("no coments", 200);
-        }
-    }
-
     function getComentsByRate($params = []){
         $id = $params[":ID"];
-        $coments = $this->productModel->getComentByRate($id);
-        /* $coments = $this->productModel->getComents(); */
-        if($coments){
-            return $this->apiView->response($coments, 200);
-        }else{
-            return $this->apiView->response("no coments", 200);
+        $rate = $params[":VALOR"];
+        if($rate==-1){
+            $coments = $this->productModel->getComentByProduct($id);
         }
-    }
-
-    function getComentsByRateAsc($params = []){
-        $id = $params[":ID"];
-        $coments = $this->productModel->getComentByRateAsc($id);
+        else{
+            $coments = $this->productModel->getComentByRate($id, $rate);
+        }
         /* $coments = $this->productModel->getComents(); */
         if($coments){
             return $this->apiView->response($coments, 200);

@@ -1,12 +1,13 @@
 <div id="app-coments">
     {if $user}
         <div class="m-2">
-            <select name="" id="" class="form-control">
-                <option value="">Seleccionar filtro</option>
-                <option value="">Ver por fecha Descendiente</option>
-                <option value="">Ver por fecha Ascendiente</option>
-                <option value="">Ver por puntaje Descendiente</option>
-                <option value="">Ver por puntaje Ascendiente</option>
+            <select name="" id=""  @change="getComentByRate($event, {$productos[0]->idarticulo})"  class="form-control">
+                <option value="-1">Seleccionar Puntaje</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
         </div> 
     {/if}

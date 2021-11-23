@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-14 18:07:40
+/* Smarty version 3.1.39, created on 2021-11-23 16:02:10
   from 'C:\xampp\htdocs\tpeespecial\templates\user\agregarproducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61689c1cda14a2_25529398',
+  'unifunc' => 'content_619d3ab289f772_62525238',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1eb46469b7cd4f1b4d4d66f7b57cc4acc91bf256' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\agregarproducto.tpl',
-      1 => 1634245657,
+      1 => 1637693941,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_61689c1cda14a2_25529398 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619d3ab289f772_62525238 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,10 +40,10 @@ function content_61689c1cda14a2_25529398 (Smarty_Internal_Template $_smarty_tpl)
 <?php $_smarty_tpl->_subTemplateRender("file:templates/user/navusuario.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="m-4">
-    <form action="agregarProducto" method="POST">  
+    <form action="agregarProducto" method="POST" enctype="multipart/form-data">  
         <div class="card m-auto" style="width: 18rem;">
             <h5 class="card-title">Imagen</h5>
-            <input type="text" placeholder="Escribe una url" name="imagen" class="form-control">
+            <input type="file" name="productFile" id="imageToUpload">
             <div class="card-body">
                 <h5 class="card-title">Categoria</h5>
                 <select class="custom-select mb-2" name="categoria">

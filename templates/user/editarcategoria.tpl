@@ -32,10 +32,10 @@
 </div>
 <div class="m-5">
 {if $categoria}
-    <form action="editarCategoria/{$categoria->idcategoria}" method="POST">  
+    <form action="editarCategoria/{$categoria->idcategoria}" method="POST" enctype="multipart/form-data">  
         <div class="card m-auto" style="width: 18rem;">
             <img src="{$categoria->url_imagen}" class="card-img-top" alt="..." >
-            <input type="text" name="imagen" value="{$categoria->url_imagen}" class="form-control" readonly>
+            <input type="file" name="categoryFile" id="imageToUpload">
             <div class="card-body">
                 <h5 class="card-title">{$categoria->Descripcion}</h5>
                 <input type="text" name="descripcion" class="form-control" value="{$categoria->Descripcion}">

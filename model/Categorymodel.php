@@ -31,13 +31,23 @@ class categorysModel{
         $sentencia->execute(array($id));
     }
 
-    function updateCategory($description, $urlImage, $id){
-        $sentencia = $this->db->prepare("UPDATE categoria SET Descripcion=?, url_imagen=? WHERE idcategoria=?");
-        $sentencia->execute(array($description, $urlImage, $id));
+    function addImage($image){
+        $filepath = "assets/img/category/{$image['name']}";
+        if (move_uploaded_file($image['tmp_name'], $filepath)) {
+            return $filepath;            
+        }
+        return null;
     }
 
-    function addCategory($description, $urlImage){
+    function updateCategory($description, $image, $id){
+        $filepath = $this->addImage($image);
+        $sentencia = $this->db->prepare("UPDATE categoria SET Descripcion=?, url_imagen=? WHERE idcategoria=?");
+        $sentencia->execute(array($description, $filepath, $id));
+    }
+
+    function addCategory($description, $image){
+        $filepath = $this->addImage($image);
         $sentencia = $this->db->prepare("INSERT INTO categoria (Descripcion, url_imagen) VALUES (?,?)");
-        $sentencia->execute(array($description, $urlImage));
+        $sentencia->execute(array($description, $filepath));
     }
 }

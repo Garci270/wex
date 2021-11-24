@@ -9,11 +9,11 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 } else {
-    $action = 'inicio'; // acción por defecto si no envían
+    $action = 'inicio';
 }
 
 $params = explode('/', $action);
-$productsController = new ProductosController();
+$productsController = new ProductsController();
 $userController = new UserController();
 $categorysController = new CategorysController();
 

@@ -10,51 +10,51 @@
               <div class="col-2">
               </div>
               <div class="card tamanioSlider p-1 col-2">
-                <img src="{$productos[0]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <img src="{$products[0]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-muted">{$productos[0]->Marca}</p>
-                  <p class="card-text text-muted">{$productos[0]->categoria}</p>
-                  <h5 class="card-title">{$productos[0]->Descripcion}</h5>
+                  <p class="card-text text-muted">{$products[0]->Marca}</p>
+                  <p class="card-text text-muted">{$products[0]->categoria}</p>
+                  <h5 class="card-title">{$products[0]->Descripcion}</h5>
                 </div>
                 <div class="card-footer">
-                  <p class="card-text tamañoPrecio">${$productos[0]->Precio_1}</p>
-                  <a href="detalle/{$productos[0]->idarticulo}" class="btn btn-danger">Detalle</a>
+                  <p class="card-text tamanioPrecio">${$products[0]->Precio_1}</p>
+                  <a href="detalle/{$products[0]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
-                <img src="{$productos[1]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <img src="{$products[1]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-muted">{$productos[1]->Marca}</p>
-                  <p class="card-text text-muted">{$productos[1]->categoria}</p>
-                  <h5 class="card-title">{$productos[1]->Descripcion}</h5>
+                  <p class="card-text text-muted">{$products[1]->Marca}</p>
+                  <p class="card-text text-muted">{$products[1]->categoria}</p>
+                  <h5 class="card-title">{$products[1]->Descripcion}</h5>
                 </div>
                 <div class="card-footer">
-                  <p class="card-text tamañoPrecio">${$productos[1]->Precio_1}</p>
-                  <a href="detalle/{$productos[1]->idarticulo}" class="btn btn-danger">Detalle</a>
+                  <p class="card-text tamanioPrecio">${$products[1]->Precio_1}</p>
+                  <a href="detalle/{$products[1]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
-                <img src="{$productos[2]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <img src="{$products[2]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-muted">{$productos[2]->Marca}</p>
-                  <p class="card-text text-muted">{$productos[2]->categoria}</p>
-                  <h5 class="card-title">{$productos[2]->Descripcion}</h5>
+                  <p class="card-text text-muted">{$products[2]->Marca}</p>
+                  <p class="card-text text-muted">{$products[2]->categoria}</p>
+                  <h5 class="card-title">{$products[2]->Descripcion}</h5>
                 </div>
                 <div class="card-footer">
-                  <p class="card-text tamañoPrecio">${$productos[2]->Precio_1}</p>
-                  <a href="detalle/{$productos[2]->idarticulo}" class="btn btn-danger">Detalle</a>
+                  <p class="card-text tamanioPrecio">${$products[2]->Precio_1}</p>
+                  <a href="detalle/{$products[2]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
-                <img src="{$productos[3]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <img src="{$products[3]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-muted">{$productos[3]->Marca}</p>
-                  <p class="card-text text-muted">{$productos[3]->categoria}</p>
-                  <h5 class="card-title">{$productos[3]->Descripcion}</h5>
+                  <p class="card-text text-muted">{$products[3]->Marca}</p>
+                  <p class="card-text text-muted">{$products[3]->categoria}</p>
+                  <h5 class="card-title">{$products[3]->Descripcion}</h5>
                 </div>
                 <div class="card-footer">
-                  <p class="card-text tamañoPrecio">${$productos[3]->Precio_1}</p>
-                  <a href="detalle/{$productos[3]->idarticulo}" class="btn btn-danger">Detalle</a>
+                  <p class="card-text tamanioPrecio">${$products[3]->Precio_1}</p>
+                  <a href="detalle/{$products[3]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="col-2">
@@ -68,51 +68,51 @@
             <div class="col-2">
               </div>
               <div class="card tamanioSlider p-1 col-2">
-                <img src="{$productos[4]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <img src="{$products[4]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-muted">{$productos[4]->Marca}</p>
-                  <p class="card-text text-muted">{$productos[4]->categoria}</p>
-                  <h5 class="card-title">{$productos[4]->Descripcion}</h5>
+                  <p class="card-text text-muted">{$products[4]->Marca}</p>
+                  <p class="card-text text-muted">{$products[4]->categoria}</p>
+                  <h5 class="card-title">{$products[4]->Descripcion}</h5>
                 </div>
                 <div class="card-footer">
-                  <p class="card-text tamañoPrecio">${$productos[4]->Precio_1}</p>
-                  <a href="detalle/{$productos[4]->idarticulo}" class="btn btn-danger">Detalle</a>
+                  <p class="card-text tamanioPrecio">${$products[4]->Precio_1}</p>
+                  <a href="detalle/{$products[4]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
-                <img src="{$productos[5]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <img src="{$products[5]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-muted">{$productos[5]->Marca}</p>
-                  <p class="card-text text-muted">{$productos[5]->categoria}</p>
-                  <h5 class="card-title">{$productos[5]->Descripcion}</h5>
+                  <p class="card-text text-muted">{$products[5]->Marca}</p>
+                  <p class="card-text text-muted">{$products[5]->categoria}</p>
+                  <h5 class="card-title">{$products[5]->Descripcion}</h5>
                 </div>
                 <div class="card-footer">
-                  <p class="card-text tamañoPrecio">${$productos[5]->Precio_1}</p>
-                  <a href="detalle/{$productos[5]->idarticulo}" class="btn btn-danger">Detalle</a>
+                  <p class="card-text tamanioPrecio">${$products[5]->Precio_1}</p>
+                  <a href="detalle/{$products[5]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
-                <img src="{$productos[6]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <img src="{$products[6]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-muted">{$productos[6]->Marca}</p>
-                  <p class="card-text text-muted">{$productos[6]->categoria}</p>
-                  <h5 class="card-title">{$productos[6]->Descripcion}</h5>
+                  <p class="card-text text-muted">{$products[6]->Marca}</p>
+                  <p class="card-text text-muted">{$products[6]->categoria}</p>
+                  <h5 class="card-title">{$products[6]->Descripcion}</h5>
                 </div>
                 <div class="card-footer">
-                  <p class="card-text tamañoPrecio">${$productos[6]->Precio_1}</p>
-                  <a href="detalle/{$productos[6]->idarticulo}" class="btn btn-danger">Detalle</a>
+                  <p class="card-text tamanioPrecio">${$products[6]->Precio_1}</p>
+                  <a href="detalle/{$products[6]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
               <div class="card tamanioSlider p-1 col-2">
-                <img src="{$productos[7]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
+                <img src="{$products[7]->url_imagen}" class="card-img-top mt-2 img-slider m-auto" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-muted">{$productos[7]->Marca}</p>
-                  <p class="card-text text-muted">{$productos[7]->categoria}</p>
-                  <h5 class="card-title">{$productos[7]->Descripcion}</h5>
+                  <p class="card-text text-muted">{$products[7]->Marca}</p>
+                  <p class="card-text text-muted">{$products[7]->categoria}</p>
+                  <h5 class="card-title">{$products[7]->Descripcion}</h5>
                 </div>
                 <div class="card-footer">
-                  <p class="card-text tamañoPrecio">${$productos[7]->Precio_1}</p>
-                  <a href="detalle/{$productos[7]->idarticulo}" class="btn btn-danger">Detalle</a>
+                  <p class="card-text tamanioPrecio">${$products[7]->Precio_1}</p>
+                  <a href="detalle/{$products[7]->idarticulo}" class="btn btn-danger">Detalle</a>
                 </div>
               </div>
             </div>

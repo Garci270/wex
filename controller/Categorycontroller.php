@@ -11,7 +11,7 @@ class categorysController{
     function __construct(){
         $this->categoryModel = new CategorysModel();
         $this->categoryView = new CategorysView();
-        $this->userView = new UsuarioView();
+        $this->userView = new UserView();
         $this->authHelper = new AuthHelper();
     }
     function showItemsCategorys($id){

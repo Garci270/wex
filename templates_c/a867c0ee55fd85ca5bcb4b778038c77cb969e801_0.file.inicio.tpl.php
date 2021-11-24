@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-10-05 18:59:29
+/* Smarty version 3.1.39, created on 2021-11-24 00:07:03
   from 'C:\xampp\htdocs\tpeespecial\templates\inicio.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_615ccac1e3a6b2_31050933',
+  'unifunc' => 'content_619dac57812817_36205969',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a867c0ee55fd85ca5bcb4b778038c77cb969e801' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\inicio.tpl',
-      1 => 1633471154,
+      1 => 1637722438,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_615ccac1e3a6b2_31050933 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619dac57812817_36205969 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +34,7 @@ function content_615ccac1e3a6b2_31050933 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
 </head>
 <body>

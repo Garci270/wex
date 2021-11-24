@@ -1,49 +1,49 @@
 <?php
 require_once "libs/smarty-3.1.39/libs/Smarty.class.php";
 class ProductsView{
-    function inicio($productos, $categorias, $user){
+    function home($products, $categorys, $user){
        $smarty = new Smarty();
-       $smarty->assign('categorias',$categorias);
-       $smarty->assign('productos',$productos);
-       $smarty->assign('bandera',false);
+       $smarty->assign('categorys',$categorys);
+       $smarty->assign('products',$products);
+       $smarty->assign('flag',false);
        $smarty->assign('user',$user);
-       $smarty->assign('titulo',"WEX");
+       $smarty->assign('title',"WEX");
        $smarty->display('templates/inicio.tpl');
     }
 
-    function mostrarProductos($productos, $user){
+    function showProducts($products, $user){
         $smarty = new Smarty();
-        $smarty->assign('titulo',"WEX");
-        $smarty->assign('productos',$productos);
-        $smarty->assign('bandera',false);
+        $smarty->assign('title',"WEX");
+        $smarty->assign('products',$products);
+        $smarty->assign('flag',false);
         $smarty->assign('user',$user);
         $smarty->display('templates/productos.tpl');
     }
     
-    function mostrarDetalleProducto($productos, $categorias, $user){
+    function showDetailProduct($products, $categorys, $user){
         $smarty = new Smarty();
-        $smarty->assign('categorias',$categorias);
-        $smarty->assign('titulo',"WEX");
-        $smarty->assign('productos',$productos);
-        $smarty->assign('bandera',false);
+        $smarty->assign('categorys',$categorys);
+        $smarty->assign('title',"WEX");
+        $smarty->assign('products',$products);
+        $smarty->assign('flag',false);
         $smarty->assign('user',$user);
         $smarty->display('templates/productodetalle.tpl');
     }
-    function agregarProducto($categorias){
+    function addProduct($categorys){
         $smarty = new Smarty();
-        $smarty->assign('categorias',$categorias);
-        $smarty->assign('titulo',"WEX");
-        $smarty->assign('bandera',false);
+        $smarty->assign('categorys',$categorys);
+        $smarty->assign('title',"WEX");
+        $smarty->assign('flag',false);
         $smarty->display('templates/user/agregarproducto.tpl');
     }
-    function editarProducto($productos, $categorias, $producto, $admin){
+    function editProduct($products, $categorys, $product, $admin){
         $smarty = new Smarty();
-        $smarty->assign('categorias',$categorias);
-        $smarty->assign('titulo',"WEX");
-        $smarty->assign('productos',$productos);
-        $smarty->assign('producto',$producto);
+        $smarty->assign('categorys',$categorys);
+        $smarty->assign('title',"WEX");
+        $smarty->assign('products',$products);
+        $smarty->assign('product',$product);
         $smarty->assign('admin',$admin);
-        $smarty->assign('bandera',false);
+        $smarty->assign('flag',false);
         $smarty->display('templates/user/editarproducto.tpl');
     }
 }

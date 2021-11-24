@@ -13,9 +13,8 @@ abstract class ApiController {
     public function __construct() {
         $this->productModel = new ProductsModel();
         $this->authHelper = new AuthHelper();
-        $this->userView = new UsuarioView();
+        $this->userView = new UserView();
         $this->apiView = new ApiView();
-        $this->view = new APIView();
         $this->data = file_get_contents("php://input"); 
     }
 

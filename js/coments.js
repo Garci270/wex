@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', (event)=>{
             data: {
             },
             methods: {
-                addComent: async function () {
+                addComent: async function (iduser, idproduct) {
                     let coment = document.querySelector("#coment").value;
                     let rate = document.querySelector("#rate").value;
                     let data = {
@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                     }
                     console.log(data);
                     try {
-                        let response = await fetch(API_URL +'/'+getUrl(), {
+                        let response = await fetch(API_URL +'/'+idproduct+'/'+iduser, {
                             method:'POST',
                             body: JSON.stringify(data),
                                 headers: {

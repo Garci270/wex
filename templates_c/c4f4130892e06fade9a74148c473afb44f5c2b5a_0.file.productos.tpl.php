@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-17 18:30:26
+/* Smarty version 3.1.39, created on 2021-11-24 00:07:12
   from 'C:\xampp\htdocs\tpeespecial\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_619574729e8553_19286181',
+  'unifunc' => 'content_619dac608a4f89_59376635',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4f4130892e06fade9a74148c473afb44f5c2b5a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\productos.tpl',
-      1 => 1637184625,
+      1 => 1637722874,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_619574729e8553_19286181 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619dac608a4f89_59376635 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +33,7 @@ function content_619574729e8553_19286181 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
 </head>
 <body>
@@ -42,26 +42,26 @@ function content_619574729e8553_19286181 (Smarty_Internal_Template $_smarty_tpl)
 <div class="container-fluid">
     <div class="row">
         <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productos']->value, 'producto');
-$_smarty_tpl->tpl_vars['producto']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
-$_smarty_tpl->tpl_vars['producto']->do_else = false;
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'product');
+$_smarty_tpl->tpl_vars['product']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
+$_smarty_tpl->tpl_vars['product']->do_else = false;
 ?>
             <div class="m-auto col-3">
                 <div class="card m-4" style="width: 16rem;">
-                    <img src="<?php echo $_smarty_tpl->tpl_vars['producto']->value->url_imagen;?>
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['product']->value->url_imagen;?>
 " class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['producto']->value->categoria;?>
+                        <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value->categoria;?>
 </h5>
-                        <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['producto']->value->Marca;?>
+                        <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value->Marca;?>
 </h5>
-                        <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['producto']->value->Descripcion;?>
+                        <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['product']->value->Descripcion;?>
 </p>
                         <div class="card-footer">
-                            <p class="card-text tamañoPrecio">$<?php echo $_smarty_tpl->tpl_vars['producto']->value->Precio_1;?>
+                            <p class="card-text tamanioPrecio">$<?php echo $_smarty_tpl->tpl_vars['product']->value->Precio_1;?>
 </p>
-                            <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['producto']->value->idarticulo;?>
+                            <a href="detalle/<?php echo $_smarty_tpl->tpl_vars['product']->value->idarticulo;?>
 " class="btn btn-danger">Detalle</a>
                             <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
                                 <p class="text-muted">En detalle ahora puedes comentar!</p>

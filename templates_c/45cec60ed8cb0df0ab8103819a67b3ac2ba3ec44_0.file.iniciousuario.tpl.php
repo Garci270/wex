@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-22 16:04:35
+/* Smarty version 3.1.39, created on 2021-11-24 00:43:59
   from 'C:\xampp\htdocs\tpeespecial\templates\user\iniciousuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_619be9c304e742_57638775',
+  'unifunc' => 'content_619db4ff07e731_75535071',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '45cec60ed8cb0df0ab8103819a67b3ac2ba3ec44' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\iniciousuario.tpl',
-      1 => 1637607873,
+      1 => 1637723182,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_619be9c304e742_57638775 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619db4ff07e731_75535071 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +33,7 @@ function content_619be9c304e742_57638775 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
 </head>
 <body>
@@ -57,7 +57,7 @@ function content_619be9c304e742_57638775 (Smarty_Internal_Template $_smarty_tpl)
                         <h5 class="card-title">Cantidad de Productos</h5>
                     </div>
                     <div class="card-footer">
-                        <h6 class="card-title"><?php echo count($_smarty_tpl->tpl_vars['productos']->value);?>
+                        <h6 class="card-title"><?php echo count($_smarty_tpl->tpl_vars['products']->value);?>
 </h6>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ function content_619be9c304e742_57638775 (Smarty_Internal_Template $_smarty_tpl)
                         <h5 class="card-title">Cantidad de Categorias</h5>
                     </div>
                     <div class="card-footer">
-                        <h6 class="card-title"><?php echo count($_smarty_tpl->tpl_vars['categorias']->value);?>
+                        <h6 class="card-title"><?php echo count($_smarty_tpl->tpl_vars['categorys']->value);?>
 </h6>
                     </div>
                 </div>

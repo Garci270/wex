@@ -4,17 +4,19 @@ require_once "./model/Productmodel.php";
 require_once "./view/Productview.php";
 require_once "./model/Categorymodel.php";
 require_once "./helper/AuthHelper.php";
-class ProductosController{
+class ProductsController{
     private $productModel;
     private $categoryModel;
     private $productView;
     private $userView;
+    private $userModel;
     private $authHelper;
     function __construct(){
         $this->productModel = new ProductsModel();
         $this->categoryModel = new CategorysModel();
         $this->productView = new ProductsView();
-        $this->userView = new UsuarioView();
+        $this->userView = new UserView();
+        $this->userModel = new UserModel();
         $this->authHelper = new AuthHelper();
     }
 
@@ -26,7 +28,7 @@ class ProductosController{
         }
         $products = $this->productModel->getProductsSlider();
         $categorys = $this->categoryModel->getCategorys(0);
-        return $this->productView->inicio($products,$categorys, $user);
+        return $this->productView->home($products,$categorys, $user);
     }
 
     function showProducts(){
@@ -36,18 +38,18 @@ class ProductosController{
             $user = false;
         }
         $products = $this->productModel->getProducts(0);
-        return $this->productView->mostrarProductos($products, $user);
+        return $this->productView->showProducts($products, $user);
     }
 
     function showProduct($id){
         if ($this->authHelper->checkLogIn()) {
-            $user = true;
+            $user = $this->userModel->getUser($_SESSION['nombre_usuario']);
         }else{
             $user = false;
         }
         $categorys = $this->categoryModel->getCategorys(0);
         $product = $this->productModel->getProductDetail($id);
-        return $this->productView->mostrarDetalleProducto($product, $categorys, $user);
+        return $this->productView->showDetailProduct($product, $categorys, $user);
     }
 
     function editProduct($id){
@@ -58,7 +60,7 @@ class ProductosController{
             if($id>0){
                 $product = $this->productModel->getProducts($id)[0];
             }
-            return $this->productView->editarProducto($products, $categorys, $product, true);
+            return $this->productView->editProduct($products, $categorys, $product, true);
         }else{
             $error = "asegurate de que eres usuario admin";
             $this->userView->showError($error, false);
@@ -69,7 +71,7 @@ class ProductosController{
         if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
             $user = true;
             $categorys = $this->categoryModel->getCategorys(0);
-            return $this->productView->agregarProducto($categorys);
+            return $this->productView->addProduct($categorys);
         }else{
             $error = "asegurate de que eres usuario admin";
             $this->userView->showError($error, false);

@@ -10,7 +10,6 @@ class ApiComentController extends ApiController{
     function getComents($params = []){
         $id = $params[":ID"];
         $coments = $this->productModel->getComentByProduct($id);
-        /* $coments = $this->productModel->getComents(); */
         if($coments){
             return $this->apiView->response($coments, 200);
         }else{
@@ -27,7 +26,6 @@ class ApiComentController extends ApiController{
         else{
             $coments = $this->productModel->getComentByRate($id, $rate);
         }
-        /* $coments = $this->productModel->getComents(); */
         if($coments){
             return $this->apiView->response($coments, 200);
         }else{
@@ -35,23 +33,14 @@ class ApiComentController extends ApiController{
         }
     }
 
-    /* function getComent($params = []){
-        $id = $params[":ID"];
-        $coments = $this->productModel->getComentByProduct($id);
-        if($coments){
-            return $this->apiView->response($coments, 200);
-        }else{
-            return $this->apiView->response("fail to get coment", 400);
-        }
-    } */
-
     function setComent($params = []){
         $idproduct = $params[':ID'];
+        $iduser = $params[':USUARIO'];
         if(!empty($this->data->coment) && !empty($this->data->rate)){
             $coment = $this->data->coment;
             $rate = $this->data->rate;
             $date = date('Y-m-d');
-            $this->productModel->setComentByProduct($idproduct,7,$coment,$rate,$date);
+            $this->productModel->setComentByProduct($idproduct,$iduser,$coment,$rate,$date);
             return $this->apiView->response("OK", 200);
         }
     }

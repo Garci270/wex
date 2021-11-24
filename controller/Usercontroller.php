@@ -17,7 +17,7 @@ class UserController{
         $this->userModel = new UserModel();
         $this->productModel = new ProductsModel();
         $this->categoryModel = new CategorysModel();
-        $this->userView = new UsuarioView();
+        $this->userView = new UserView();
         $this->productView = new ProductsView();
         $this->authHelper = new AuthHelper();
     }
@@ -43,7 +43,7 @@ class UserController{
                 }
             }else{
                 $user = true;
-                return $this->productView->inicio($products, $categorys, $user);
+                return $this->productView->home($products, $categorys, $user);
             }
         }else{
             $error = "asegurate de que eres usuario";

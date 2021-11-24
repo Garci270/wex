@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>{$titulo}</title>
+    <title>{$title}</title>
 </head>
 <body>
 {include file="templates/user/navusuario.tpl"}
@@ -19,7 +19,7 @@
                     <div class="row">
                         <select class="custom-select col-10" id="selCategoria">
                         <option value="-1" selected>Seleccione una categoria</option>
-                        {foreach from=$categorias item=$item}
+                        {foreach from=$categorys item=$item}
                             <option value="{$item->idcategoria}">{$item->Descripcion}</option>
                         {/foreach}
                         </select>
@@ -31,16 +31,16 @@
     </div>
 </div>
 <div class="m-5">
-{if $categoria}
-    <form action="editarCategoria/{$categoria->idcategoria}" method="POST" enctype="multipart/form-data">  
+{if $category}
+    <form action="editarCategoria/{$category->idcategoria}" method="POST" enctype="multipart/form-data">  
         <div class="card m-auto" style="width: 18rem;">
-            <img src="{$categoria->url_imagen}" class="card-img-top" alt="..." >
+            <img src="{$category->url_imagen}" class="card-img-top" alt="..." >
             <input type="file" name="categoryFile" id="imageToUpload">
             <div class="card-body">
-                <h5 class="card-title">{$categoria->Descripcion}</h5>
-                <input type="text" name="descripcion" class="form-control" value="{$categoria->Descripcion}">
+                <h5 class="card-title">{$category->Descripcion}</h5>
+                <input type="text" name="descripcion" class="form-control" value="{$category->Descripcion}">
                 <div class="card-footer">
-                    <a href="eliminarCat/{$categoria->idcategoria}" class="btn btn-danger mt-2">Eliminar</a>
+                    <a href="eliminarCat/{$category->idcategoria}" class="btn btn-danger mt-2">Eliminar</a>
                     <button type="submit" class="btn btn-danger mt-2">Editar</a>
                 </div>
             </div>
@@ -49,8 +49,8 @@
 {/if}
 
 </div>
-<script src="js/categoria.js"></script>
-{if $categoria}
+<script src="js/category.js"></script>
+{if $category}
     {include file="templates/footer.tpl"}
 {else}
     <script src="https://kit.fontawesome.com/538a82c3ca.js" crossorigin="anonymous"></script>

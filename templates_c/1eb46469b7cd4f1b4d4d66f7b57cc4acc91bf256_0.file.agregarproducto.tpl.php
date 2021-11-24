@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-23 16:02:10
+/* Smarty version 3.1.39, created on 2021-11-24 00:44:49
   from 'C:\xampp\htdocs\tpeespecial\templates\user\agregarproducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_619d3ab289f772_62525238',
+  'unifunc' => 'content_619db5317b4202_87864325',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1eb46469b7cd4f1b4d4d66f7b57cc4acc91bf256' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tpeespecial\\templates\\user\\agregarproducto.tpl',
-      1 => 1637693941,
+      1 => 1637722944,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_619d3ab289f772_62525238 (Smarty_Internal_Template $_smarty_tpl) {
+function content_619db5317b4202_87864325 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +33,7 @@ function content_619d3ab289f772_62525238 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
 </head>
 <body>
@@ -48,13 +48,13 @@ function content_619d3ab289f772_62525238 (Smarty_Internal_Template $_smarty_tpl)
                 <h5 class="card-title">Categoria</h5>
                 <select class="custom-select mb-2" name="categoria">
                 <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categorias']->value, 'categoria');
-$_smarty_tpl->tpl_vars['categoria']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
-$_smarty_tpl->tpl_vars['categoria']->do_else = false;
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categorys']->value, 'category');
+$_smarty_tpl->tpl_vars['category']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['category']->value) {
+$_smarty_tpl->tpl_vars['category']->do_else = false;
 ?>
-                    <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value->idcategoria;?>
-"><?php echo $_smarty_tpl->tpl_vars['categoria']->value->Descripcion;?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['category']->value->idcategoria;?>
+"><?php echo $_smarty_tpl->tpl_vars['category']->value->Descripcion;?>
 </option>
                 <?php
 }
@@ -65,7 +65,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <p class="card-text">Detalle</p>
                 <input type="text" name="descripcion" class="form-control" placeholder="Escribe el Detalle">
                 <div class="card-footer">
-                <p class="card-text tamañoPrecio">Precio</p>
+                <p class="card-text tamanioPrecio">Precio</p>
                 <input type="text" name="precio" class="form-control" placeholder="Ingrese el Precio">
                     <button type="submit" class="btn btn-danger mt-2">Agregar</button>
                     <a href="inicioUsuario" class="btn btn-danger mt-2">Cancelar</a>

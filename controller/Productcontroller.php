@@ -82,18 +82,23 @@ class ProductsController{
     function updateProduct($id){
         if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
             $user = true;
-            if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])&& !empty($_FILES['productFile']["name"])){
-                if($_FILES['productFile']['type'] == "image/jpg" || $_FILES['productFile']['type'] == "image/jpeg" || $_FILES['productFile']['type'] == "image/png" ){
-                    $image = $_FILES['productFile'];
-                    $category = $_POST['categoria'];
-                    $description = $_POST['descripcion'];
-                    $brand = $_POST['marca'];
-                    $price = $_POST['precio'];
-                    $this->productModel->updateProduct($description, $price,$brand, $category, $id,$image);
-                    $this->userView->home();
+            if(!empty($_POST['categoria'])&& !empty($_POST['descripcion'])&& !empty($_POST['precio'])&& !empty($_POST['marca'])){
+                $category = $_POST['categoria'];
+                $description = $_POST['descripcion'];
+                $brand = $_POST['marca'];
+                $price = $_POST['precio'];
+                if(!empty($_FILES['productFile']["name"])){
+                    if($_FILES['productFile']['type'] == "image/jpg" || $_FILES['productFile']['type'] == "image/jpeg" || $_FILES['productFile']['type'] == "image/png" ){
+                        $image = $_FILES['productFile'];
+                        $this->productModel->updateProduct($description, $price,$brand, $category, $id,$image);
+                        $this->userView->home();
+                    }else{
+                        $error = "asegurate de que subes una imagen!";
+                        $this->userView->showError($error, $user);
+                    }
                 }else{
-                    $error = "asegurate de que subes una imagen!";
-                    $this->userView->showError($error, $user);
+                    $this->productModel->updateProductNoImage($description, $price,$brand, $category, $id);
+                    $this->userView->home();
                 }
             }else{
                 $error = "asegurate de completar bien los campos!";

@@ -39,6 +39,11 @@ class productsModel{
         $query->execute(array($description,$price,$filepath,$brand,$categoria,$id));
     }
 
+    function updateProductNoImage($description,$price,$brand,$categoria,$id){
+        $query = $this->db->prepare("UPDATE articulo SET Descripcion=?, Precio_1=?, Marca=?, idcategoria=? WHERE idarticulo =?");
+        $query->execute(array($description,$price,$brand,$categoria,$id));
+    }
+
     function addProduct($description,$price,$brand,$category,$image){
         $filepath = $this->addImage($image);
         $query = $this->db->prepare("INSERT INTO articulo (Descripcion, Precio_1, url_imagen, Marca, idcategoria) VALUES(?,?,?,?,?)");

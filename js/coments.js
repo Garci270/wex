@@ -54,7 +54,6 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                         coment: coment,
                         rate: rate
                     }
-                    console.log(data);
                     try {
                         let response = await fetch(API_URL +'/'+idproduct+'/'+iduser, {
                             method:'POST',

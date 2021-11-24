@@ -1,6 +1,6 @@
 <div id="app-coments">
     {if $user}
-        <div class="m-2" v-if="coments">
+        <div class="m-2">
             <select name="" id=""  @change="getComentByRate($event, {$products[0]->idarticulo})"  class="form-control">
                 <option value="-1">Seleccionar Puntaje</option>
                 <option value="1">1</option>

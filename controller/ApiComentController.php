@@ -36,12 +36,14 @@ class ApiComentController extends ApiController{
     function setComent($params = []){
         $idproduct = $params[':ID'];
         $iduser = $params[':USUARIO'];
-        if(!empty($this->data->coment) && !empty($this->data->rate)){
+        if(!empty($this->data->coment) && !empty($this->data->rate) && $this->data->rate != -1){
             $coment = $this->data->coment;
             $rate = $this->data->rate;
             $date = date('Y-m-d');
             $this->productModel->setComentByProduct($idproduct,$iduser,$coment,$rate,$date);
             return $this->apiView->response("OK", 200);
+        }else{
+            return $this->apiView->response("error to upload coment", 400);
         }
     }
 

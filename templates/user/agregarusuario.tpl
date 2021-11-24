@@ -19,15 +19,15 @@
             <form action="crearUsuario" method="POST">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nombre</label>
-                    <input type="text" class="form-control" placeholder="Escribe el nombre" name="nombre" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" placeholder="Escribe el nombre" name="nombre"  aria-describedby="emailHelp">
                 </div>  
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nombre de Usuario</label>
-                    <input type="text" class="form-control" placeholder="Escribe el nombre de usuario" name="nombre_usuario" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" placeholder="Escribe el nombre de usuario" name="nombre_usuario"  aria-describedby="emailHelp">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" placeholder="Escribe el email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" placeholder="Escribe el email" name="email"  aria-describedby="emailHelp">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Contraseña</label>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Nivel</label>
-                    <input type="number" class="form-control" placeholder="Escriba el nivel" id="exampleInputPassword1" name="nivel">
+                    <input type="number" class="form-control" placeholder="Escriba el nivel"  name="nivel">
                 </div>
                 <div class="">
                 <button type="submit" class="col-2 btn btn-danger">Crear</button>

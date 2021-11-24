@@ -49,7 +49,12 @@ class ProductsController{
         }
         $categorys = $this->categoryModel->getCategorys(0);
         $product = $this->productModel->getProductDetail($id);
-        return $this->productView->showDetailProduct($product, $categorys, $user);
+        if($product && $categorys){
+            return $this->productView->showDetailProduct($product, $categorys, $user);
+        }else{
+            $error = "error al cargar el producto";
+            $this->userView->showError($error, false);
+        }
     }
 
     function editProduct($id){

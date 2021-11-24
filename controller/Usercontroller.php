@@ -59,8 +59,13 @@ class UserController{
             $name=$_POST['nombre'];
             $userName=$_POST['nombre_usuario'];
             $level = 0;
-            $this->userModel->setUser($name,$userName,$email, $password, $level);
-            return $this->getUser();
+            $user = $this->userModel->setUser($name,$userName,$email, $password, $level);
+            if ($user) {
+                return $this->getUser();
+            }else{
+                $error = "email o usuario no valido prueba con otro";
+                $this->userView->showError($error, false);     
+            }
         }else{
             $error = "asegurate de completar bien todos los campos";
             $this->userView->showError($error, false);
@@ -146,8 +151,13 @@ class UserController{
                 $userName=$_POST['nombre_usuario'];
                 $level=intval($_POST['nivel']);
                 if($level >= 0 && $level <= 1){
-                    $this->userModel->setUser($name,$userName,$email, $password, $level);
-                    return $this->userView->home();
+                    $userCreate = $this->userModel->setUser($name,$userName,$email, $password, $level);
+                    if ($userCreate) {
+                        return $this->userView->home();
+                    }else{
+                        $error = "asegurate de poner un nivel valido";
+                        $this->userView->showError($error, $user);
+                    }
                 }else{
                     $error = "asegurate de poner un nivel valido";
                     $this->userView->showError($error, $user);

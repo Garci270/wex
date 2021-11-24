@@ -23,8 +23,10 @@ class ApiComentController extends ApiController{
         if($rate==-1){
             $coments = $this->productModel->getComentByProduct($id);
         }
-        else{
+        else if($rate >= 1 && $rate <= 5){
             $coments = $this->productModel->getComentByRate($id, $rate);
+        }else{
+            return $this->apiView->response("no coments", 200);
         }
         if($coments){
             return $this->apiView->response($coments, 200);

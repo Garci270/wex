@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2021 a las 19:06:30
+-- Tiempo de generación: 24-11-2021 a las 08:07:46
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
 
@@ -43,9 +43,9 @@ CREATE TABLE `articulo` (
 INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `Marca`, `idcategoria`) VALUES
 (3, 'Papa X Kg', 59.9, 'https://actualonline.com.ar/images/tmp/p_3.jpg', 'GENERICA', 3),
 (4, 'Cebolla Valenciana X Kg', 64.9, 'https://actualonline.com.ar/images/tmp/p_4.jpg', 'GENERICA', 3),
-(5, 'Zanahoria X Kg', 84.9, 'https://actualonline.com.ar/images/tmp/p_5.jpg', 'GENERICA', 3),
+(5, 'Zanahoria X Kg', 84.9, 'assets/img/product/AgustinGarciaAmaro.jpg', 'GENERICA', 3),
 (6, 'Anana  Lata X 825', 399.9, 'https://actualonline.com.ar/images/articulos/p_6.jpg', 'MAROLIO', 3),
-(11, 'Bolsa De Carbon Carton X 4 Kgs.', 239.9, 'https://actualonline.com.ar/images/articulos/p_11.jpg', 'GENERICA', 1),
+(11, 'Bolsa De Carbon Carton X 4 Kgs.', 239.9, 'https://actualonline.com.ar/images/articulos/p_11.jpg', 'CARBONES', 1),
 (16, 'Tapas Para Empanadas  De Horno Y Freir', 79.9, 'https://actualonline.com.ar/images/tmp/p_16.jpg', 'LA CHACHA', 1),
 (17, 'Empanadas  De Copetin', 85.9, 'https://actualonline.com.ar/images/articulos/p_17.jpg', 'LA CHACHA', 1),
 (24, 'Pan Rallado  X 400 Grs', 124.9, 'https://actualonline.com.ar/images/articulos/p_24.jpg', 'SANTA TERESITA', 1),
@@ -132,14 +132,13 @@ INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `
 (312, 'Oblea  Sabor Vainilla Paquete X 100 Grs.', 49.99, 'https://actualonline.com.ar/images/articulos/p_312.jpg', 'RECITAL', 1),
 (316, 'Limpiador Liquido  X 900 Cc. Suavidad De Algodon', 65.9, 'https://perfumeriaspigmento.com.ar/media/catalog/product/cache/image/620x678/e9c3970ab036de70892d86c6d221abfe/7/7/7793253003944.jpg', 'POETT', 22),
 (320, 'Aceite  De Girasol Botella X 1,5 Lts.', 219.55, 'http://d3ugyf2ht6aenh.cloudfront.net/stores/798/865/products/72756941-81a5627672605c028d16107993950727-640-0.jpg', 'CAÑUELAS', 1),
-(321, 'Aceite  De Girasol Botella X 900 Cc.', 137.45, 'https://actualonline.com.ar/images/tmp/p_321.jpg', 'CAÑUELAS', 1),
 (326, 'Acondicionador  Listo Lavanda X 800  Cc.', 399.9, 'https://actualonline.com.ar/images/articulos/p_326.jpg', 'ECHO', 23),
 (330, 'Limpiador Liquido  3 En 1 Bebe Botella X 900', 79.9, 'https://actualonline.com.ar/images/tmp/p_330.jpg', 'PROCENEX', 22),
 (331, 'Insecticida  Max Cucarachicida En Aerosol X 400 Cc.', 479.9, 'https://actualonline.com.ar/images/tmp/p_331.jpg', 'RAID', 23),
 (352, 'Mermelada  Sabor Ciruela Frasco X 390 Grs.', 99.9, 'https://actualonline.com.ar/images/tmp/p_352.119', 'DR CORMILLOT', 1),
 (355, 'Shampoo  Liso Extremo Envase X 200 Cc.', 225.9, 'https://actualonline.com.ar/images/tmp/p_355.jpg', 'PANTENE', 23),
 (359, 'Anana en Lata x400gr', 200, 'https://actualonline.com.ar/images/articulos/p_6.jpg', 'AGUSTIN', 1),
-(360, 'AGUSTIN', 25421, 'https://actualonline.com.ar/images/articulos/p_6.jpg', 'AGUSTIN', 21),
+(360, 'AGUSTIN', 25421, 'assets/img/product/unnamed.jpg', 'AGUSTIN', 21),
 (361, 'Carne feteada 100gr.', 100.25, 'https://static.diariovasco.com/www/multimedia/201906/03/media/cortadas/carne-roja-kS1C-R5uqUSGFlSqj84mn1I9bQuN-624x385@Diario%20Vasco.jpg', 'AGUSTIN', 2),
 (362, 'Parrillada', 250, 'https://fundaciondelcorazon.com/images/Blog/iStock-627240344.jpg', 'AGUSTIN', 21),
 (363, 'Chorizo c/u', 50, 'https://raffe.com.ar/wp-content/uploads/2019/06/Chorizo-Especial-Raffe.jpg', 'AGUSTIN', 2),
@@ -152,7 +151,9 @@ INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `
 (370, 'Queso Pategras', 200, 'https://eosdelivery.com.ar/3959-large_default/QUESO-ILOLAY-PATEGRAS-X100GR.jpg', 'Ilolay', 4),
 (371, 'Queso Muzzarella', 100, 'https://superlorito.com.ar/wp-content/uploads/2020/05/MUZZARELLA-FETAS-ilolay.jpg', 'Ilolay', 4),
 (372, 'Queso Feteado 100Gr.', 100.25, 'http://d3ugyf2ht6aenh.cloudfront.net/stores/001/219/229/products/queso-ilolay1-18e416b5a829be344315995212003710-640-0.jpg', 'Ilolay', 4),
-(373, 'Queso Cremoso 100gr', 100.25, 'https://fiambreriasofi.com.ar/wp-content/uploads/2021/05/Queso-Cremoso-Arroyo-Cabral-Kg-1-5846.jpg', 'AGUSTIN', 4);
+(373, 'Queso Cremoso 100gr', 100.25, 'https://fiambreriasofi.com.ar/wp-content/uploads/2021/05/Queso-Cremoso-Arroyo-Cabral-Kg-1-5846.jpg', 'AGUSTIN', 4),
+(374, 'Nuevo Producto', 240, 'https://actualonline.com.ar/images/articulos/p_6.jpg', 'AGUSTIN', 1),
+(375, 'Nuevas carnes', 300, 'https://actualonline.com.ar/images/articulos/p_6.jpg', 'AGUSTIN', 2);
 
 -- --------------------------------------------------------
 
@@ -185,27 +186,40 @@ INSERT INTO `categoria` (`idcategoria`, `Descripcion`, `url_imagen`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `comentario`
+--
+
+CREATE TABLE `comentario` (
+  `idcomentario` int(11) NOT NULL,
+  `idarticulo` int(11) NOT NULL,
+  `idusuario` int(11) NOT NULL,
+  `comentario` varchar(300) NOT NULL,
+  `puntuacion` int(1) NOT NULL DEFAULT 1,
+  `fecha` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE `usuario` (
   `idusuario` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
+  `nombre_usuario` varchar(20) NOT NULL,
   `email` varchar(300) NOT NULL,
-  `clave` varchar(300) NOT NULL
+  `clave` varchar(300) NOT NULL,
+  `nivel` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`idusuario`, `nombre`, `email`, `clave`) VALUES
-(1, 'Agustin', 'agustingarciaamaro@gmail.com', '$2y$10$QpMh7708FS1kFAhN9CZNBOqqEHvtWk41PGVqLIQKYv97A22D/ch.a'),
-(2, 'Roberto', 'rogworksi@gmail.com', '$2y$10$Z.5qyPDt2oadYR/3PfV7Ru5rxVb3HbjVuFmXBTFZ/zFLv8.acZ32i'),
-(3, 'Roberto', 'manuelgarcia0952@gmail.com', '$2y$10$73r/A8G5C0X477wrHoRscuIpvqiCLzp7UWUzNbapTnvkMcv2Z4/RC'),
-(4, 'Roberto', 'testinguser@gmail.com', '$2y$10$6TytzhetysrlxMjkE1UYSezOIvj6D8MAjD4FS88MW.jEjbSPziAEK'),
-(5, 'Manuel', 'pepito@gmail.com', '$2y$10$52RrIbRQkpOufQyIsKCZoe.6bbMu34i1nw3.CwuzGHBySHPULRMNy'),
-(6, 'Cristian', 'cristian@gmail.com', '$2y$10$Bu2i4LFxhLkwgFf5SLlNMuFMRHcT8wqbN5T7svKKcnmjkKH7vmMXa');
+INSERT INTO `usuario` (`idusuario`, `nombre`, `nombre_usuario`, `email`, `clave`, `nivel`) VALUES
+(1, 'Agustin', '', 'agustingarciaamaro@gmail.com', '$2y$10$QpMh7708FS1kFAhN9CZNBOqqEHvtWk41PGVqLIQKYv97A22D/ch.a', 1),
+(14, 'Roberto', 'rog70', 'rog@gmail.com', '$2y$10$qg1.bcmTjfPQcBuRji.bKeNbG4dB1fYA.amReahlrNmvLbfEzZziS', 0);
 
 --
 -- Índices para tablas volcadas
@@ -225,6 +239,14 @@ ALTER TABLE `categoria`
   ADD PRIMARY KEY (`idcategoria`);
 
 --
+-- Indices de la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  ADD PRIMARY KEY (`idcomentario`),
+  ADD KEY `idusuario` (`idusuario`),
+  ADD KEY `idarticulo` (`idarticulo`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -238,19 +260,25 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `articulo`
 --
 ALTER TABLE `articulo`
-  MODIFY `idarticulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=374;
+  MODIFY `idarticulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=377;
 
 --
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+
+--
+-- AUTO_INCREMENT de la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  MODIFY `idcomentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas
@@ -261,6 +289,13 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `articulo`
   ADD CONSTRAINT `articulo_ibfk_1` FOREIGN KEY (`idcategoria`) REFERENCES `categoria` (`idcategoria`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`idusuario`) REFERENCES `usuario` (`idusuario`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`idarticulo`) REFERENCES `articulo` (`idarticulo`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

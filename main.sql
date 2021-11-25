@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2021 a las 19:39:13
+-- Tiempo de generación: 24-11-2021 a las 21:52:14
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
 
@@ -43,7 +43,6 @@ CREATE TABLE `articulo` (
 INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `Marca`, `idcategoria`) VALUES
 (3, 'Papa X Kg', 59.9, 'https://actualonline.com.ar/images/tmp/p_3.jpg', 'GENERICA', 3),
 (4, 'Cebolla Valenciana X Kg', 64.9, 'https://actualonline.com.ar/images/tmp/p_4.jpg', 'GENERICA', 3),
-(5, 'Zanahoria X Kg', 84.9, 'assets/img/product/AgustinGarciaAmaro.jpg', 'GENERICA', 3),
 (6, 'Anana  Lata X 825', 399.9, 'https://actualonline.com.ar/images/articulos/p_6.jpg', 'MAROLIO', 3),
 (11, 'Bolsa De Carbon Carton X 4 Kgs.', 239.9, 'https://actualonline.com.ar/images/articulos/p_11.jpg', 'CARBONES', 1),
 (16, 'Tapas Para Empanadas  De Horno Y Freir', 79.9, 'https://actualonline.com.ar/images/tmp/p_16.jpg', 'LA CHACHA', 1),
@@ -79,7 +78,7 @@ INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `
 (144, 'Aceite  Mezcla Botella X 900 Cc.', 89.9, 'https://actualonline.com.ar/images/tmp/p_144.png', 'MAROLIO', 1),
 (150, 'Champagna  Demi Sec Botella X 750 Cc.', 579.9, 'https://actualonline.com.ar/images/tmp/p_150.jpg', 'MUMM CUVEE', 10),
 (151, 'Paleta De Novillito En Bifes X Kg', 749.9, 'https://actualonline.com.ar/images/articulos/p_151.jpg', 'GENERICA', 2),
-(152, 'Paño De Piso  Super Ballerina Paquete X 1 Unidad', 159.9, 'https://lh3.googleusercontent.com/proxy/bFShCACSWUMmnY8oKzG95iTp6-3Pz92EKZkTs3-dmjKq0dJIoqyCC_V0Wh0KBbruN2bgvZWLUujiPWEsZI8mY9lc3QQrkijh-FyK0rpuYa7pyBqSstlWGbmXLHjUAKjv-c8', 'CIF', 22),
+(152, 'Paño De Piso  Super Ballerina Paquete X 1 Unidad', 159.9, 'https://jumboargentina.vteximg.com.br/arquivos/ids/635498-512-512/Limpiador-L-quido-Procenex-Extra-Fragancia-Lavanda-900-Ml-2-28836.jpg?v=637534488244900000', 'CIF', 22),
 (153, 'Roast Beef De Novillito En Bifes X Kg', 599.9, 'https://actualonline.com.ar/images/articulos/p_153.jpg', 'GENERICA', 2),
 (154, 'Bocado De Jamon De Cerdo En Bifes X Kg', 349.9, 'https://actualonline.com.ar/images/articulos/p_154.jpg', 'GENERICA', 2),
 (164, 'Salchichas Vienissima X 12 Unidades', 213.35, 'https://mercanet.com.ar/server/Portal_0019782/img/products/salchicha-vienissima-6-uds_9310535.jpg', 'VIENISIMA', 1),
@@ -130,7 +129,7 @@ INSERT INTO `articulo` (`idarticulo`, `Descripcion`, `Precio_1`, `url_imagen`, `
 (309, 'Fideos  Tallarin Con Huevo Paquete X 500 Grs.', 139.9, 'https://actualonline.com.ar/images/tmp/p_309.117', 'DON VICENTE', 1),
 (310, 'Mortadela Familiar  X 500 G', 389.9, 'https://actualonline.com.ar/images/tmp/p_310.jpg', 'PALADINI', 4),
 (312, 'Oblea  Sabor Vainilla Paquete X 100 Grs.', 49.99, 'https://actualonline.com.ar/images/articulos/p_312.jpg', 'RECITAL', 1),
-(316, 'Limpiador Liquido  X 900 Cc. Suavidad De Algodon', 65.9, 'https://perfumeriaspigmento.com.ar/media/catalog/product/cache/image/620x678/e9c3970ab036de70892d86c6d221abfe/7/7/7793253003944.jpg', 'POETT', 22),
+(316, 'Limpiador Liquido  X 900 Cc. Suavidad De Algodon', 65.9, 'https://jumboargentina.vteximg.com.br/arquivos/ids/635498-512-512/Limpiador-L-quido-Procenex-Extra-Fragancia-Lavanda-900-Ml-2-28836.jpg?v=637534488244900000', 'POETT', 22),
 (320, 'Aceite  De Girasol Botella X 1,5 Lts.', 219.55, 'http://d3ugyf2ht6aenh.cloudfront.net/stores/798/865/products/72756941-81a5627672605c028d16107993950727-640-0.jpg', 'CAÑUELAS', 1),
 (326, 'Acondicionador  Listo Lavanda X 800  Cc.', 399.9, 'https://actualonline.com.ar/images/articulos/p_326.jpg', 'ECHO', 23),
 (330, 'Limpiador Liquido  3 En 1 Bebe Botella X 900', 79.9, 'https://actualonline.com.ar/images/tmp/p_330.jpg', 'PROCENEX', 22),
@@ -262,25 +261,25 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `articulo`
 --
 ALTER TABLE `articulo`
-  MODIFY `idarticulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=378;
+  MODIFY `idarticulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=382;
 
 --
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `idcomentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `idcomentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restricciones para tablas volcadas

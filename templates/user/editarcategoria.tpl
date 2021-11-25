@@ -41,6 +41,7 @@
                 <input type="text" name="descripcion" class="form-control" value="{$category->Descripcion}">
                 <div class="card-footer">
                     <a href="eliminarCat/{$category->idcategoria}" class="btn btn-danger mt-2">Eliminar</a>
+                    <small class="form-text text-muted">Debes eliminar todos los productos antes de eliminar la categoria.</small>
                     <a href="eliminarProdsCat/{$category->idcategoria}" class="btn btn-danger mt-2">Eliminar Productos</a>
                     <button type="submit" class="btn btn-danger mt-2">Editar</a>
                 </div>

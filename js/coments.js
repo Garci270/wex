@@ -31,7 +31,6 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                     }else{
                         app.coments = [];
                         app.coments = coments;                
-                        console.log(app.coments);
                     }
                 } catch (e) {
                     console.log(e);
@@ -81,7 +80,6 @@ window.addEventListener('DOMContentLoaded', (event)=>{
                 app.coments = false;
             }else{
                 app.coments = coments;                
-                console.log(app.coments);
             }
         } catch (e) {
             console.log(e);
@@ -93,11 +91,8 @@ window.addEventListener('DOMContentLoaded', (event)=>{
     
    
     function getUrl(){
-        //Se obtiene el valor de la URL desde el navegador
         let actual = window.location+'';
-        //Se realiza la división de la URL
         let split = actual.split("/");
-        //Se obtiene el ultimo valor de la URL
         let id = split[split.length-1];
         return id;
     }

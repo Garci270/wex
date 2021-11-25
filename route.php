@@ -69,6 +69,9 @@ switch($params[0]){
     case 'eliminarCat':
         $categorysController->deleteCategory($params[1]);
         break;
+    case 'eliminarProdsCat':
+        $productsController->deleteAllProductsCat($params[1]);
+        break;
     case 'agregarProd':
         $productsController->goToAddProduct();
         break;

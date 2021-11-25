@@ -7,6 +7,7 @@ require_once "./helper/AuthHelper.php";
 class ProductsController{
     private $productModel;
     private $categoryModel;
+    private $categoryView;
     private $productView;
     private $userView;
     private $userModel;
@@ -14,6 +15,7 @@ class ProductsController{
     function __construct(){
         $this->productModel = new ProductsModel();
         $this->categoryModel = new CategorysModel();
+        $this->categoryView = new CategorysView();
         $this->productView = new ProductsView();
         $this->userView = new UserView();
         $this->userModel = new UserModel();
@@ -151,4 +153,16 @@ class ProductsController{
         }
         
     }
+
+    function deleteAllProductsCat($id){
+        if($this->authHelper->checkLogIn() &&  $this->authHelper->checkLevel()){
+            $this->productModel->deleteAllProductsCat($id);
+            return $this->userView->home();
+        }else{
+            $error = "asegurate de que eres usuario admin";
+            $this->userView->showError($error, false);
+        }
+        
+    }
 }
+

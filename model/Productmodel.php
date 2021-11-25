@@ -33,6 +33,11 @@ class productsModel{
         $query->execute(array($id));
     }
 
+    function deleteAllProductsCat($id){
+        $query = $this->db->prepare("DELETE  FROM articulo WHERE idcategoria=?");
+        $query->execute(array($id));
+    }
+
     function updateProduct($description,$price,$brand,$categoria,$id, $image){
         $filepath = $this->addImage($image);
         $query = $this->db->prepare("UPDATE articulo SET Descripcion=?, Precio_1=?, url_imagen=?, Marca=?, idcategoria=? WHERE idarticulo =?");
